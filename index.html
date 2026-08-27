@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>html, body, body * { cursor: url("images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RIZOS</title>
+
+    <!-- ICONO DE LA PESTAÑA -->
+    <!-- Si tienes un archivo llamado icon.png, déjalo así -->
+    <link rel="icon" type="image/png" href="icon.png">
+
+
+    <style>
+
+        /* =========================================
+           COLORES PRINCIPALES
+           ========================================= */
+
+        :root {
+            --rosa: #f49ac2;
+            --rosa-claro: #ffd6e8;
+            --rosa-muy-claro: #fff0f6;
+
+            --amarillo: #f7df91;
+            --amarillo-claro: #fff4bd;
+            --amarillo-muy-claro: #fffbea;
+
+            --texto: #8b526c;
+            --texto-oscuro: #714258;
+
+            --blanco: #ffffff;
+        }
+
+
+        /* =========================================
+           CONFIGURACIÓN GENERAL
+           ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            padding: 25px 0;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 12px;
+
+            color: var(--texto);
+
+            /*
+            Fondo tipo internet de los 2000.
+            Los puntitos hacen que parezca una textura.
+            */
+
+            background-color: #fff8df;
+
+            background-image:
+                radial-gradient(
+                    #eadfbd 1px,
+                    transparent 1px
+                );
+
+            background-size: 8px 8px;
+        }
+
+
+
+        /* =========================================
+           PÁGINA PRINCIPAL
+           ========================================= */
+
+        .pagina {
+
+            width: 900px;
+
+            max-width: 94%;
+
+            margin: auto;
+
+            background: white;
+
+            border-left: 1px solid var(--rosa);
+
+            border-right: 1px solid var(--rosa);
+
+            box-shadow:
+                0 0 15px rgba(230, 160, 185, 0.35);
+        }
+
+
+
+        /* =========================================
+           BARRA SUPERIOR
+           ========================================= */
+
+        .topbar {
+
+            height: 40px;
+
+            padding: 6px 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #ffb9d8,
+                    #ee82b4
+                );
+
+            border-bottom: 2px solid #ffe5ef;
+
+            text-shadow:
+                1px 1px #b75a82;
+        }
+
+
+        .logo {
+
+            font-size: 19px;
+
+            font-weight: bold;
+        }
+
+
+        .logo span {
+
+            color: #fff6c9;
+        }
+
+
+        .top-right {
+
+            font-size: 11px;
+        }
+
+
+
+        /* =========================================
+           MENÚ
+           ========================================= */
+
+        .menu {
+
+            padding: 5px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #fff1ad,
+                    #f8d982
+                );
+
+            border-bottom: 1px solid #dfc16b;
+        }
+
+
+        .menu a {
+
+            color: #8a6070;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            padding: 2px 10px;
+
+            border-right: 1px solid #e6c977;
+        }
+
+
+        .menu a:last-child {
+
+            border-right: none;
+        }
+
+
+        .menu a:hover {
+
+            color: #d65d8c;
+
+            text-decoration: underline;
+        }
+
+
+
+        /* =========================================
+           CONTENIDO PRINCIPAL
+           ========================================= */
+
+        .contenido {
+
+            display: grid;
+
+            grid-template-columns: 240px 1fr;
+
+            gap: 15px;
+
+            padding: 15px;
+        }
+
+
+
+        /* =========================================
+           CAJITAS
+           ========================================= */
+
+        .caja {
+
+            border: 1px solid #edb0c9;
+
+            margin-bottom: 14px;
+
+            background: white;
+        }
+
+
+        .titulo-caja {
+
+            padding: 4px 7px;
+
+            color: #805066;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    to right,
+                    var(--rosa-claro),
+                    var(--amarillo-claro),
+                    var(--rosa-claro)
+                );
+
+            border-bottom: 1px solid #e9b1c8;
+
+            text-shadow:
+                1px 1px white;
+        }
+
+
+        .contenido-caja {
+
+            padding: 9px;
+        }
+
+
+
+        /* =========================================
+           PERFIL
+           ========================================= */
+
+        .nombre {
+
+            color: #d75d8e;
+
+            font-size: 18px;
+
+            font-weight: bold;
+
+            margin-bottom: 3px;
+        }
+
+
+        .estado {
+
+            color: #a58291;
+
+            font-size: 11px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .avatar {
+
+            width: 145px;
+
+            height: 145px;
+
+            margin: 4px auto 10px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #d5799d;
+
+            font-size: 45px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--rosa-claro),
+                    var(--amarillo-claro)
+                );
+
+            border: 3px solid white;
+
+            outline: 1px solid #e7a9bf;
+
+            box-shadow:
+                2px 2px 0 #ead77d;
+        }
+
+
+        .centrado {
+
+            text-align: center;
+        }
+
+
+
+        /* =========================================
+           INFORMACIÓN DEL PERFIL
+           ========================================= */
+
+        .dato {
+
+            margin: 7px 0;
+        }
+
+
+        .dato strong {
+
+            color: #d36691;
+        }
+
+
+        hr {
+
+            border: none;
+
+            border-top: 1px dashed #e7b8c9;
+
+            margin: 10px 0;
+        }
+
+
+
+        /* =========================================
+           LISTAS
+           ========================================= */
+
+        ul {
+
+            padding-left: 18px;
+
+            margin: 5px 0;
+        }
+
+
+        li {
+
+            margin-bottom: 5px;
+        }
+
+
+
+        /* =========================================
+           TÍTULO DE LA PÁGINA
+           ========================================= */
+
+        .bienvenida h1 {
+
+            margin: 0 0 3px;
+
+            font-size: 25px;
+
+            color: #d45b8c;
+
+            text-shadow:
+                1px 1px #ffeab0;
+        }
+
+
+        .subtitulo {
+
+            color: #b28b3f;
+
+            font-style: italic;
+
+            margin-bottom: 12px;
+        }
+
+
+
+        /* =========================================
+           DESCRIPCIÓN
+           ========================================= */
+
+        .descripcion {
+
+            font-size: 14px;
+
+            line-height: 1.65;
+
+            color: #6f5962;
+        }
+
+
+        .descripcion p {
+
+            margin-top: 0;
+
+            margin-bottom: 13px;
+        }
+
+
+        .destacado {
+
+            color: #d45d8c;
+
+            font-weight: bold;
+        }
+
+
+
+        /* =========================================
+           DECORACIÓN
+           ========================================= */
+
+        .decoracion {
+
+            text-align: center;
+
+            margin: 12px 0;
+
+            color: #d99b5b;
+
+            font-size: 17px;
+
+            letter-spacing: 4px;
+        }
+
+
+
+        /* =========================================
+           BOTONES
+           ========================================= */
+
+        .botones {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            justify-content: center;
+
+            gap: 5px;
+
+            margin-top: 8px;
+        }
+
+
+        .boton {
+
+            display: inline-block;
+
+            padding: 4px 10px;
+
+            color: #87556a;
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #fff2b8,
+                    #f9d77d
+                );
+
+            border: 1px solid #d9b85d;
+
+            box-shadow:
+                inset 0 1px white,
+                1px 1px 1px #ddd;
+        }
+
+
+        .boton:hover {
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #ffd7e8,
+                    #f39cc2
+                );
+
+            color: white;
+        }
+
+
+
+        /* =========================================
+           PEQUEÑOS "BLINKIES"
+           ========================================= */
+
+        .blinkie {
+
+            display: inline-block;
+
+            padding: 3px 7px;
+
+            margin: 2px;
+
+            font-size: 9px;
+
+            font-weight: bold;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    to right,
+                    #ee8eb8,
+                    #f5d87e,
+                    #ee8eb8
+                );
+
+            border: 1px solid #dc8aaa;
+
+            box-shadow:
+                inset 0 1px rgba(255,255,255,0.8);
+        }
+
+
+
+        /* =========================================
+           CAJA DE ENLACES
+           ========================================= */
+
+        .enlace {
+
+            display: block;
+
+            padding: 4px 3px;
+
+            color: #c65c86;
+
+            text-decoration: none;
+
+            border-bottom: 1px dotted #e7becb;
+        }
+
+
+        .enlace:hover {
+
+            background: var(--amarillo-muy-claro);
+
+            color: #d44e83;
+        }
+
+
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+
+        footer {
+
+            padding: 13px;
+
+            text-align: center;
+
+            color: #a9808f;
+
+            background: var(--rosa-muy-claro);
+
+            border-top: 1px solid #edb4ca;
+
+            font-size: 10px;
+        }
+
+
+
+        /* =========================================
+           MÓVIL
+           ========================================= */
+
+        @media (max-width: 700px) {
+
+            .contenido {
+
+                grid-template-columns: 1fr;
+            }
+
+            .pagina {
+
+                max-width: 96%;
+            }
+
+            .top-right {
+
+                display: none;
+            }
+
+            .menu a {
+
+                display: inline-block;
+
+                padding: 4px 5px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="pagina">
+
+
+    <!-- =====================================
+         BARRA SUPERIOR
+         ===================================== -->
+
+    <header class="topbar">
+
+        <div class="logo">
+
+            RIZOS<span></span>
+
+        </div>
+
+
+        <div class="top-right">
+
+            ✧ bienvenido a mi rincón perdido en internet ✧
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         MENÚ
+         ===================================== -->
+
+    <nav class="menu">
+
+        <a href="index.html">🏠 Home</a>
+
+        <a href="aboutme.htlm.html">♡ About Me</a>
+
+        <a href="blog.html">✎ Blog</a>
+
+        <a href="hobbies.html">☆ Hobbies</a>
+
+        <a href="music.html">♫ Music</a>
+
+        <a href="agenda-login.html">⭐ Agenda</a>
+
+        <a href="galery.html">📸 Galery</a>
+
+        <a href="dreams.html">✧ Dreams</a>
+
+        <a href="life.html">❀ Life</a>
+
+        <a href="writiti.html"> ✎ Writiti</a>
+    
+
+    </nav>
+
+
+
+    <!-- =====================================
+         DOS COLUMNAS
+         ===================================== -->
+
+    <main class="contenido">
+
+
+
+        <!-- =================================
+             COLUMNA IZQUIERDA
+             ================================= -->
+
+        <aside>
+
+
+            <!-- PERFIL -->
+
+            <section class="caja">
+
+                <div class="titulo-caja">
+
+                    ★ Miis Profile
+
+                </div>
+
+
+                <div class="contenido-caja">
+
+
+                    <div class="avatar profile-avatar" data-owner-photo="profile">
+
+                        ᯓ★
+                        
+                    </div>
+
+
+                    <div class="centrado">
+
+                        <div class="nombre">
+
+                            Ashley ∞
+
+                        </div>
+
+
+                        <div class="estado">
+
+                            ♡ lov3 lov3
+
+                        </div>
+
+                    </div>
+
+
+                    <hr>
+
+
+                    <div class="dato">
+
+                        <strong>Humor:</strong>
+                        ✧ inspirada
+
+                    </div>
+
+
+                    <div class="dato">
+
+                        <strong>Estado:</strong>
+                        online ♡
+
+                    </div>
+
+
+                    <div class="dato">
+
+                        <strong>Escuchando:</strong>
+                        ♪ TQMQA-Eladio Carrión
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- INTERESES -->
+
+            <section class="caja">
+
+                <div class="titulo-caja">
+
+                    ♡ Mis Intereses
+
+                </div>
+
+
+                <div class="contenido-caja">
+
+                    <p>
+
+                        <strong>General</strong>
+
+                    </p>
+
+                    <ul>
+
+                        <li>Ideas raras</li>
+
+                        <li>Internet</li>
+
+                        <li>Crear cosas</li>
+
+                        <li>Escribir</li>
+
+                        <li>Hobbies</li>
+
+                    </ul>
+
+
+                    <p>
+
+                        <strong>Music</strong>
+
+                    </p>
+
+                    <ul>
+
+                        <li>♫ canciones que me gustan</li>
+
+                        <li>♫ playlists</li>
+
+                    </ul>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- BLINKIES -->
+
+            <section class="caja">
+
+                <div class="titulo-caja">
+
+                    ✧ My little blinkies
+
+                </div>
+
+
+                <div class="contenido-caja centrado">
+
+
+                    <span class="blinkie">
+                        ONLINE ♡
+                    </span>
+
+
+                    <span class="blinkie">
+                        BLOGGER
+                    </span>
+
+
+                    <span class="blinkie">
+                        Y2K WEB
+                    </span>
+
+
+                    <span class="blinkie">
+                        ★ DREAMER
+                    </span>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- LINKS -->
+
+            <section class="caja">
+
+                <div class="titulo-caja">
+
+                    🔗 My Links
+
+                </div>
+
+
+                <div class="contenido-caja">
+
+                    <a class="enlace" href="juegos.html">
+                        ♡ Games
+                    </a>
+
+                    <a class="enlace" href="links.html">
+                        ★ Otros links
+                    </a>
+
+                    <a class="enlace" href="promo.html">
+                        ✧ Diario
+                    </a>
+
+                </div>
+
+            </section>
+
+
+        </aside>
+
+
+
+
+        <!-- =================================
+             COLUMNA DERECHA
+             ================================= -->
+
+        <section>
+
+
+            <div class="bienvenida">
+
+
+                <h1>
+
+                    Hallooᯓ★
+
+                </h1>
+
+
+                <div class="subtitulo">
+
+                    bienvenido a mi pequeña web ♡
+
+                </div>
+
+
+
+                <!-- DESCRIPCIÓN -->
+
+                <section class="caja">
+
+
+                    <div class="titulo-caja">
+
+                        ✿ Sobre este blog
+
+                    </div>
+
+
+                    <div class="contenido-caja descripcion">
+
+
+                        <p>
+
+                            Alguna vez te ha sucedido que has estado tan
+                            aburrido y tu mente ha conectado lo suficiente
+                            con la nube de ideas para darte una ingeniosa
+                            ocurrencia que podría cambiar tu rutina de una
+                            forma leve pero efectiva?
+
+                            Como... un <span class="destacado">
+                            shot de inspiración</span>?
+
+                        </p>
+
+
+                        <p>
+
+                            Pues eso me está sucediendo ahora mismo al
+                            crear este blog.
+
+                        </p>
+
+
+                        <p>
+
+                            Aquí compartiré mis
+
+                            <span class="destacado">
+                            ideas, pensamientos, hobbies y demás
+                            </span>
+
+                            (como todo blog normal y corriente,
+                            o eso espero jeje)
+
+                            ¯\_(ツ)_/¯
+
+                        </p>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- DECORACIÓN -->
+
+                <div class="decoracion">
+
+                    ☆ ★ ☆ ★ ☆
+
+                </div>
+
+
+
+                <!-- WELCOME -->
+
+                <section class="caja">
+
+
+                    <div class="titulo-caja">
+
+                        ♡ Bienvenido!!
+
+                    </div>
+
+
+                    <div class="contenido-caja">
+
+
+                        <p>
+
+                            Holaaa y bienvenido/a a mi pequeño rincón
+                            perdido en Internet.
+
+                        </p>
+
+
+                        <p>
+
+                            Aquí probablemente encontrarás un poco
+                            de todo.
+
+                        </p>
+
+
+                        <p>
+
+                            ✧ pensamientos
+
+                            <br>
+
+                            ✧ ideas
+
+                            <br>
+
+                            ✧ hobbies
+
+                            <br>
+
+                            ✧ cosas que me gustan
+
+                            <br>
+
+                            ✧ y quién sabe qué más
+
+                        </p>
+
+
+                        <div class="botones">
+
+
+                            <a href="blog.html" class="boton">
+
+                                ♡ MY BLOG
+
+                            </a>
+
+
+                            <a href="hobbies.html" class="boton">
+
+                                ★ MY HOBBIES
+
+                            </a>
+
+
+                            <a href="writiti.html" class="boton">
+
+                                ✧ WRITITI
+
+                            </a>
+
+
+                        </div>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- DECORACIÓN -->
+
+                <div class="decoracion">
+
+                    ⋆｡°✩ ─────── ✩°｡⋆
+
+                </div>
+
+
+
+                <!-- MINI CAJA -->
+
+                <section class="caja">
+
+
+                    <div class="titulo-caja">
+
+                        ★ Última actualización
+
+                    </div>
+
+
+                    <div class="contenido-caja">
+
+
+                        <p>
+
+                            <strong>
+
+                                25 / 08 / 2026
+
+                            </strong>
+
+                        </p>
+
+
+                        <p>
+
+                            ✿ Estoy construyendo esta web poco
+                            a poco...
+
+                        </p>
+
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+         ===================================== -->
+
+    <footer>
+
+        ✿ made with love & way too many ideas ✿
+
+        <br>
+
+        RIZOSᯓ★ · 2026
+
+    </footer>
+
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="access.js"></script>
+<script src="loading.js"></script>
+</body>
+
+</html>
+

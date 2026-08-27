@@ -1,0 +1,2598 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>html, body, body * { cursor: url("images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DANNY OCEAN ♡</title>
+
+<link rel="icon" type="image/png" href="icon.png">
+
+
+<style>
+
+/* =====================================================
+   🌊 COLORES — DANNY OCEAN
+===================================================== */
+
+:root {
+
+    --azul: #3aa6c9;
+    --azul-oscuro: #17627d;
+    --azul-claro: #bdebf2;
+
+    --turquesa: #58c9c0;
+    --turquesa-claro: #c9f2ed;
+
+    --amarillo: #f6d96b;
+    --amarillo-claro: #fff2b0;
+
+    --arena: #fff8e7;
+    --blanco: #ffffff;
+
+    --texto: #49636b;
+    --texto-claro: #789098;
+
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    color: var(--texto);
+
+    background-color:
+        #d9f4f5;
+
+    background-image:
+
+        radial-gradient(
+            #9ddadd 1px,
+            transparent 1px
+        );
+
+    background-size: 9px 9px;
+
+}
+
+
+/* =====================================================
+   PÁGINA
+===================================================== */
+
+.pagina {
+
+    width: 1100px;
+
+    max-width: 94%;
+
+    margin: 25px auto;
+
+    background:
+        rgba(255,255,255,0.96);
+
+    border:
+        1px solid #91ccd2;
+
+    box-shadow:
+
+        8px 8px 0 #f1d66e,
+
+        0 0 25px
+        rgba(40,130,150,0.25);
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    min-height: 125px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            #2e91b1,
+            #64cfc9,
+            #f5dc79
+        );
+
+    border-bottom:
+        3px solid white;
+
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.sol-logo {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        2px solid white;
+
+    background:
+        rgba(255,255,255,0.35);
+
+    font-size: 40px;
+
+    box-shadow:
+        3px 3px 0 #3b99a6;
+
+}
+
+
+.titulo {
+
+    margin: 0;
+
+    color: white;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 36px;
+
+    letter-spacing: 4px;
+
+    text-shadow:
+        2px 2px #347f91;
+
+}
+
+
+.subtitulo {
+
+    margin-top: 6px;
+
+    color: white;
+
+    letter-spacing: 2px;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   MENÚ SUPERIOR
+===================================================== */
+
+.menu {
+
+    padding: 6px;
+
+    text-align: center;
+
+    background:
+        #fff7d2;
+
+    border-bottom:
+        1px solid #dbc76e;
+
+}
+
+
+.menu a {
+
+    display: inline-block;
+
+    margin: 0 12px;
+
+    padding: 4px 10px;
+
+    color:
+        #397384;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+.menu a:hover {
+
+    color: white;
+
+    background:
+        var(--turquesa);
+
+}
+
+
+/* =====================================================
+   LAYOUT
+===================================================== */
+
+.layout {
+
+    display: grid;
+
+    grid-template-columns:
+        190px 1fr;
+
+    gap: 18px;
+
+    padding: 18px;
+
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+
+    background:
+        #effafa;
+
+    border:
+        1px solid #91ccd2;
+
+    align-self:
+        start;
+
+}
+
+
+.sidebar-title {
+
+    padding: 8px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to right,
+            #2586a4,
+            #55c8c0
+        );
+
+    border-bottom:
+        1px solid #82c8ca;
+
+    font-weight: bold;
+
+}
+
+
+.sidebar-button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 12px 8px;
+
+    border: none;
+
+    border-bottom:
+        1px solid #c5e6e6;
+
+    color:
+        #426d78;
+
+    background:
+        #f8ffff;
+
+    text-align: left;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.sidebar-button:hover {
+
+    color: white;
+
+    background:
+        var(--turquesa);
+
+}
+
+
+.sidebar-button.active {
+
+    color: white;
+
+    background:
+        #349bb4;
+
+    box-shadow:
+        inset 4px 0 #f4d66b;
+
+}
+
+
+/* =====================================================
+   CONTENIDO
+===================================================== */
+
+.main {
+
+    min-width: 0;
+
+}
+
+
+/* =====================================================
+   VENTANAS
+===================================================== */
+
+.ventana {
+
+    margin-bottom: 18px;
+
+    border:
+        1px solid #8bc7ce;
+
+    background:
+        white;
+
+    box-shadow:
+        3px 3px 0 #c9e7e5;
+
+}
+
+
+.barra {
+
+    padding: 7px 9px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            to right,
+            #2b91ad,
+            #55c5bf
+        );
+
+    border-bottom:
+        1px solid #72aeb6;
+
+    font-weight: bold;
+
+    text-shadow:
+        1px 1px #4d8993;
+
+}
+
+
+.window-buttons {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.interior {
+
+    padding: 15px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    display: grid;
+
+    grid-template-columns:
+        220px 1fr;
+
+    gap: 18px;
+
+}
+
+
+.foto-principal {
+
+    min-height: 270px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid #9ccfd2;
+
+    background:
+        linear-gradient(
+            150deg,
+            #c9f1f1,
+            #fff4bd
+        );
+
+    color:
+        #71969d;
+
+    text-align: center;
+
+}
+
+
+.foto-principal img {
+
+    width: 100%;
+
+    height: 100%;
+
+    max-height: 320px;
+
+    object-fit: cover;
+
+}
+
+
+.intro h2 {
+
+    margin-top: 0;
+
+    color:
+        #267f98;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 25px;
+
+}
+
+
+.intro p {
+
+    color:
+        #55757c;
+
+    line-height:
+        1.8;
+
+}
+
+
+.frase {
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    color:
+        #55777e;
+
+    background:
+        #fff5c8;
+
+    border-left:
+        4px solid #e3c74f;
+
+    font-style:
+        italic;
+
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.texto {
+
+    color:
+        #58767c;
+
+    line-height:
+        1.9;
+
+}
+
+
+.texto strong {
+
+    color:
+        #277e94;
+
+}
+
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+.galeria {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.foto {
+
+    min-height: 180px;
+
+    border:
+        1px solid #91ccd2;
+
+    background:
+        #eefafa;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        #75939a;
+
+    text-align: center;
+
+}
+
+
+.foto img {
+
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+}
+
+
+.caption {
+
+    padding: 6px;
+
+    color:
+        #65838a;
+
+    background:
+        #fff7d2;
+
+    text-align: center;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   ALBUMES
+===================================================== */
+
+.album-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+}
+
+
+.album {
+
+    padding: 8px;
+
+    border:
+        1px solid #91c9cf;
+
+    background:
+        #f5ffff;
+
+}
+
+
+.album-cover {
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            140deg,
+            #c8eeee,
+            #fff0ad
+        );
+
+    border:
+        1px solid #9fcfd3;
+
+    color:
+        #6c8f95;
+
+    text-align: center;
+
+}
+
+
+.album-cover img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.album-name {
+
+    margin-top: 8px;
+
+    color:
+        #277e94;
+
+    font-weight: bold;
+
+    text-align: center;
+
+}
+
+
+.album-note {
+
+    margin-top: 5px;
+
+    color:
+        #789196;
+
+    text-align: center;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   LISTAS
+===================================================== */
+
+.lista {
+
+    margin: 0;
+
+    padding-left: 20px;
+
+}
+
+
+.lista li {
+
+    margin-bottom: 8px;
+
+    color:
+        #5d797f;
+
+}
+
+
+.lista li::marker {
+
+    color:
+        #e1c452;
+
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.stat {
+
+    padding: 12px;
+
+    text-align: center;
+
+    border:
+        1px solid #9acfd3;
+
+    background:
+        #f2fbfa;
+
+}
+
+
+.stat-number {
+
+    display: block;
+
+    color:
+        #277f96;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+.stat-label {
+
+    color:
+        #779198;
+
+    font-size: 9px;
+
+}
+
+
+/* =====================================================
+   OPINIÓN
+===================================================== */
+
+.opinion {
+
+    min-height: 180px;
+
+    padding: 14px;
+
+    background:
+        #f5fbfb;
+
+    border:
+        1px dashed #87bfc5;
+
+}
+
+
+.opinion textarea {
+
+    width: 100%;
+
+    min-height: 150px;
+
+    padding: 10px;
+
+    resize: vertical;
+
+    outline: none;
+
+    border:
+        1px solid #91c7cc;
+
+    color:
+        #55757c;
+
+    background:
+        white;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+}
+
+
+.opinion textarea:focus {
+
+    border-color:
+        #45aab6;
+
+}
+
+
+/* =====================================================
+   DESTACADO
+===================================================== */
+
+.marco-destacado {
+
+    padding: 15px;
+
+    border:
+        1px solid #8bc6cc;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e4f7f5,
+            #fff6cb
+        );
+
+}
+
+
+.marco-destacado h3 {
+
+    margin-top: 0;
+
+    color:
+        #277f94;
+
+    font-family:
+        Georgia,
+        serif;
+
+}
+
+
+/* =====================================================
+   BOTÓN
+===================================================== */
+
+.boton {
+
+    padding:
+        6px 12px;
+
+    border:
+        1px solid #7ebbc2;
+
+    color:
+        white;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #4bb6bd,
+            #277e96
+        );
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+.boton:hover {
+
+    background:
+        #2c91a8;
+
+}
+
+.editor-panel {
+    margin: 0 18px 18px;
+    padding: 8px 10px;
+    color: var(--texto);
+    background: var(--amarillo-claro);
+    border: 1px solid #91ccd2;
+    text-align: center;
+}
+
+.editor-button,
+.editor-delete {
+    padding: 5px 9px;
+    border: 1px solid var(--azul-oscuro);
+    color: white;
+    background: var(--azul-oscuro);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.editor-delete {
+    display: none;
+    margin-top: 5px;
+    background: #a24e61;
+}
+
+.editando [contenteditable="true"] {
+    outline: 1px dashed var(--azul);
+    background: #f3ffff;
+}
+
+.editando .editor-delete {
+    display: inline-block;
+}
+
+.editor-actions {
+    display: none;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.editando .editor-actions {
+    display: block;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 15px;
+
+    text-align: center;
+
+    color:
+        #789298;
+
+    background:
+        #eaf8f7;
+
+    border-top:
+        1px solid #9bcbd0;
+
+    font-size: 10px;
+
+}
+
+
+footer a {
+
+    color:
+        #32869a;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .hero {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .galeria,
+    .album-grid,
+    .stats {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .titulo {
+
+        font-size: 25px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="pagina">
+
+
+<!-- =================================================
+     HEADER
+================================================== -->
+
+<header>
+
+
+    <div class="logo">
+
+
+        <div class="sol-logo">
+
+            ☀
+
+        </div>
+
+
+        <div>
+
+            <h1 class="titulo">
+
+                DANNY OCEAN
+
+            </h1>
+
+
+            <div class="subtitulo">
+
+                BABYLON BOY · VENEZUELA ♡
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div>
+
+        🌊
+
+    </div>
+
+
+</header>
+
+<div class="editor-panel">
+    <button class="editor-button" id="toggleEditor" type="button">✎ Editar página</button>
+    <span id="editorStatus">Activa la edición para cambiar tu contenido.</span>
+</div>
+
+
+
+<!-- =================================================
+     MENÚ SUPERIOR
+================================================== -->
+
+<nav class="menu">
+
+   
+    <a href="index.html">
+        HOME
+    </a>
+
+    <a href="aboutme.html">
+        ABOUT ME
+    </a>
+
+    <a href="blog.html">
+        BLOG
+    </a>
+
+    <a href="hobbies.html">
+        HOBBIES
+    </a>
+
+    <a href="music.html">
+        MUSIC
+    </a>
+
+    <a href="agenda-login.html">
+        AGENDA
+    </a>
+
+    <a href="galery.html">
+        GALERY
+    </a>
+
+    <a href="dreams.html">
+        DREAMS
+    </a>
+
+    <a href="life.html">
+        LIFE
+    </a>
+
+    <a href="writiti.html">
+        WRITITI
+    </a>
+
+
+</nav>
+
+
+
+<!-- =================================================
+     LAYOUT
+================================================== -->
+
+<div class="layout">
+
+
+
+<!-- =================================================
+     SIDEBAR
+================================================== -->
+
+<aside class="sidebar">
+
+
+    <div class="sidebar-title">
+
+        🌊 DANNY OCEAN 🌊
+
+    </div>
+
+
+    <button
+        class="sidebar-button active"
+        onclick="mostrarSeccion('inicio', this)"
+    >
+
+        ♡ HOME
+
+    </button>
+
+
+    <button
+        class="sidebar-button"
+        onclick="mostrarSeccion('albums', this)"
+    >
+
+        ♪ ALBUMS
+
+    </button>
+
+
+    <button
+        class="sidebar-button"
+        onclick="mostrarSeccion('playlist', this)"
+    >
+
+        ♫ PLAYLIST
+
+    </button>
+
+
+    <button
+        class="sidebar-button"
+        onclick="mostrarSeccion('songs', this)"
+    >
+
+        ♪ SONGS
+
+    </button>
+
+
+    <button
+        class="sidebar-button"
+        onclick="mostrarSeccion('galeria', this)"
+    >
+
+        ▣ GALLERY
+
+    </button>
+
+
+    <div
+        style="
+            padding:12px;
+            text-align:center;
+            color:#73939a;
+            font-size:10px;
+            line-height:1.7;
+        "
+    >
+
+        ☀
+
+        <br>
+
+        beach days
+
+        <br>
+
+        & late night songs
+
+        <br>
+
+        ♡
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =================================================
+     MAIN
+================================================== -->
+
+<main class="main">
+
+
+
+<!-- =================================================
+     HOME
+================================================== -->
+
+<section
+    id="inicio"
+    class="seccion"
+>
+
+
+<!-- HERO -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        🌊 BIENVENIDO A MI RINCÓN DE DANNY OCEAN
+
+        <span class="window-buttons">
+
+            − □ ×
+
+        </span>
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="hero">
+
+
+            <!-- FOTO PRINCIPAL -->
+
+            <div class="foto-principal">
+
+
+                <!--
+
+                PARA PONER UNA FOTO:
+
+                coloca tu imagen en la carpeta.
+
+                Por ejemplo:
+
+                danny1.jpg
+
+                y cambia este contenido por:
+
+                <img src="danny1.jpg">
+
+                -->
+
+
+                <div>
+
+                    📷
+
+                    <br><br>
+
+                    YOUR PHOTO HERE
+
+                    <br>
+
+                    <small>
+
+                        danny1.jpg
+
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- INTRO -->
+
+            <div class="intro" data-edit-key="home-intro">
+
+
+                <h2>
+
+                    DANNY OCEAN ☀
+
+                </h2>
+
+
+                <p>
+
+                    Bienvenid@ a mi pequeño rincón
+                    dedicado a Danny Ocean.
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        ¿Cómo lo conocí?
+                    </strong>
+
+                    <br><br>
+
+                    AQUÍ PUEDES CONTAR TU HISTORIA.
+
+                    Escribe cuándo escuchaste su música
+                    por primera vez, cuál fue la canción
+                    que descubriste primero, dónde estabas,
+                    qué pensaste y cómo empezaste a
+                    interesarte por su música.
+
+                </p>
+
+
+                <div class="frase">
+
+                    ✧ AQUÍ PUEDES ESCRIBIR
+                    UNA FRASE TUYA ✧
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     VENEZUELA
+================================================== -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        🇻🇪 VENEZUELA ♡
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="marco-destacado">
+
+
+            <h3>
+
+                🌴 THE VENEZUELAN SIDE
+
+            </h3>
+
+
+            <div class="texto">
+
+
+                <p>
+
+                    Aquí puedes escribir sobre la conexión
+                    que encuentras entre Danny Ocean,
+                    Venezuela y su identidad.
+
+                </p>
+
+
+                <p>
+
+                    Puedes hablar de lo que significa para ti
+                    escuchar su música, de la estética tropical,
+                    de Caracas, del mar, de la cultura venezolana
+                    o simplemente de lo que te transmite.
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Tu espacio:
+                    </strong>
+
+                    escribe aquí todo lo que quieras ♡
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     MI EXPERIENCIA
+================================================== -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ☀ MY EXPERIENCE
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="texto" data-edit-key="home-experience">
+
+
+            <p>
+
+                <strong>
+                    My Danny Ocean story:
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                Escribe aquí tu experiencia personal.
+
+                Puedes hablar de canciones que
+                asocias con determinados recuerdos,
+                momentos importantes, conciertos,
+                descubrimientos o simplemente
+                de por qué su música te gusta.
+
+            </p>
+
+
+            <p>
+
+                Este apartado puede ser tan largo
+                como quieras.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     PHOTO WALL
+================================================== -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ▣ LITTLE PHOTO WALL
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="galeria">
+
+
+            <div>
+
+                <div class="foto">
+
+                    📷
+
+                    <br>
+
+                    PHOTO 01
+
+                </div>
+
+
+                <div class="caption">
+
+                    beach memory ♡
+
+                </div>
+
+            </div>
+
+
+
+            <div>
+
+                <div class="foto">
+
+                    📷
+
+                    <br>
+
+                    PHOTO 02
+
+                </div>
+
+
+                <div class="caption">
+
+                    favorite moment
+
+                </div>
+
+            </div>
+
+
+
+            <div>
+
+                <div class="foto">
+
+                    📷
+
+                    <br>
+
+                    PHOTO 03
+
+                </div>
+
+
+                <div class="caption">
+
+                    ocean vibes
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     STATS
+================================================== -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ✦ MY DANNY STATS
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="stats">
+
+
+            <div class="stat">
+
+                <span class="stat-number">
+
+                    00
+
+                </span>
+
+                <span class="stat-label">
+
+                    CONCERTS
+
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span class="stat-number">
+
+                    00
+
+                </span>
+
+                <span class="stat-label">
+
+                    YEARS LISTENING
+
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span class="stat-number">
+
+                    00
+
+                </span>
+
+                <span class="stat-label">
+
+                    FAVORITE SONGS
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     ALBUMS
+================================================== -->
+
+<section
+    id="albums"
+    class="seccion"
+    style="display:none;"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ♪ ALBUM COLLECTION
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <p class="texto">
+
+            Aquí puedes colocar las portadas de
+            tus álbumes favoritos y escribir
+            qué piensas de cada uno.
+
+        </p>
+
+
+        <div class="album-grid" id="albumGrid">
+
+
+            <div class="album">
+
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 01
+
+                </div>
+
+
+                <div class="album-name">
+
+                    ALBUM NAME
+
+                </div>
+
+
+                <div class="album-note">
+
+                    My thoughts...
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="album">
+
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 02
+
+                </div>
+
+
+                <div class="album-name">
+
+                    ALBUM NAME
+
+                </div>
+
+
+                <div class="album-note">
+
+                    My thoughts...
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="album">
+
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 03
+
+                </div>
+
+
+                <div class="album-name">
+
+                    ALBUM NAME
+
+                </div>
+
+
+                <div class="album-note">
+
+                    My thoughts...
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="album">
+
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 04
+
+                </div>
+
+
+                <div class="album-name">
+
+                    ALBUM NAME
+
+                </div>
+
+
+                <div class="album-note">
+
+                    My thoughts...
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="album">
+
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 05
+
+                </div>
+
+
+                <div class="album-name">
+
+                    ALBUM NAME
+
+                </div>
+
+
+                <div class="album-note">
+
+                    My thoughts...
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="album">
+
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 06
+
+                </div>
+
+
+                <div class="album-name">
+
+                    ALBUM NAME
+
+                </div>
+
+
+                <div class="album-note">
+
+                    My thoughts...
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="editor-actions">
+            <button class="editor-button" id="addAlbum" type="button">+ Añadir álbum</button>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- OPINIÓN -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        📝 MY ALBUM NOTES
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="opinion">
+
+
+            <textarea
+                placeholder="Write everything you think about Danny's albums here..."
+            ></textarea>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     PLAYLIST
+================================================== -->
+
+<section
+    id="playlist"
+    class="seccion"
+    style="display:none;"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ♫ MY SUMMER PLAYLIST
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="marco-destacado">
+
+
+            <h3>
+
+                🌊 CURRENT ROTATION
+
+            </h3>
+
+
+            <ol class="lista" id="playlistList">
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+            </ol>
+
+            <div class="editor-actions">
+                <button class="editor-button" id="addPlaylistSong" type="button">+ Añadir canción</button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        💭 WHY THIS PLAYLIST?
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="opinion">
+
+
+            <textarea
+                placeholder="Tell the story behind your playlist..."
+            ></textarea>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     SONGS
+================================================== -->
+
+<section
+    id="songs"
+    class="seccion"
+    style="display:none;"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ♪ MY FAVORITE SONGS
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="marco-destacado">
+
+
+            <h3>
+
+                ☀ TOP SONGS
+
+            </h3>
+
+
+            <ol class="lista" id="songsList">
+
+
+                <li>
+                    SONG #01 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #02 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #03 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #04 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #05 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #06 — why I love it...
+                </li>
+
+
+            </ol>
+
+            <div class="editor-actions">
+                <button class="editor-button" id="addFavoriteSong" type="button">+ Añadir canción</button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        📝 SONG MEMORIES
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="opinion">
+
+
+            <textarea
+                placeholder="Write about the songs and memories connected to them..."
+            ></textarea>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     GALLERY
+================================================== -->
+
+<section
+    id="galeria"
+    class="seccion"
+    style="display:none;"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ▣ OCEAN PHOTO ARCHIVE
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="galeria">
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+</main>
+
+
+</div>
+
+
+
+<!-- =================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    ☀ DANNY OCEAN CORNER · made with ocean vibes ♡
+
+    <br><br>
+
+    <a href="index.html">
+
+        ← BACK TO HOME
+
+    </a>
+
+</footer>
+
+
+</div>
+
+
+
+<!-- =================================================
+     JAVASCRIPT
+================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="access.js"></script>
+<script src="loading.js"></script>
+<script>
+
+
+function mostrarSeccion(
+    nombre,
+    boton
+) {
+
+
+
+/* =====================================================
+   EDITOR PERSONAL
+===================================================== */
+
+const editorButton = document.getElementById("toggleEditor");
+const editorStatus = document.getElementById("editorStatus");
+const albumGrid = document.getElementById("albumGrid");
+const playlistList = document.getElementById("playlistList");
+const songsList = document.getElementById("songsList");
+let editando = false;
+
+function guardarEditor() {
+    if (!window.siteAccess.requireOwner()) return;
+    document.querySelectorAll("[data-edit-key]").forEach(elemento => {
+        localStorage.setItem("danny_" + elemento.dataset.editKey, elemento.innerHTML);
+    });
+    document.querySelectorAll(".opinion textarea").forEach((textarea, indice) => {
+        localStorage.setItem("danny_textarea_" + indice, textarea.value);
+    });
+    localStorage.setItem("danny_albumGrid", albumGrid.innerHTML);
+    localStorage.setItem("danny_playlistList", playlistList.innerHTML);
+    localStorage.setItem("danny_songsList", songsList.innerHTML);
+}
+
+function prepararAlbum(album) {
+    album.querySelectorAll(".album-cover, .album-name, .album-note").forEach(elemento => {
+        elemento.contentEditable = window.siteAccess.isOwner() ? "true" : "false";
+    });
+    if (!album.querySelector(".editor-delete")) {
+        const button = document.createElement("button");
+        button.className = "editor-delete";
+        button.type = "button";
+        button.textContent = "Eliminar álbum";
+        album.appendChild(button);
+    }
+}
+
+function prepararLista(lista) {
+    lista.querySelectorAll("li").forEach(item => {
+        item.contentEditable = window.siteAccess.isOwner() ? "true" : "false";
+        if (!item.querySelector(".editor-delete")) {
+            const button = document.createElement("button");
+            button.className = "editor-delete";
+            button.type = "button";
+            button.textContent = "Eliminar";
+            item.appendChild(button);
+        }
+    });
+}
+
+function cargarEditor() {
+    document.querySelectorAll("[data-edit-key]").forEach(elemento => {
+        const contenido = localStorage.getItem("danny_" + elemento.dataset.editKey);
+        if (contenido !== null) elemento.innerHTML = contenido;
+    });
+    const albumGuardado = localStorage.getItem("danny_albumGrid");
+    const playlistGuardada = localStorage.getItem("danny_playlistList");
+    const songsGuardadas = localStorage.getItem("danny_songsList");
+    if (albumGuardado) albumGrid.innerHTML = albumGuardado;
+    if (playlistGuardada) playlistList.innerHTML = playlistGuardada;
+    if (songsGuardadas) songsList.innerHTML = songsGuardadas;
+    albumGrid.querySelectorAll(".album").forEach(prepararAlbum);
+    prepararLista(playlistList);
+    prepararLista(songsList);
+    document.querySelectorAll(".opinion textarea").forEach((textarea, indice) => {
+        const contenido = localStorage.getItem("danny_textarea_" + indice);
+        if (contenido !== null) textarea.value = contenido;
+    });
+}
+
+editorButton.addEventListener("click", () => {
+    if (!window.siteAccess.requireOwner()) return;
+    editando = !editando;
+    document.body.classList.toggle("editando", editando);
+    document.querySelectorAll("[data-edit-key], .album-cover, .album-name, .album-note, .lista li").forEach(elemento => {
+        elemento.contentEditable = editando ? "true" : "false";
+    });
+    document.querySelectorAll(".opinion textarea").forEach(textarea => textarea.disabled = !editando);
+    editorButton.textContent = editando ? "✓ Terminar edición" : "✎ Editar página";
+    editorStatus.textContent = editando ? "Escribe, agrega o elimina contenido y se guardará automáticamente." : "Cambios guardados en este navegador.";
+});
+
+document.addEventListener("input", event => {
+    if (editando && window.siteAccess.isOwner() && (event.target.matches("[contenteditable='true']") || event.target.matches("textarea"))) guardarEditor();
+});
+
+document.addEventListener("click", event => {
+    if (event.target.matches(".editor-delete")) {
+        if (!window.siteAccess.requireOwner()) return;
+        event.target.closest(".album, li").remove();
+        guardarEditor();
+    }
+});
+
+document.getElementById("addAlbum").addEventListener("click", () => {
+    if (!window.siteAccess.requireOwner()) return;
+    const album = document.createElement("div");
+    album.className = "album";
+    album.innerHTML = '<div class="album-cover">📀<br>COVER</div><div class="album-name">ALBUM NAME</div><div class="album-note">My thoughts...</div>';
+    albumGrid.appendChild(album);
+    prepararAlbum(album);
+    guardarEditor();
+});
+
+function agregarCancion(lista) {
+    if (!window.siteAccess.requireOwner()) return;
+    const item = document.createElement("li");
+    item.textContent = "SONG NAME";
+    lista.appendChild(item);
+    prepararLista(lista);
+    guardarEditor();
+}
+
+document.getElementById("addPlaylistSong").addEventListener("click", () => agregarCancion(playlistList));
+document.getElementById("addFavoriteSong").addEventListener("click", () => agregarCancion(songsList));
+cargarEditor();
+
+    /*
+       Ocultar todas las secciones
+    */
+
+    const secciones =
+        document.querySelectorAll(
+            ".seccion"
+        );
+
+
+    secciones.forEach(
+        function(seccion) {
+
+            seccion.style.display =
+                "none";
+
+        }
+    );
+
+
+
+    /*
+       Mostrar la seleccionada
+    */
+
+    document.getElementById(
+        nombre
+    ).style.display =
+        "block";
+
+
+
+    /*
+       Quitar active
+    */
+
+    const botones =
+        document.querySelectorAll(
+            ".sidebar-button"
+        );
+
+
+    botones.forEach(
+        function(b) {
+
+            b.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+
+
+    /*
+       Activar botón
+    */
+
+    boton.classList.add(
+        "active"
+    );
+
+
+
+    /*
+       Subir al principio
+    */
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

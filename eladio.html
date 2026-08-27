@@ -1,0 +1,2575 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>html, body, body * { cursor: url("images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ELADIO CARRION ♠</title>
+
+    <!-- Si tienes un icono propio, puedes usarlo -->
+    <link rel="icon" type="image/png" href="icon.png">
+
+
+<style>
+
+/* =====================================================
+   PALETA
+===================================================== */
+
+:root {
+
+    --vino: #641d2b;
+    --vino-oscuro: #351016;
+    --vino-claro: #8e3545;
+
+    --negro: #151113;
+    --negro-suave: #241b1d;
+
+    --crema: #eadcc7;
+    --crema-claro: #f5ecdf;
+
+    --rojo: #a63c4e;
+
+    --gris: #a99b9c;
+
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    color: var(--crema);
+
+    background:
+        var(--negro);
+
+    /*
+       Textura sutil tipo páginas antiguas
+    */
+
+    background-image:
+
+        radial-gradient(
+            rgba(255,255,255,0.04) 1px,
+            transparent 1px
+        );
+
+    background-size: 7px 7px;
+
+}
+
+
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.pagina {
+
+    width: 1100px;
+
+    max-width: 94%;
+
+    margin: 25px auto;
+
+    background:
+        var(--negro-suave);
+
+    border:
+        1px solid #71313c;
+
+    box-shadow:
+        8px 8px 0 #42131d,
+        0 0 25px rgba(0,0,0,0.7);
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    min-height: 115px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            #351016,
+            #6b1d2b,
+            #351016
+        );
+
+    border-bottom:
+        3px solid var(--crema);
+
+}
+
+
+/* =====================================================
+   LOGO / TITULO
+===================================================== */
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.rosa-logo {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid #b86b77;
+
+    background:
+        #2b0d13;
+
+    color:
+        #eadcc7;
+
+    font-size: 39px;
+
+    /*
+       Aquí puedes sustituir el símbolo
+       por una imagen tuya del logo si
+       tienes una imagen autorizada.
+    */
+
+}
+
+
+.titulo {
+
+    margin: 0;
+
+    color:
+        var(--crema);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 34px;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        2px 2px #24070d;
+
+}
+
+
+.subtitulo {
+
+    margin-top: 5px;
+
+    color:
+        #c9999f;
+
+    letter-spacing: 2px;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   NAVEGACIÓN SUPERIOR
+===================================================== */
+
+.menu {
+
+    padding: 6px;
+
+    text-align: center;
+
+    background:
+        #1c1416;
+
+    border-bottom:
+        1px solid #66313a;
+
+}
+
+
+.menu a {
+
+    display: inline-block;
+
+    margin: 0 12px;
+
+    padding: 4px 10px;
+
+    color:
+        var(--crema);
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-left:
+        1px solid transparent;
+
+    border-right:
+        1px solid transparent;
+
+}
+
+
+.menu a:hover {
+
+    color:
+        white;
+
+    background:
+        var(--vino);
+
+    border-color:
+        #9a4b59;
+
+}
+
+
+/* =====================================================
+   LAYOUT
+===================================================== */
+
+.layout {
+
+    display: grid;
+
+    grid-template-columns:
+        190px 1fr;
+
+    gap: 18px;
+
+    padding: 18px;
+
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+
+    background:
+        #1a1315;
+
+    border:
+        1px solid #6c303a;
+
+    align-self:
+        start;
+
+}
+
+
+.sidebar-title {
+
+    padding: 8px;
+
+    text-align: center;
+
+    color:
+        var(--crema);
+
+    background:
+        linear-gradient(
+            to right,
+            #641d2b,
+            #351016
+        );
+
+    border-bottom:
+        1px solid #8c4551;
+
+    font-weight: bold;
+
+}
+
+
+.sidebar-button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 12px 8px;
+
+    border: none;
+
+    border-bottom:
+        1px solid #3b2529;
+
+    color:
+        var(--crema);
+
+    background:
+        #21181a;
+
+    text-align: left;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.sidebar-button:hover {
+
+    color: white;
+
+    background:
+        var(--vino);
+
+}
+
+
+.sidebar-button.active {
+
+    color: white;
+
+    background:
+        #7c2636;
+
+    box-shadow:
+        inset 4px 0 #d9b9a4;
+
+}
+
+
+/* =====================================================
+   CONTENIDO PRINCIPAL
+===================================================== */
+
+.main {
+
+    min-width: 0;
+
+}
+
+
+/* =====================================================
+   VENTANAS
+===================================================== */
+
+.ventana {
+
+    margin-bottom: 18px;
+
+    border:
+        1px solid #70313c;
+
+    background:
+        #1d1719;
+
+    box-shadow:
+        3px 3px 0 #351016;
+
+}
+
+
+.barra {
+
+    padding: 7px 9px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color:
+        var(--crema);
+
+    background:
+        linear-gradient(
+            to right,
+            #641d2b,
+            #42131c
+        );
+
+    border-bottom:
+        1px solid #8a414e;
+
+    font-weight: bold;
+
+    text-shadow:
+        1px 1px #24070d;
+
+}
+
+
+.window-buttons {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.interior {
+
+    padding: 15px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    display: grid;
+
+    grid-template-columns:
+        220px 1fr;
+
+    gap: 18px;
+
+}
+
+
+.foto-principal {
+
+    min-height: 270px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid #7b3945;
+
+    background:
+        #100c0d;
+
+    color:
+        #947b7e;
+
+    text-align: center;
+
+    font-size: 11px;
+
+}
+
+
+.foto-principal img {
+
+    width: 100%;
+
+    height: 100%;
+
+    max-height: 320px;
+
+    object-fit: cover;
+
+}
+
+
+.intro h2 {
+
+    margin-top: 0;
+
+    color:
+        var(--crema);
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 25px;
+
+}
+
+
+.intro p {
+
+    color:
+        #c2afb0;
+
+    line-height:
+        1.8;
+
+}
+
+
+.frase {
+
+    margin-top: 15px;
+
+    padding: 10px;
+
+    color:
+        var(--crema);
+
+    background:
+        #34151b;
+
+    border-left:
+        4px solid #9b4b58;
+
+    font-style:
+        italic;
+
+}
+
+
+/* =====================================================
+   CAJAS DE TEXTO
+===================================================== */
+
+.texto {
+
+    color:
+        #c8b8b8;
+
+    line-height:
+        1.9;
+
+}
+
+
+.texto strong {
+
+    color:
+        var(--crema);
+
+}
+
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+.galeria {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.foto {
+
+    min-height: 180px;
+
+    border:
+        1px solid #71313c;
+
+    background:
+        #110e0f;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        #887477;
+
+    text-align: center;
+
+}
+
+
+.foto img {
+
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+}
+
+
+.caption {
+
+    padding: 6px;
+
+    color:
+        #c9b4b6;
+
+    background:
+        #281a1d;
+
+    text-align: center;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   ALBUMES
+===================================================== */
+
+.album-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+}
+
+
+.album {
+
+    padding: 8px;
+
+    border:
+        1px solid #74333e;
+
+    background:
+        #171214;
+
+}
+
+
+.album-cover {
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        #2a171b;
+
+    border:
+        1px solid #5f3038;
+
+    color:
+        #90797b;
+
+    text-align: center;
+
+}
+
+
+.album-cover img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.album-name {
+
+    margin-top: 8px;
+
+    color:
+        var(--crema);
+
+    font-weight: bold;
+
+    text-align: center;
+
+}
+
+
+.album-note {
+
+    margin-top: 5px;
+
+    color:
+        #998587;
+
+    text-align: center;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   LISTAS
+===================================================== */
+
+.lista {
+
+    margin: 0;
+
+    padding-left: 20px;
+
+}
+
+
+.lista li {
+
+    margin-bottom: 8px;
+
+    color:
+        #c3b2b3;
+
+}
+
+
+.lista li::marker {
+
+    color:
+        #a14b5a;
+
+}
+
+
+/* =====================================================
+   ESTADÍSTICAS / DATOS
+===================================================== */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.stat {
+
+    padding: 12px;
+
+    text-align: center;
+
+    border:
+        1px solid #66303a;
+
+    background:
+        #241619;
+
+}
+
+
+.stat-number {
+
+    display: block;
+
+    color:
+        var(--crema);
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+.stat-label {
+
+    color:
+        #967d80;
+
+    font-size: 9px;
+
+}
+
+
+/* =====================================================
+   PANEL DE OPINIÓN
+===================================================== */
+
+.opinion {
+
+    min-height: 180px;
+
+    padding: 14px;
+
+    background:
+        #25171a;
+
+    border:
+        1px dashed #82404b;
+
+}
+
+
+.opinion textarea {
+
+    width: 100%;
+
+    min-height: 150px;
+
+    padding: 10px;
+
+    resize: vertical;
+
+    outline: none;
+
+    border:
+        1px solid #69313b;
+
+    color:
+        #d9c9ca;
+
+    background:
+        #130f10;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+}
+
+
+.opinion textarea:focus {
+
+    border-color:
+        #a85b69;
+
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.boton {
+
+    padding:
+        6px 12px;
+
+    border:
+        1px solid #7d3a46;
+
+    color:
+        var(--crema);
+
+    background:
+        linear-gradient(
+            to bottom,
+            #7d2a3a,
+            #45131d
+        );
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+.boton:hover {
+
+    background:
+        #8d3447;
+
+}
+
+
+/* =====================================================
+   MARCO DESTACADO
+===================================================== */
+
+.marco-destacado {
+
+    padding: 15px;
+
+    border:
+        1px solid #8c4a56;
+
+    background:
+        linear-gradient(
+            135deg,
+            #32151a,
+            #1a1214
+        );
+
+}
+
+
+.marco-destacado h3 {
+
+    margin-top: 0;
+
+    color:
+        var(--crema);
+
+    font-family:
+        Georgia,
+        serif;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 15px;
+
+    text-align: center;
+
+    color:
+        #927c7f;
+
+    background:
+        #150f11;
+
+    border-top:
+        1px solid #5e2b34;
+
+    font-size: 10px;
+
+}
+
+
+footer a {
+
+    color:
+        #c18a94;
+
+}
+
+.editor-panel {
+    margin: 0 18px 18px;
+    padding: 8px 10px;
+    color: var(--crema);
+    background: #34151b;
+    border: 1px solid #82404b;
+    text-align: center;
+}
+
+.editor-button,
+.editor-delete {
+    padding: 5px 9px;
+    border: 1px solid #7d3a46;
+    color: var(--crema);
+    background: #7d2a3a;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.editor-delete {
+    display: none;
+    margin-top: 5px;
+    background: #45131d;
+}
+
+.editando [contenteditable="true"] {
+    outline: 1px dashed #c18a94;
+    background: #34151b;
+}
+
+.editando .editor-delete {
+    display: inline-block;
+}
+
+.editor-actions {
+    display: none;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.editando .editor-actions {
+    display: block;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .hero {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .sidebar {
+
+        order: 2;
+
+    }
+
+    .main {
+
+        order: 1;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .galeria,
+    .album-grid,
+    .stats {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .titulo {
+
+        font-size: 24px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="pagina">
+
+
+<!-- =================================================
+     HEADER
+================================================== -->
+
+<header>
+
+
+    <div class="logo">
+
+
+        <div class="rosa-logo">
+
+            🥀
+
+        </div>
+
+
+        <div>
+
+            <h1 class="titulo">
+
+                ELADIO CARRION
+
+            </h1>
+
+
+            <div class="subtitulo">
+
+                SAUCE BOY · 2000s STYLE
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div>
+
+        ★
+
+    </div>
+
+
+</header>
+
+<div class="editor-panel">
+    <button class="editor-button" id="toggleEditor" type="button">✎ Editar página</button>
+    <span id="editorStatus">Activa la edición para cambiar tu contenido.</span>
+</div>
+
+
+
+<!-- =================================================
+     MENU
+================================================== -->
+
+<nav class="menu">
+
+    <a href="index.html">
+        HOME
+    </a>
+
+    <a href="aboutme.html">
+        ABOUT ME
+    </a>
+
+    <a href="blog.html">
+        BLOG
+    </a>
+
+    <a href="hobbies.html">
+        HOBBIES
+    </a>
+
+    <a href="music.html">
+        MUSIC
+    </a>
+
+    <a href="agenda-login.html">
+        AGENDA
+    </a>
+
+    <a href="galery.html">
+        GALERY
+    </a>
+
+    <a href="dreams.html">
+        DREAMS
+    </a>
+
+    <a href="life.html">
+        LIFE
+    </a>
+
+    <a href="writiti.html">
+        WRITITI
+    </a>
+
+</nav>
+
+
+
+<!-- =================================================
+     LAYOUT
+================================================== -->
+
+<div class="layout">
+
+
+
+<!-- =================================================
+     SIDEBAR
+================================================== -->
+
+<aside class="sidebar">
+
+
+    <div class="sidebar-title">
+
+        ♠ ELADIO ♠
+
+    </div>
+
+
+    <button
+        class="sidebar-button active"
+        onclick="mostrarSeccion('inicio', this)"
+    >
+
+        ♡ HOME
+
+    </button>
+
+
+    <button
+        class="sidebar-button"
+        onclick="mostrarSeccion('albums', this)"
+    >
+
+        ♪ ALBUMS
+
+    </button>
+
+
+    <button
+        class="sidebar-button"
+        onclick="mostrarSeccion('playlist', this)"
+    >
+
+        ♫ PLAYLIST
+
+    </button>
+
+
+    <button
+        class="sidebar-button"
+        onclick="mostrarSeccion('songs', this)"
+    >
+
+        ♪ SONGS
+
+    </button>
+
+
+    <button
+        class="sidebar-button"
+        onclick="mostrarSeccion('galeria', this)"
+    >
+
+        ▣ GALLERY
+
+    </button>
+
+
+    <div
+        style="
+            padding:12px;
+            text-align:center;
+            color:#856e72;
+            font-size:10px;
+            line-height:1.7;
+        "
+    >
+
+        ♡
+
+        <br>
+
+        
+
+        <br>
+
+        3MEN2
+
+        <br>
+
+        KBRN♕
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =================================================
+     MAIN
+================================================== -->
+
+<main class="main">
+
+
+
+<!-- =================================================
+     INICIO
+================================================== -->
+
+<section
+    id="inicio"
+    class="seccion"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        🥀 BIENVENIDO A MI RINCÓN DE ELADIO
+
+        <span class="window-buttons">
+
+            − □ ×
+
+        </span>
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="hero">
+
+
+            <!-- FOTO -->
+
+            <div class="foto-principal">
+
+                <!--
+
+                PARA PONER TU FOTO:
+
+                mete una imagen en la carpeta
+                y cambia este bloque por:
+
+                <img src="eladio1.jpg">
+
+                -->
+
+                <div>
+
+                    📷
+
+                    <br><br>
+
+                    YOUR PHOTO HERE
+
+                    <br>
+
+                    <small>
+                        eladio1.jpg
+                    </small>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TEXTO -->
+
+            <div class="intro" data-edit-key="home-intro">
+
+
+                <h2>
+
+                    ELADIO CARRION ♠
+
+                </h2>
+
+
+                <p>
+
+                    Aquí empieza mi pequeño rincón
+                    dedicado a Eladio Carrion.
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        ¿Cómo lo conocí?
+                    </strong>
+
+                    <br><br>
+
+                    AQUÍ PUEDES ESCRIBIR TU HISTORIA.
+
+                    Cuenta cuándo escuchaste su música
+                    por primera vez, qué canción fue,
+                    qué estabas haciendo, cómo descubriste
+                    sus álbumes y qué fue lo que hizo
+                    que siguieras escuchándolo.
+
+                </p>
+
+
+                <div class="frase">
+
+                    ✧ ESCRIBE AQUÍ UNA FRASE
+                    O UN PENSAMIENTO TUYO ✧
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     MI EXPERIENCIA
+================================================== -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ♠ MY EXPERIENCE
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="texto" data-edit-key="home-experience">
+
+
+            <p>
+
+                <strong>
+                    Mi experiencia con su música:
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                Escribe aquí todo lo que quieras
+                contar sobre tu experiencia.
+
+                Puedes hablar de conciertos,
+                canciones que te recuerden a momentos
+                concretos, cuándo empezaste a escucharle,
+                cómo ha cambiado tu opinión con el tiempo,
+                etc.
+
+            </p>
+
+
+            <p>
+
+                También puedes escribir aquí
+                tus opiniones personales sobre
+                diferentes etapas de su música.
+
+            </p>
+
+
+            <p>
+
+                ✧ ESTE ESPACIO ES TUYO ✧
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     FOTOS
+================================================== -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ▣ LITTLE PHOTO WALL
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="galeria">
+
+
+            <div>
+
+
+                <div class="foto">
+
+                    <div>
+
+                        📷
+
+                        <br><br>
+
+                        PHOTO 01
+
+                    </div>
+
+                </div>
+
+
+                <div class="caption">
+
+                    write a caption ♡
+
+                </div>
+
+
+            </div>
+
+
+
+            <div>
+
+
+                <div class="foto">
+
+                    <div>
+
+                        📷
+
+                        <br><br>
+
+                        PHOTO 02
+
+                    </div>
+
+                </div>
+
+
+                <div class="caption">
+
+                    write a caption ♡
+
+                </div>
+
+
+            </div>
+
+
+
+            <div>
+
+
+                <div class="foto">
+
+                    <div>
+
+                        📷
+
+                        <br><br>
+
+                        PHOTO 03
+
+                    </div>
+
+                </div>
+
+
+                <div class="caption">
+
+                    write a caption ♡
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     DATOS
+================================================== -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ✦ MY ELADIO STATS
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="stats">
+
+
+            <div class="stat">
+
+                <span class="stat-number" id="yearsListening">
+
+                    05
+
+                </span>
+
+                <span class="stat-label">
+
+                    YEARS LISTENING
+
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span class="stat-number">
+
+                    00
+
+                </span>
+
+                <span class="stat-label">
+
+                    FAV SONGS
+
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span class="stat-number">
+
+                    00
+
+                </span>
+
+                <span class="stat-label">
+
+                    FAV ERA
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     ALBUMS
+================================================== -->
+
+<section
+    id="albums"
+    class="seccion"
+    style="display:none;"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ♪ ALBUM COLLECTION
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <p class="texto">
+
+            Aquí puedes poner los álbumes que
+            más te gustan y escribir tus opiniones
+            personales sobre cada uno.
+
+        </p>
+
+
+        <div class="album-grid" id="albumGrid">
+
+
+            <div class="album">
+
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 01
+
+                </div>
+
+
+                <div class="album-name">
+
+                    ALBUM NAME
+
+                </div>
+
+
+                <div class="album-note">
+
+                    My thoughts about this album...
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="album">
+
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 02
+
+                </div>
+
+
+                <div class="album-name">
+
+                    ALBUM NAME
+
+                </div>
+
+
+                <div class="album-note">
+
+                    My thoughts about this album...
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="album">
+
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 03
+
+                </div>
+
+
+                <div class="album-name">
+
+                    ALBUM NAME
+
+                </div>
+
+
+                <div class="album-note">
+
+                    My thoughts about this album...
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="album">
+
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 04
+
+                </div>
+
+
+                <div class="album-name">
+
+                    ALBUM NAME
+
+                </div>
+
+
+                <div class="album-note">
+
+                    My thoughts about this album...
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="album">
+
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 05
+
+                </div>
+
+
+                <div class="album-name">
+
+                    ALBUM NAME
+
+                </div>
+
+
+                <div class="album-note">
+
+                    My thoughts about this album...
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="album">
+
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 06
+
+                </div>
+
+
+                <div class="album-name">
+
+                    ALBUM NAME
+
+                </div>
+
+
+                <div class="album-note">
+
+                    My thoughts about this album...
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="editor-actions">
+    <button class="editor-button" id="addAlbum" type="button">+ Añadir álbum</button>
+</div>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        📝 MY ALBUM NOTES
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="opinion">
+
+
+            <textarea
+                placeholder="Write here what you think about his albums, your favorites, the eras you like most, etc..."
+            ></textarea>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     PLAYLIST
+================================================== -->
+
+<section
+    id="playlist"
+    class="seccion"
+    style="display:none;"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ♫ MY PLAYLIST
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <p class="texto">
+
+            Mi playlist personal de Eladio.
+            Puedes organizarla como quieras.
+
+        </p>
+
+
+        <div class="marco-destacado">
+
+
+            <h3>
+
+                ♫ CURRENT ROTATION
+
+            </h3>
+
+
+            <ol class="lista" id="playlistList">
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+            </ol>
+
+            <div class="editor-actions">
+                <button class="editor-button" id="addPlaylistSong" type="button">+ Añadir canción</button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        💭 WHY THESE SONGS?
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="opinion">
+
+
+            <textarea
+                placeholder="Tell your story behind this playlist..."
+            ></textarea>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     SONGS
+================================================== -->
+
+<section
+    id="songs"
+    class="seccion"
+    style="display:none;"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ♪ MY FAVORITE SONGS
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="marco-destacado">
+
+
+            <h3>
+
+                ♠ TOP SONGS
+
+            </h3>
+
+
+            <ol class="lista" id="songsList">
+
+
+                <li>
+                    SONG #01 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #02 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #03 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #04 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #05 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #06 — why I love it...
+                </li>
+
+
+            </ol>
+
+            <div class="editor-actions">
+                <button class="editor-button" id="addFavoriteSong" type="button">+ Añadir canción</button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        📝 SONG MEMORIES
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="opinion">
+
+
+            <textarea
+                placeholder="Write about songs that remind you of specific moments..."
+            ></textarea>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     GALERÍA
+================================================== -->
+
+<section
+    id="galeria"
+    class="seccion"
+    style="display:none;"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ▣ PHOTO ARCHIVE
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="galeria">
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+</main>
+
+
+</div>
+
+
+
+<!-- =================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    🥀 ELADIO CORNER · made with love & too much music ♠
+
+    <br><br>
+
+    <a href="index.html">
+        ← BACK TO HOME
+    </a>
+
+</footer>
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="access.js"></script>
+<script src="loading.js"></script>
+<script>
+
+/* Fecha desde la que escuchas a Eladio */
+const fechaInicioEscucha = new Date(2021, 7, 25);
+const hoy = new Date();
+let añosEscuchando = hoy.getFullYear() - fechaInicioEscucha.getFullYear();
+
+if (
+    hoy.getMonth() < fechaInicioEscucha.getMonth() ||
+    (hoy.getMonth() === fechaInicioEscucha.getMonth() && hoy.getDate() < fechaInicioEscucha.getDate())
+) {
+    añosEscuchando--;
+}
+
+document.getElementById("yearsListening").textContent =
+    String(Math.max(0, añosEscuchando)).padStart(2, "0");
+
+/* =====================================================
+   CAMBIO DE SECCIONES
+===================================================== */
+
+function mostrarSeccion(
+    nombre,
+    boton
+) {
+
+
+    /*
+       Ocultar todas las secciones
+    */
+
+    const secciones =
+        document.querySelectorAll(
+            ".seccion"
+        );
+
+
+    secciones.forEach(
+        function(seccion) {
+
+            seccion.style.display =
+                "none";
+
+        }
+    );
+
+
+
+    /*
+       Mostrar la sección elegida
+    */
+
+    document.getElementById(
+        nombre
+    ).style.display =
+        "block";
+
+
+
+    /*
+       Quitar active de todos
+    */
+
+    const botones =
+        document.querySelectorAll(
+            ".sidebar-button"
+        );
+
+
+    botones.forEach(
+        function(b) {
+
+            b.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+
+
+    /*
+       Activar el botón pulsado
+    */
+
+    boton.classList.add(
+        "active"
+    );
+
+
+    /*
+       Volver arriba
+    */
+
+    window.scrollTo(
+        {
+            top: 0,
+            behavior: "smooth"
+        }
+    );
+
+}
+
+
+/* =====================================================
+   EDITOR PERSONAL
+===================================================== */
+
+const editorButton = document.getElementById("toggleEditor");
+const editorStatus = document.getElementById("editorStatus");
+const albumGrid = document.getElementById("albumGrid");
+const playlistList = document.getElementById("playlistList");
+const songsList = document.getElementById("songsList");
+let editando = false;
+
+function guardarEditor() {
+    if (!window.siteAccess.requireOwner()) return;
+    document.querySelectorAll("[data-edit-key]").forEach(elemento => {
+        localStorage.setItem("eladio_" + elemento.dataset.editKey, elemento.innerHTML);
+    });
+    document.querySelectorAll(".opinion textarea").forEach((textarea, indice) => {
+        localStorage.setItem("eladio_textarea_" + indice, textarea.value);
+    });
+    localStorage.setItem("eladio_albumGrid", albumGrid.innerHTML);
+    localStorage.setItem("eladio_playlistList", playlistList.innerHTML);
+    localStorage.setItem("eladio_songsList", songsList.innerHTML);
+}
+
+function prepararAlbum(album) {
+    album.querySelectorAll(".album-cover, .album-name, .album-note").forEach(elemento => {
+        elemento.contentEditable = window.siteAccess.isOwner() ? "true" : "false";
+    });
+    if (!album.querySelector(".editor-delete")) {
+        const button = document.createElement("button");
+        button.className = "editor-delete";
+        button.type = "button";
+        button.textContent = "Eliminar álbum";
+        album.appendChild(button);
+    }
+}
+
+function prepararLista(lista) {
+    lista.querySelectorAll("li").forEach(item => {
+        item.contentEditable = window.siteAccess.isOwner() ? "true" : "false";
+        if (!item.querySelector(".editor-delete")) {
+            const button = document.createElement("button");
+            button.className = "editor-delete";
+            button.type = "button";
+            button.textContent = "Eliminar";
+            item.appendChild(button);
+        }
+    });
+}
+
+function cargarEditor() {
+    document.querySelectorAll("[data-edit-key]").forEach(elemento => {
+        const contenido = localStorage.getItem("eladio_" + elemento.dataset.editKey);
+        if (contenido !== null) elemento.innerHTML = contenido;
+    });
+    const albumGuardado = localStorage.getItem("eladio_albumGrid");
+    const playlistGuardada = localStorage.getItem("eladio_playlistList");
+    const songsGuardadas = localStorage.getItem("eladio_songsList");
+    if (albumGuardado) albumGrid.innerHTML = albumGuardado;
+    if (playlistGuardada) playlistList.innerHTML = playlistGuardada;
+    if (songsGuardadas) songsList.innerHTML = songsGuardadas;
+    albumGrid.querySelectorAll(".album").forEach(prepararAlbum);
+    prepararLista(playlistList);
+    prepararLista(songsList);
+    document.querySelectorAll(".opinion textarea").forEach((textarea, indice) => {
+        const contenido = localStorage.getItem("eladio_textarea_" + indice);
+        if (contenido !== null) textarea.value = contenido;
+    });
+}
+
+editorButton.addEventListener("click", () => {
+    if (!window.siteAccess.requireOwner()) return;
+    editando = !editando;
+    document.body.classList.toggle("editando", editando);
+    document.querySelectorAll("[data-edit-key], .opinion textarea, .album-cover, .album-name, .album-note, .lista li").forEach(elemento => {
+        if (elemento.matches("textarea")) elemento.disabled = !editando;
+        else elemento.contentEditable = editando ? "true" : "false";
+    });
+    editorButton.textContent = editando ? "✓ Terminar edición" : "✎ Editar página";
+    editorStatus.textContent = editando ? "Escribe, agrega o elimina contenido y se guardará automáticamente." : "Cambios guardados en este navegador.";
+});
+
+document.addEventListener("input", event => {
+    if (editando && window.siteAccess.isOwner() && (event.target.matches("[contenteditable='true']") || event.target.matches("textarea"))) guardarEditor();
+});
+
+document.addEventListener("click", event => {
+    if (event.target.matches(".editor-delete")) {
+        if (!window.siteAccess.requireOwner()) return;
+        event.target.closest(".album, li").remove();
+        guardarEditor();
+    }
+});
+
+document.getElementById("addAlbum").addEventListener("click", () => {
+    if (!window.siteAccess.requireOwner()) return;
+    const album = document.createElement("div");
+    album.className = "album";
+    album.innerHTML = '<div class="album-cover">📀<br>COVER</div><div class="album-name">ALBUM NAME</div><div class="album-note">My thoughts...</div>';
+    albumGrid.appendChild(album);
+    prepararAlbum(album);
+    guardarEditor();
+});
+
+function agregarCancion(lista) {
+    if (!window.siteAccess.requireOwner()) return;
+    const item = document.createElement("li");
+    item.textContent = "SONG NAME";
+    lista.appendChild(item);
+    prepararLista(lista);
+    guardarEditor();
+}
+
+document.getElementById("addPlaylistSong").addEventListener("click", () => agregarCancion(playlistList));
+document.getElementById("addFavoriteSong").addEventListener("click", () => agregarCancion(songsList));
+cargarEditor();
+
+</script>
+
+
+</body>
+
+</html>

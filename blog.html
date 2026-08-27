@@ -1,0 +1,2192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>html, body, body * { cursor: url("images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog · Hallooᯓ★</title>
+
+    <link rel="icon" type="image/png" href="icon.png">
+
+
+    <style>
+
+        /* =========================================
+           COLORES
+           ========================================= */
+
+        :root {
+
+            --rosa: #f49ac2;
+            --rosa-claro: #ffd6e8;
+            --rosa-suave: #fff0f6;
+
+            --amarillo: #f7df91;
+            --amarillo-claro: #fff4bd;
+            --amarillo-suave: #fffbea;
+
+            --texto: #765966;
+            --rosa-texto: #d45d8c;
+
+            --borde: #edb0c9;
+
+            --blanco: #ffffff;
+
+        }
+
+
+        /* =========================================
+           GENERAL
+           ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            padding: 25px 0;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 12px;
+
+            color: var(--texto);
+
+            background-color: #fff8df;
+
+            background-image:
+                radial-gradient(
+                    #eadfbd 1px,
+                    transparent 1px
+                );
+
+            background-size: 8px 8px;
+
+        }
+
+
+        /* =========================================
+           PÁGINA
+           ========================================= */
+
+        .pagina {
+
+            width: 900px;
+
+            max-width: 94%;
+
+            margin: auto;
+
+            background: white;
+
+            border-left: 1px solid var(--borde);
+
+            border-right: 1px solid var(--borde);
+
+            box-shadow:
+                0 0 15px rgba(230, 160, 185, 0.35);
+
+        }
+
+
+        /* =========================================
+           BARRA SUPERIOR
+           ========================================= */
+
+        .topbar {
+
+            height: 42px;
+
+            padding: 6px 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #ffb9d8,
+                    #ee82b4
+                );
+
+            border-bottom: 2px solid #ffe5ef;
+
+            text-shadow:
+                1px 1px #b75a82;
+
+        }
+
+
+        .logo {
+
+            font-size: 19px;
+
+            font-weight: bold;
+
+        }
+
+
+        .logo span {
+
+            color: #fff6c9;
+
+        }
+
+
+        .top-right {
+
+            font-size: 11px;
+
+        }
+
+
+        /* =========================================
+           MENÚ
+           ========================================= */
+
+        .menu {
+
+            padding: 5px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #fff1ad,
+                    #f8d982
+                );
+
+            border-bottom: 1px solid #dfc16b;
+
+        }
+
+
+        .menu a {
+
+            color: #8a6070;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            padding: 2px 10px;
+
+            border-right: 1px solid #e6c977;
+
+        }
+
+
+        .menu a:last-child {
+
+            border-right: none;
+
+        }
+
+
+        .menu a:hover {
+
+            color: #d65d8c;
+
+            text-decoration: underline;
+
+        }
+
+
+        /* =========================================
+           CONTENIDO
+           ========================================= */
+
+        .contenido {
+
+            display: grid;
+
+            grid-template-columns: 200px 1fr;
+
+            gap: 15px;
+
+            padding: 15px;
+
+        }
+
+
+        /* =========================================
+           CAJAS
+           ========================================= */
+
+        .caja {
+
+            border: 1px solid var(--borde);
+
+            margin-bottom: 15px;
+
+            background: white;
+
+        }
+
+
+        .titulo-caja {
+
+            padding: 4px 8px;
+
+            color: #805066;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    to right,
+                    var(--rosa-claro),
+                    var(--amarillo-claro),
+                    var(--rosa-claro)
+                );
+
+            border-bottom: 1px solid #e9b1c8;
+
+            text-shadow:
+                1px 1px white;
+
+        }
+
+
+        .contenido-caja {
+
+            padding: 10px;
+
+        }
+
+
+        /* =========================================
+           TÍTULO DEL BLOG
+           ========================================= */
+
+        .titulo-blog {
+
+            margin: 0;
+
+            color: #d45d8c;
+
+            font-size: 27px;
+
+            text-shadow:
+                1px 1px #ffeab0;
+
+        }
+
+
+        .subtitulo-blog {
+
+            margin-top: 3px;
+
+            margin-bottom: 15px;
+
+            color: #b28b3f;
+
+            font-style: italic;
+
+        }
+
+
+        /* =========================================
+           SIDEBAR
+           ========================================= */
+
+        .sidebar-lista {
+
+            list-style: none;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+
+        .sidebar-lista li {
+
+            margin-bottom: 4px;
+
+        }
+
+
+        .sidebar-lista a {
+
+            display: block;
+
+            padding: 5px 7px;
+
+            color: #9a5874;
+
+            text-decoration: none;
+
+            background: #fffbea;
+
+            border-bottom: 1px dotted #e5c6d0;
+
+        }
+
+
+        .sidebar-lista a:hover {
+
+            background: var(--rosa-claro);
+
+            color: #d45d8c;
+
+        }
+
+
+        /* =========================================
+           MINI CALENDARIO
+           ========================================= */
+
+        .calendario {
+
+            text-align: center;
+
+        }
+
+
+        .mes {
+
+            color: #d45d8c;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+
+        }
+
+        .calendar-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .calendar-nav .mes {
+            flex: 1;
+            margin: 0;
+        }
+
+        .calendar-button {
+            min-width: 25px;
+            padding: 3px 7px;
+            border: 1px solid #d9b85d;
+            color: #87556a;
+            background: #fff2b8;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .calendar-button:hover {
+            color: white;
+            background: #f39cc2;
+        }
+
+
+        .dias {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(7, 1fr);
+
+            gap: 2px;
+
+            font-size: 10px;
+
+        }
+
+
+        .dia {
+
+            padding: 4px 1px;
+
+            background: #fffbea;
+
+        }
+
+
+        .dia.especial {
+
+            color: white;
+
+            background: var(--rosa);
+
+            font-weight: bold;
+
+        }
+
+
+        /* =========================================
+           BLINKIES
+           ========================================= */
+
+        .blinkies {
+
+            text-align: center;
+
+        }
+
+
+        .blinkie {
+
+            display: inline-block;
+
+            padding: 4px 7px;
+
+            margin: 2px;
+
+            color: white;
+
+            font-size: 9px;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    to right,
+                    #ee8eb8,
+                    #f5d87e,
+                    #ee8eb8
+                );
+
+            border: 1px solid #dc8aaa;
+
+            box-shadow:
+                inset 0 1px rgba(255,255,255,0.8);
+
+        }
+
+
+        /* =========================================
+           ENTRADAS
+           ========================================= */
+
+        .entrada {
+
+            border: 1px solid #edb0c9;
+
+            margin-bottom: 22px;
+
+            background: white;
+
+        }
+
+
+        .entrada-cabecera {
+
+            padding: 8px 10px;
+
+            background:
+                linear-gradient(
+                    to right,
+                    #ffd6e8,
+                    #fff4bd
+                );
+
+            border-bottom: 1px solid #e7b3c7;
+
+        }
+
+
+        .entrada-titulo {
+
+            margin: 0;
+
+            color: #d45d8c;
+
+            font-size: 21px;
+
+            text-shadow:
+                1px 1px white;
+
+        }
+
+
+        .entrada-fecha {
+
+            margin-top: 4px;
+
+            color: #a77b8b;
+
+            font-size: 10px;
+
+        }
+
+
+        .entrada-contenido {
+
+            padding: 13px;
+
+        }
+
+
+        .entrada-contenido p {
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================================
+           METADATOS
+           ========================================= */
+
+        .metadata {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 5px;
+
+            margin-bottom: 12px;
+
+        }
+
+
+        .meta {
+
+            padding: 3px 7px;
+
+            color: #8b526c;
+
+            background: var(--amarillo-claro);
+
+            border: 1px solid #e3cc80;
+
+            font-size: 10px;
+
+        }
+
+
+        /* =========================================
+           FOTOS DE LAS ENTRADAS
+           ========================================= */
+
+        .foto-blog {
+
+            margin: 15px auto;
+
+            max-width: 90%;
+
+            padding: 5px;
+
+            background: white;
+
+            border: 1px solid #e4a9c0;
+
+            box-shadow:
+                3px 3px 0 #ead77d;
+
+        }
+
+
+        .foto-blog img {
+
+            display: block;
+
+            width: 100%;
+
+            max-height: 400px;
+
+            object-fit: cover;
+
+        }
+
+
+        .foto-placeholder {
+
+            height: 220px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: #c87596;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff4bd,
+                    #ffd6e8
+                );
+
+            font-size: 18px;
+
+        }
+
+
+        .caption {
+
+            padding: 5px;
+
+            text-align: center;
+
+            color: #a27c8b;
+
+            font-size: 10px;
+
+            font-style: italic;
+
+        }
+
+
+        /* =========================================
+           FRASES DESTACADAS
+           ========================================= */
+
+        .quote {
+
+            margin: 18px 10px;
+
+            padding: 12px 15px;
+
+            color: #8a5268;
+
+            font-size: 14px;
+
+            font-style: italic;
+
+            text-align: center;
+
+            background: var(--amarillo-suave);
+
+            border-top: 1px dashed #e4c66e;
+
+            border-bottom: 1px dashed #e4c66e;
+
+        }
+
+
+        /* =========================================
+           SEPARADOR
+           ========================================= */
+
+        .separador {
+
+            text-align: center;
+
+            margin: 12px 0;
+
+            color: #d99b5b;
+
+            font-size: 16px;
+
+            letter-spacing: 4px;
+
+        }
+
+
+        /* =========================================
+           BOTÓN LEER MÁS
+           ========================================= */
+
+        .boton {
+
+            display: inline-block;
+
+            padding: 5px 12px;
+
+            color: #87556a;
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #fff2b8,
+                    #f9d77d
+                );
+
+            border: 1px solid #d9b85d;
+
+            box-shadow:
+                inset 0 1px white,
+                1px 1px 1px #ddd;
+
+        }
+
+
+        .boton:hover {
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #ffd7e8,
+                    #f39cc2
+                );
+
+        }
+
+
+        /* =========================================
+           TEXTO DESTACADO
+           ========================================= */
+
+        .rosa {
+
+            color: #d45d8c;
+
+            font-weight: bold;
+
+        }
+
+
+        .amarillo {
+
+            color: #b28b3f;
+
+            font-weight: bold;
+
+        }
+
+
+        .blog-interactivo {
+            margin: 18px 0 24px;
+        }
+
+        .admin-panel,
+        .blog-feed {
+            border: 1px solid var(--borde);
+            background: #fffbea;
+            padding: 12px;
+            margin-bottom: 15px;
+        }
+
+        .admin-panel h2,
+        .blog-feed h2 {
+            margin: 0 0 8px;
+            color: var(--rosa-texto);
+            font-size: 17px;
+        }
+
+        .blog-field {
+            width: 100%;
+            padding: 7px;
+            margin: 4px 0;
+            border: 1px solid #dfbd68;
+            color: var(--texto);
+            background: white;
+            font: inherit;
+        }
+
+        .blog-field[type="file"] {
+            padding: 5px;
+        }
+
+        .blog-filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-bottom: 10px;
+        }
+
+        .blog-filter-row .blog-field {
+            flex: 1 1 180px;
+            width: auto;
+            margin: 0;
+        }
+
+        .category-button.active {
+            color: white;
+            background: #ee82b4;
+        }
+
+        .event-item {
+            padding: 5px 0;
+            border-top: 1px dotted #e4bfd0;
+            font-size: 11px;
+        }
+
+        .event-item strong {
+            color: var(--rosa-texto);
+        }
+
+        .calendar-today {
+            outline: 2px solid var(--rosa-texto);
+        }
+
+        .calendar-important {
+            color: white;
+            background: var(--rosa);
+            font-weight: bold;
+        }
+
+        .blog-action {
+            padding: 6px 11px;
+            border: 1px solid #d9b85d;
+            color: #87556a;
+            background: #fff2b8;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .blog-action:hover {
+            color: white;
+            background: #f39cc2;
+        }
+
+        .admin-status,
+        .blog-status {
+            margin: 7px 0 0;
+            color: #a15d78;
+            font-size: 11px;
+        }
+
+        .blog-post {
+            padding: 10px;
+            margin-top: 12px;
+            border: 1px solid #edb0c9;
+            background: white;
+        }
+
+        .blog-post h3 {
+            margin: 0 0 4px;
+            color: var(--rosa-texto);
+            font-size: 17px;
+        }
+
+        .blog-post-date {
+            color: #a77b8b;
+            font-size: 10px;
+        }
+
+        .blog-post-image {
+            display: block;
+            width: 100%;
+            max-height: 420px;
+            margin: 10px 0;
+            object-fit: contain;
+            background: #fffbea;
+        }
+
+        .blog-text-only {
+            padding: 16px;
+            margin: 10px 0;
+            color: #a15d78;
+            text-align: center;
+            background: #fff4bd;
+            border: 1px dashed #dfbd68;
+        }
+
+        .blog-post-description {
+            margin: 8px 0;
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+
+        .blog-post-actions {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .delete-button {
+            color: #9b405f;
+            background: #ffd6e8;
+            border-color: #d98bab;
+        }
+
+        .comment-list {
+            margin-top: 8px;
+        }
+
+        .comment-item {
+            padding: 5px 0;
+            border-top: 1px dotted #e4bfd0;
+            font-size: 11px;
+        }
+
+        .comment-item strong {
+            color: var(--rosa-texto);
+        }
+
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+
+        footer {
+
+            padding: 13px;
+
+            text-align: center;
+
+            color: #a9808f;
+
+            background: var(--rosa-suave);
+
+            border-top: 1px solid #edb4ca;
+
+            font-size: 10px;
+
+        }
+
+
+        /* =========================================
+           MÓVIL
+           ========================================= */
+
+        @media (max-width: 700px) {
+
+            .contenido {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .top-right {
+
+                display: none;
+
+            }
+
+
+            .menu a {
+
+                display: inline-block;
+
+                padding: 4px 5px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="pagina">
+
+
+    <!-- =====================================
+         CABECERA
+         ===================================== -->
+
+    <header class="topbar">
+
+        <div class="logo">
+
+            RIZOS<span>ᯓ★</span>
+
+        </div>
+
+
+        <div class="top-right">
+
+            ✧ internet diary ✧
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         MENÚ
+         ===================================== -->
+
+    <nav class="menu">
+
+        <a href="index.html">🏠 Home</a>
+
+        <a href="aboutme.htlm.html">♡ About Me</a>
+
+        <a href="blog.html">✎ Blog</a>
+
+        <a href="hobbies.html">☆ Hobbies</a>
+
+        <a href="music.html">♫ Music</a>
+
+        <a href="agenda-login.html">⭐ Agenda</a>
+
+        <a href="galery.html">📸 Galery</a>
+
+        <a href="dreams.html">✧ Dreams</a>
+
+        <a href="life.html">❀ Life</a>
+
+        <a href="writiti.html"> ✎ Writiti</a>
+    
+
+    </nav>
+
+
+
+    <!-- =====================================
+         CONTENIDO
+         ===================================== -->
+
+    <main class="contenido">
+
+
+        <!-- =================================
+             SIDEBAR
+             ================================= -->
+
+        <aside>
+
+
+            <!-- BLOG MENU -->
+
+            <section class="caja">
+
+                <div class="titulo-caja">
+
+                    ✎ Blog Menu
+
+                </div>
+
+
+                <div class="contenido-caja">
+
+                    <ul class="sidebar-lista">
+
+                        <li>
+                            <a href="#ultima">
+                                ★ Última entrada
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#historias">
+                                ♡ Historias
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#fotos">
+                                📷 Fotos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#opiniones">
+                                ✧ Opiniones
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#random">
+                                ☀ Random
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ARCHIVO -->
+
+            <section class="caja">
+
+                <div class="titulo-caja">
+
+                    ♡ Blog Archive
+
+                </div>
+
+
+                <div class="contenido-caja">
+
+                    <ul class="sidebar-lista">
+
+                        <li>
+                            <a href="#">
+                                August 2026
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                July 2026
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                June 2026
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                May 2026
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- CALENDARIO -->
+
+            <section class="caja">
+
+                <div class="titulo-caja">
+
+                    ★ Calendario
+
+                </div>
+
+
+                <div class="contenido-caja calendario">
+
+                    <div class="calendar-nav">
+                        <button class="calendar-button" id="previousMonth" type="button" aria-label="Mes anterior">←</button>
+                        <div class="mes" id="calendarMonth"></div>
+                        <button class="calendar-button" id="nextMonth" type="button" aria-label="Mes siguiente">→</button>
+                    </div>
+                    <div class="dias" id="calendarDays"></div>
+                    <div class="event-list" id="eventList"></div>
+                    <div id="eventAdmin" hidden>
+                        <input class="blog-field" id="eventDate" type="date">
+                        <input class="blog-field" id="eventTitle" type="text" placeholder="Nombre de la fecha importante">
+                        <button class="blog-action" id="addEvent" type="button">Añadir fecha</button>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- MOOD -->
+
+            <section class="caja">
+
+                <div class="titulo-caja">
+
+                    ♡ Current Mood
+
+                </div>
+
+
+                <div class="contenido-caja">
+
+                    <p>
+
+                        ☀ Mood:
+
+                        <strong>
+                            inspirado
+                        </strong>
+
+                    </p>
+
+
+                    <p>
+
+                        ♫ Listening:
+
+                        <strong>
+                            something nice
+                        </strong>
+
+                    </p>
+
+
+                    <p>
+
+                        ☕ Doing:
+
+                        <strong>
+                            escribiendo
+                        </strong>
+
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- BLINKIES -->
+
+            <section class="caja">
+
+                <div class="titulo-caja">
+
+                    ✧ Blog blinkies
+
+                </div>
+
+
+                <div class="contenido-caja blinkies">
+
+                    <span class="blinkie">
+                        BLOGGER
+                    </span>
+
+                    <span class="blinkie">
+                        ONLINE
+                    </span>
+
+                    <span class="blinkie">
+                        Y2K
+                    </span>
+
+                    <span class="blinkie">
+                        ♡ WRITE
+                    </span>
+
+                </div>
+
+            </section>
+
+
+        </aside>
+
+
+
+        <!-- =================================
+             PARTE PRINCIPAL DEL BLOG
+             ================================= -->
+
+        <section>
+
+
+            <h1 class="titulo-blog">
+
+                My Blog ᯓ★
+
+            </h1>
+
+
+            <div class="subtitulo-blog">
+
+                little thoughts, stories, pictures & random things ♡
+
+            </div>
+
+            <section class="blog-interactivo" aria-label="Blog interactivo">
+                <div class="admin-panel" id="adminPanel">
+                    <h2>★ Área de publicación</h2>
+                    <div id="loginArea">
+                        <input class="blog-field" id="adminEmail" type="email" placeholder="Tu correo de Supabase" autocomplete="email">
+                        <input class="blog-field" id="adminPassword" type="password" placeholder="Tu contraseña de Supabase" autocomplete="current-password">
+                        <button class="blog-action" id="adminLogin" type="button">Entrar</button>
+                    </div>
+                    <div id="publishArea" hidden>
+                        <input class="blog-field" id="postTitle" type="text" placeholder="Título de la publicación">
+                        <select class="blog-field" id="postCategory">
+                            <option value="historias">Historias</option>
+                            <option value="fotos">Fotos</option>
+                            <option value="opiniones">Opiniones</option>
+                            <option value="random">Random</option>
+                        </select>
+                        <input class="blog-field" id="postImage" type="file" accept="image/png,image/jpeg,image/gif,image/webp">
+                        <textarea class="blog-field" id="postDescription" rows="4" placeholder="Escribe una descripción o solo texto..."></textarea>
+                        <button class="blog-action" id="publishPost" type="button">Publicar</button>
+                        <button class="blog-action" id="adminLogout" type="button">Cerrar sesión</button>
+                    </div>
+                    <p class="admin-status" id="adminStatus">Solo la cuenta administradora puede publicar.</p>
+                </div>
+
+                <div class="blog-feed">
+                    <h2>♡ Publicaciones nuevas</h2>
+                    <div class="blog-filter-row">
+                        <input class="blog-field" id="postSearch" type="search" placeholder="Buscar en el blog...">
+                        <button class="blog-action category-button active" type="button" data-category="all">Todas</button>
+                        <button class="blog-action category-button" type="button" data-category="historias">Historias</button>
+                        <button class="blog-action category-button" type="button" data-category="fotos">Fotos</button>
+                        <button class="blog-action category-button" type="button" data-category="opiniones">Opiniones</button>
+                        <button class="blog-action category-button" type="button" data-category="random">Random</button>
+                    </div>
+                    <div id="blogPosts"><p class="blog-status">Cargando publicaciones...</p></div>
+                </div>
+                <div class="blog-feed" id="blogPollsBox">
+                    <h2>♡ Encuestas</h2>
+                    <div class="owner-only">
+                        <input class="blog-field" id="pollQuestion" type="text" placeholder="Pregunta de la encuesta">
+                        <input class="blog-field" id="pollOptions" type="text" placeholder="Opciones separadas por coma: sí, no, a veces">
+                        <button class="blog-action" id="createPoll" type="button">Crear encuesta</button>
+                    </div>
+                    <div id="blogPolls"></div>
+                </div>
+            </section>
+
+
+
+            <!-- =================================
+                 ENTRADA 1
+                 ================================= -->
+
+            <article class="entrada" id="ultima">
+
+
+                <header class="entrada-cabecera">
+
+                    <h2 class="entrada-titulo">
+
+                        ★ Una pequeña introducción
+
+                    </h2>
+
+
+                    <div class="entrada-fecha">
+
+                        25 / 08 / 2026 · 03:00 AM
+
+                    </div>
+
+                </header>
+
+
+                <div class="entrada-contenido">
+
+
+                    <div class="metadata">
+
+                        <span class="meta">
+                            ✎ thoughts
+                        </span>
+
+                        <span class="meta">
+                            ☀ personal
+                        </span>
+
+                        <span class="meta">
+                            ♡ first post
+                        </span>
+
+                    </div>
+
+
+                    <p>
+
+                        Bueno... supongo que este es oficialmente
+                        mi primer post.
+
+                    </p>
+
+
+                    <p>
+
+                        Llevo un rato haciendo esta página y todavía
+                        no sé exactamente en qué se va a convertir.
+                        Quizás eso sea precisamente lo divertido.
+
+                    </p>
+
+
+                    <p>
+
+                        No quiero que este blog tenga que seguir
+                        necesariamente una temática concreta.
+
+                        Quiero poder entrar un día y escribir sobre
+                        algo que me pasó, otro día subir una foto,
+                        otro día hablar de alguna idea que tuve y
+                        otro simplemente escribir cualquier tontería
+                        que me parezca interesante.
+
+                    </p>
+
+
+                    <div class="quote">
+
+                        "A veces las mejores ideas aparecen cuando
+                        no estás intentando tener una."
+
+                    </div>
+
+
+                    <p>
+
+                        Así que supongo que este será mi pequeño
+                        experimento en Internet.
+
+                        Ya veremos en qué termina convirtiéndose.
+
+                        ★
+
+                    </p>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================
+                 ENTRADA 2
+                 ================================= -->
+
+            <article class="entrada" id="historias">
+
+
+                <header class="entrada-cabecera">
+
+                    <h2 class="entrada-titulo">
+
+                        ♡ Una historia que quiero recordar
+
+                    </h2>
+
+
+                    <div class="entrada-fecha">
+
+                        [FECHA] · [HORA]
+
+                    </div>
+
+                </header>
+
+
+                <div class="entrada-contenido">
+
+
+                    <div class="metadata">
+
+                        <span class="meta">
+                            ♡ story
+                        </span>
+
+                        <span class="meta">
+                            ✧ memories
+                        </span>
+
+                    </div>
+
+
+                    <p>
+
+                        Aquí puedes escribir una anécdota.
+
+                    </p>
+
+
+                    <p>
+
+                        Puedes contar algo que te pasó,
+                        una conversación graciosa, un día
+                        especialmente raro, una experiencia
+                        que quieras recordar...
+
+                    </p>
+
+
+                    <!-- FOTO -->
+
+                    <div class="foto-blog">
+
+                        <!--
+
+                        PARA PONER UNA FOTO:
+
+                        <img
+                            src="imagenes/anecdota1.jpg"
+                            alt="Foto de mi anécdota"
+                        >
+
+                        -->
+
+
+                        <div class="foto-placeholder">
+
+                            📷<br>
+                            FOTO DE LA ANÉCDOTA
+
+                        </div>
+
+
+                        <div class="caption">
+
+                            caption de la foto ♡
+
+                        </div>
+
+                    </div>
+
+
+                    <p>
+
+                        Escribe aquí todo lo que quieras contar
+                        sobre esta historia.
+
+                        Puedes hacer esta entrada tan larga como
+                        quieras.
+
+                    </p>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================
+                 ENTRADA 3 - FOTOS
+                 ================================= -->
+
+            <article class="entrada" id="fotos">
+
+
+                <header class="entrada-cabecera">
+
+                    <h2 class="entrada-titulo">
+
+                        📷 Fotos que quería guardar
+
+                    </h2>
+
+
+                    <div class="entrada-fecha">
+
+                        [FECHA]
+
+                    </div>
+
+                </header>
+
+
+                <div class="entrada-contenido">
+
+
+                    <div class="metadata">
+
+                        <span class="meta">
+                            📷 photos
+                        </span>
+
+                        <span class="meta">
+                            ♡ memories
+                        </span>
+
+                    </div>
+
+
+                    <p>
+
+                        Algunas fotos que simplemente me gustan
+                        y quiero guardar aquí.
+
+                    </p>
+
+
+
+                    <!-- FOTO -->
+
+                    <div class="foto-blog">
+
+                        <div class="foto-placeholder">
+
+                            📷 FOTO 01
+
+                        </div>
+
+                        <div class="caption">
+
+                            escribe aquí qué es esta foto...
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- FOTO -->
+
+                    <div class="foto-blog">
+
+                        <div class="foto-placeholder">
+
+                            📷 FOTO 02
+
+                        </div>
+
+                        <div class="caption">
+
+                            otro pequeño recuerdo ♡
+
+                        </div>
+
+                    </div>
+
+
+
+                    <p>
+
+                        Puedes añadir tantas fotos como quieras
+                        copiando uno de estos bloques.
+
+                    </p>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================
+                 ENTRADA 4 - OPINIÓN
+                 ================================= -->
+
+            <article class="entrada" id="opiniones">
+
+
+                <header class="entrada-cabecera">
+
+                    <h2 class="entrada-titulo">
+
+                        ✧ Una opinión que quería compartir
+
+                    </h2>
+
+
+                    <div class="entrada-fecha">
+
+                        [FECHA]
+
+                    </div>
+
+                </header>
+
+
+                <div class="entrada-contenido">
+
+
+                    <div class="metadata">
+
+                        <span class="meta">
+                            ✧ opinion
+                        </span>
+
+                        <span class="meta">
+                            💭 thoughts
+                        </span>
+
+                    </div>
+
+
+                    <p>
+
+                        Aquí puedes escribir tu opinión sobre
+                        cualquier cosa que quieras.
+
+                    </p>
+
+
+                    <p>
+
+                        Puede ser una película, un videojuego,
+                        una canción, un libro, una experiencia,
+                        algo que viste por Internet o simplemente
+                        una idea que tienes.
+
+                    </p>
+
+
+                    <div class="quote">
+
+                        ★ "Escribe aquí una frase que quieras
+                        destacar."
+
+                    </div>
+
+
+                    <p>
+
+                        Aquí continúa tu opinión...
+
+                    </p>
+
+
+                    <p>
+
+                        Puedes escribir varios párrafos.
+                        No hay límite.
+
+                    </p>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================
+                 ENTRADA 5 - RANDOM
+                 ================================= -->
+
+            <article class="entrada" id="random">
+
+
+                <header class="entrada-cabecera">
+
+                    <h2 class="entrada-titulo">
+
+                        ☀ Random thoughts
+
+                    </h2>
+
+
+                    <div class="entrada-fecha">
+
+                        [FECHA]
+
+                    </div>
+
+                </header>
+
+
+                <div class="entrada-contenido">
+
+
+                    <div class="metadata">
+
+                        <span class="meta">
+                            ☀ random
+                        </span>
+
+                        <span class="meta">
+                            ♡ brain dump
+                        </span>
+
+                    </div>
+
+
+                    <p>
+
+                        Este espacio puede ser para absolutamente
+                        cualquier cosa.
+
+                    </p>
+
+
+                    <p>
+
+                        Una idea que tuviste a las 2 de la mañana.
+
+                        Una lista de cosas que quieres hacer.
+
+                        Algo que te hace ilusión.
+
+                        Una pregunta absurda.
+
+                        Una recomendación.
+
+                        Una historia corta.
+
+                        Lo que sea.
+
+                    </p>
+
+
+                    <p>
+
+                        Este es tu blog. No tiene que tener sentido
+                        todo el tiempo. ♡
+
+                    </p>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- =================================
+                 SEPARADOR
+                 ================================= -->
+
+            <div class="separador">
+
+                ☆ ★ ☆ ★ ☆ ★ ☆
+
+            </div>
+
+
+
+            <!-- =================================
+                 FINAL
+                 ================================= -->
+
+            <section class="caja">
+
+
+                <div class="titulo-caja">
+
+                    ♡ That's all for now...
+
+                </div>
+
+
+                <div class="contenido-caja">
+
+
+                    <p>
+
+                        Gracias por leer hasta aquí.
+
+                    </p>
+
+
+                    <p>
+
+                        Volveré cuando tenga otra cosa que contar
+                        ★
+
+                    </p>
+
+
+                    <div style="text-align:center;">
+
+                        <a href="index.html" class="boton">
+
+                            ← Back to Home
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+         ===================================== -->
+
+    <footer>
+
+        ✿ Hallooᯓ★ · my little blog · 2026 ✿
+
+        <br>
+
+        made with way too many ideas ♡
+
+    </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="access.js"></script>
+<script src="loading.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const client = window.supabase.createClient(
+            "https://tgvecrecqueikcbemnee.supabase.co",
+            "sb_publishable_rM4IuPpzAis_ad_GXthyhw_nPfi7-M5"
+        );
+        const adminEmail = "ashleycontreras8422@gmail.com";
+        const blogPosts = document.getElementById("blogPosts");
+        const adminStatus = document.getElementById("adminStatus");
+        const loginArea = document.getElementById("loginArea");
+        const publishArea = document.getElementById("publishArea");
+        const eventAdmin = document.getElementById("eventAdmin");
+        let allPosts = [];
+        let activeCategory = "all";
+        let isAdmin = false;
+        const visitorId = localStorage.getItem("blog_visitor_id") || crypto.randomUUID();
+        localStorage.setItem("blog_visitor_id", visitorId);
+        const calendarViewDate = new Date(new Date().getFullYear(), new Date().getMonth(), 1);
+
+        const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({
+            "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+        }[character]));
+
+        async function loadInteractions(postId) {
+            const post = document.querySelector(`[data-post-id="${postId}"]`);
+            const [{ data: likes }, { data: comments }] = await Promise.all([
+                client.from("blog_likes").select("id").eq("post_id", postId),
+                client.from("blog_comments").select("*").eq("post_id", postId).order("created_at")
+            ]);
+            if (!post) return;
+            post.querySelector(".like-button span").textContent = likes?.length || 0;
+            post.querySelector(".comment-list").innerHTML = (comments || []).map(comment =>
+                `<div class="comment-item"><strong>${escapeHtml(comment.author)}:</strong> ${escapeHtml(comment.text)}</div>`
+            ).join("");
+        }
+
+        function renderPosts() {
+            const search = document.getElementById("postSearch").value.trim().toLowerCase();
+            const posts = allPosts.filter(post => {
+                const category = post.category || "random";
+                const content = `${post.title} ${post.description}`.toLowerCase();
+                return (activeCategory === "all" || category === activeCategory) && content.includes(search);
+            });
+            blogPosts.innerHTML = posts.length ? posts.map(post => `
+                <article class="blog-post" data-post-id="${post.id}">
+                    <h3>${escapeHtml(post.title)}</h3>
+                    <div class="blog-post-date">${new Date(post.created_at).toLocaleString("es-ES")} · ${escapeHtml(post.category || "random")}</div>
+                    ${post.image_url ? `<img class="blog-post-image" src="${escapeHtml(post.image_url)}" alt="${escapeHtml(post.title)}">` : "<div class=\"blog-text-only\">✎ Publicación escrita</div>"}
+                    <p class="blog-post-description">${escapeHtml(post.description)}</p>
+                    <div class="blog-post-actions"><button class="blog-action like-button" type="button">♡ Me gusta (<span>0</span>)</button>${isAdmin ? '<button class="blog-action delete-button" type="button">Eliminar</button>' : ""}</div>
+                    <div class="comment-list"></div>
+                    <input class="blog-field comment-name" type="text" placeholder="Tu nombre o apodo">
+                    <input class="blog-field comment-text" type="text" placeholder="Escribe un comentario...">
+                    <button class="blog-action comment-button" type="button">Comentar</button>
+                </article>`).join("") : "<p class=\"blog-status\">No hay publicaciones que coincidan.</p>";
+            posts.forEach(post => loadInteractions(post.id));
+        }
+
+        async function loadPosts() {
+            const { data: posts, error } = await client.from("blog_posts").select("*").order("created_at", { ascending: false });
+            if (error) {
+                blogPosts.innerHTML = "<p class=\"blog-status\">No se pudieron cargar las publicaciones.</p>";
+                return;
+            }
+            allPosts = posts;
+            renderPosts();
+        }
+
+        async function updateAdmin(session) {
+            isAdmin = session?.user?.email?.toLowerCase() === adminEmail;
+            loginArea.hidden = isAdmin;
+            publishArea.hidden = !isAdmin;
+            eventAdmin.hidden = !isAdmin;
+            adminStatus.textContent = isAdmin ? "Sesión iniciada como administradora." : "Solo la cuenta administradora puede publicar.";
+            loadPosts();
+        }
+
+        document.getElementById("adminLogin").addEventListener("click", async () => {
+            const email = document.getElementById("adminEmail").value.trim();
+            const password = document.getElementById("adminPassword").value;
+            const { error } = await client.auth.signInWithPassword({ email, password });
+            if (error) adminStatus.textContent = "Correo o contraseña incorrectos.";
+        });
+
+        document.getElementById("adminLogout").addEventListener("click", () => client.auth.signOut());
+        document.getElementById("publishPost").addEventListener("click", async () => {
+            const title = document.getElementById("postTitle").value.trim();
+            const category = document.getElementById("postCategory").value;
+            const description = document.getElementById("postDescription").value.trim();
+            const image = document.getElementById("postImage").files[0];
+            const { data: { session } } = await client.auth.getSession();
+            if (!session || session.user.email.toLowerCase() !== adminEmail || !title || !description) return;
+            let imageUrl = null;
+            if (image) {
+                const fileName = `${crypto.randomUUID()}-${image.name.replace(/[^a-zA-Z0-9._-]/g, "")}`;
+                const { error: uploadError } = await client.storage.from("blog-images").upload(fileName, image);
+                if (uploadError) { adminStatus.textContent = "No se pudo subir la imagen."; return; }
+                const { data: file } = client.storage.from("blog-images").getPublicUrl(fileName);
+                imageUrl = file.publicUrl;
+            }
+            const { error } = await client.from("blog_posts").insert({ title, description, image_url: imageUrl, category });
+            adminStatus.textContent = error ? "No se pudo publicar." : "Publicado correctamente.";
+            if (!error) { document.getElementById("postTitle").value = ""; document.getElementById("postDescription").value = ""; document.getElementById("postImage").value = ""; loadPosts(); }
+        });
+
+        blogPosts.addEventListener("click", async event => {
+            const post = event.target.closest(".blog-post");
+            if (!post) return;
+            const postId = post.dataset.postId;
+            if (event.target.closest(".like-button")) {
+                if (!window.siteAccess.requireAuth()) return;
+                await client.from("blog_likes").upsert(
+                    { post_id: postId, visitor_id: visitorId },
+                    { onConflict: "post_id,visitor_id", ignoreDuplicates: true }
+                );
+            } else if (event.target.closest(".delete-button")) {
+                if (!isAdmin || !confirm("¿Quieres eliminar esta publicación?")) return;
+                await client.from("blog_posts").delete().eq("id", postId);
+                loadPosts();
+                return;
+            } else if (event.target.closest(".comment-button")) {
+                if (!window.siteAccess.requireAuth()) return;
+                const author = post.querySelector(".comment-name").value.trim();
+                const text = post.querySelector(".comment-text").value.trim();
+                if (author && text) await client.from("blog_comments").insert({ post_id: postId, author, text });
+                post.querySelector(".comment-name").value = "";
+                post.querySelector(".comment-text").value = "";
+            }
+            loadInteractions(postId);
+        });
+
+        async function loadImportantDates() {
+            const { data: events, error } = await client.from("important_dates").select("*").order("date");
+            if (error) return;
+            const today = new Date();
+            const year = calendarViewDate.getFullYear();
+            const month = calendarViewDate.getMonth();
+            const monthName = calendarViewDate.toLocaleDateString("es-ES", { month: "long", year: "numeric" });
+            document.getElementById("calendarMonth").textContent = monthName.charAt(0).toUpperCase() + monthName.slice(1);
+            const firstDay = (new Date(year, month, 1).getDay() + 6) % 7;
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const eventDays = new Map((events || []).filter(event => {
+                const eventDate = String(event.date);
+                const monthDay = eventDate.slice(5);
+                return eventDate.startsWith(`${year}-${String(month + 1).padStart(2, "0")}-`) ||
+                    (event.recurring && monthDay.startsWith(`${String(month + 1).padStart(2, "0")}-`));
+            }).map(event => {
+                const day = String(new Date(event.date).getDate()).padStart(2, "0");
+                return [`${year}-${String(month + 1).padStart(2, "0")}-${day}`, event.title];
+            }));
+            const calendarDays = document.getElementById("calendarDays");
+            calendarDays.innerHTML = ["L", "M", "X", "J", "V", "S", "D"].map(day => `<div class="dia">${day}</div>`).join("");
+            calendarDays.innerHTML += "<div class=\"dia\"></div>".repeat(firstDay);
+            for (let day = 1; day <= daysInMonth; day++) {
+                const date = `${year}-${String(month + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+                const classes = ["dia"];
+                if (date === today.toISOString().slice(0, 10)) classes.push("calendar-today");
+                if (eventDays.has(date)) classes.push("calendar-important");
+                calendarDays.innerHTML += `<div class="${classes.join(" ")}" title="${escapeHtml(eventDays.get(date) || "")}">${day}</div>`;
+            }
+            document.getElementById("eventList").innerHTML = (events || []).map(event => `
+                <div class="event-item"><strong>${event.date.slice(5)}</strong> · ${escapeHtml(event.title)}${isAdmin ? ` <button class="blog-action edit-event" data-event-id="${event.id}" type="button">Editar</button><button class="blog-action delete-event" data-event-id="${event.id}" type="button">Eliminar</button>` : ""}</div>
+            `).join("");
+        }
+
+        document.getElementById("postSearch").addEventListener("input", renderPosts);
+        document.getElementById("previousMonth").addEventListener("click", () => {
+            calendarViewDate.setMonth(calendarViewDate.getMonth() - 1);
+            loadImportantDates();
+        });
+        document.getElementById("nextMonth").addEventListener("click", () => {
+            calendarViewDate.setMonth(calendarViewDate.getMonth() + 1);
+            loadImportantDates();
+        });
+        document.querySelectorAll(".category-button").forEach(button => button.addEventListener("click", () => {
+            activeCategory = button.dataset.category;
+            document.querySelectorAll(".category-button").forEach(item => item.classList.toggle("active", item === button));
+            renderPosts();
+        }));
+
+        document.getElementById("addEvent").addEventListener("click", async () => {
+            const date = document.getElementById("eventDate").value;
+            const title = document.getElementById("eventTitle").value.trim();
+            const { data: { session } } = await client.auth.getSession();
+            if (!session || session.user.email.toLowerCase() !== adminEmail || !date || !title) return;
+            await client.from("important_dates").insert({ date, title, recurring: date.endsWith("-01-12") });
+            document.getElementById("eventDate").value = "";
+            document.getElementById("eventTitle").value = "";
+            loadImportantDates();
+        });
+
+        document.getElementById("eventList").addEventListener("click", async event => {
+            const editButton = event.target.closest(".edit-event");
+            if (editButton && isAdmin) {
+                const current = await client.from("important_dates").select("date,title").eq("id", editButton.dataset.eventId).single();
+                if (!current.error) {
+                    const title = prompt("Nombre de la fecha:", current.data.title);
+                    const date = prompt("Fecha (AAAA-MM-DD):", current.data.date);
+                    if (title && date) await client.from("important_dates").update({ title, date }).eq("id", editButton.dataset.eventId);
+                    loadImportantDates();
+                }
+                return;
+            }
+            const button = event.target.closest(".delete-event");
+            if (!button || !isAdmin) return;
+            await client.from("important_dates").delete().eq("id", button.dataset.eventId);
+            loadImportantDates();
+        });
+
+        document.getElementById("createPoll")?.addEventListener("click", () => {
+            if (!isAdmin) return;
+            const question = document.getElementById("pollQuestion").value.trim();
+            const options = document.getElementById("pollOptions").value.split(",").map(item => item.trim()).filter(Boolean);
+            if (!question || options.length < 2) {
+                adminStatus.textContent = "Escribe una pregunta y al menos dos opciones.";
+                return;
+            }
+            const polls = JSON.parse(localStorage.getItem("blogPolls") || "[]");
+            polls.push({ id: Date.now(), question, options, votes: {} });
+            localStorage.setItem("blogPolls", JSON.stringify(polls));
+            document.getElementById("pollQuestion").value = "";
+            document.getElementById("pollOptions").value = "";
+            renderPolls();
+        });
+
+        function renderPolls() {
+            const polls = JSON.parse(localStorage.getItem("blogPolls") || "[]");
+            const voter = visitorId;
+            document.getElementById("blogPolls").innerHTML = polls.map(poll => {
+                const counts = poll.options.map((option, index) => Object.values(poll.votes).filter(vote => vote === index).length);
+                const voted = poll.votes[voter];
+                return `<article class="blog-post" data-poll-id="${poll.id}"><h3>${escapeHtml(poll.question)}</h3>${poll.options.map((option, index) => `<p><button class="blog-action poll-vote" data-option="${index}" type="button" ${voted !== undefined ? "disabled" : ""}>${escapeHtml(option)} (${counts[index]})</button></p>`).join("")}${isAdmin ? `<button class="blog-action delete-poll" type="button">Eliminar encuesta</button>` : ""}</article>`;
+            }).join("") || "<p class=\"blog-status\">Todavía no hay encuestas.</p>";
+        }
+
+        document.getElementById("blogPolls").addEventListener("click", event => {
+            const pollCard = event.target.closest("[data-poll-id]");
+            if (!pollCard) return;
+            const polls = JSON.parse(localStorage.getItem("blogPolls") || "[]");
+            const poll = polls.find(item => String(item.id) === pollCard.dataset.pollId);
+            if (!poll) return;
+            if (event.target.closest(".delete-poll")) {
+                if (!isAdmin) return;
+                localStorage.setItem("blogPolls", JSON.stringify(polls.filter(item => item.id !== poll.id)));
+                renderPolls();
+                return;
+            }
+            const voteButton = event.target.closest(".poll-vote");
+            if (!voteButton) return;
+            poll.votes[visitorId] = Number(voteButton.dataset.option);
+            localStorage.setItem("blogPolls", JSON.stringify(polls));
+            renderPolls();
+        });
+
+        client.auth.getSession().then(({ data: { session } }) => updateAdmin(session));
+        client.auth.onAuthStateChange((_event, session) => updateAdmin(session));
+        loadPosts();
+        loadImportantDates();
+        renderPolls();
+        setInterval(loadPosts, 10000);
+        setInterval(loadImportantDates, 60000);
+    });
+</script>
+
+</div>
+
+</body>
+
+</html> 

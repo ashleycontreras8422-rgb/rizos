@@ -1,0 +1,4128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>html, body, body * { cursor: url("images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Life Quest ♡</title>
+
+<link rel="icon" type="image/png" href="icon.png">
+
+
+<style>
+
+/* =========================================================
+   LIFE QUEST
+   Y2K • PASTEL PINK • PASTEL YELLOW
+========================================================= */
+
+:root {
+
+    --pink: #efb2c5;
+    --pink-dark: #bd718c;
+    --pink-light: #fff0f5;
+
+    --yellow: #f4dc82;
+    --yellow-light: #fff9dc;
+    --yellow-dark: #b59638;
+
+    --cream: #fffdf7;
+
+    --brown: #705d4a;
+    --brown-light: #927b63;
+
+    --white: #ffffff;
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    color: var(--brown);
+
+    background-color: #f8dce7;
+
+    background-image:
+        radial-gradient(
+            #e9b7c8 1px,
+            transparent 1px
+        );
+
+    background-size: 10px 10px;
+
+}
+
+
+.page {
+
+    width: 1120px;
+
+    max-width: 94%;
+
+    margin: 25px auto;
+
+    background:
+        rgba(255,255,255,.97);
+
+    border:
+        1px solid #d99aae;
+
+    box-shadow:
+        8px 8px 0 #8d6471,
+        0 0 25px rgba(80,40,50,.18);
+
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+
+    min-height: 145px;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            #efb1c5,
+            #fff0ae,
+            #f6c7d6
+        );
+
+    border-bottom:
+        3px solid white;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+}
+
+
+.logo-box {
+
+    width: 78px;
+
+    height: 78px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 37px;
+
+    color: white;
+
+    background:
+        rgba(255,255,255,.35);
+
+    border:
+        2px solid white;
+
+    box-shadow:
+        4px 4px 0 #c5879a;
+
+}
+
+
+.title {
+
+    margin: 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 40px;
+
+    letter-spacing: 5px;
+
+    color: #785765;
+
+    text-shadow:
+        2px 2px white;
+
+}
+
+
+.subtitle {
+
+    margin-top: 6px;
+
+    color: #8e724e;
+
+    letter-spacing: 3px;
+
+    font-size: 10px;
+
+}
+
+
+.header-stars {
+
+    color: #b89a42;
+
+    font-size: 20px;
+
+    letter-spacing: 6px;
+
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+nav {
+
+    padding: 7px;
+
+    text-align: center;
+
+    background:
+        #fff7df;
+
+    border-bottom:
+        1px solid #dfc783;
+
+}
+
+
+nav a {
+
+    display: inline-block;
+
+    padding: 5px 11px;
+
+    margin: 0 8px;
+
+    color: #7d694e;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+nav a:hover {
+
+    color: white;
+
+    background:
+        #d38ca4;
+
+}
+
+
+/* =========================================================
+   LAYOUT
+========================================================= */
+
+.layout {
+
+    display: grid;
+
+    grid-template-columns:
+        190px 1fr;
+
+    gap: 18px;
+
+    padding: 18px;
+
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+
+    background:
+        #fffdf8;
+
+    border:
+        1px solid #dfc891;
+
+    align-self: start;
+
+}
+
+
+.sidebar-title {
+
+    padding: 9px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            to right,
+            #c97f99,
+            #e4a8ba,
+            #d4b34d
+        );
+
+    font-weight: bold;
+
+}
+
+
+.side-btn {
+
+    width: 100%;
+
+    padding: 12px 8px;
+
+    border: none;
+
+    border-bottom:
+        1px solid #eadcc8;
+
+    color: #756148;
+
+    background:
+        #fffdf8;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+}
+
+
+.side-btn:hover {
+
+    color: white;
+
+    background:
+        #d58fa7;
+
+}
+
+
+.side-btn.active {
+
+    color: white;
+
+    background:
+        #c47b96;
+
+    box-shadow:
+        inset 4px 0 #efd267;
+
+}
+
+
+/* =========================================================
+   WINDOWS
+========================================================= */
+
+.window {
+
+    margin-bottom: 18px;
+
+    border:
+        1px solid #ddc58b;
+
+    background: white;
+
+    box-shadow:
+        3px 3px 0 #eadcc7;
+
+}
+
+
+.window-bar {
+
+    padding: 7px 9px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            to right,
+            #c77f98,
+            #e2a8b9,
+            #d6b44e
+        );
+
+    font-weight: bold;
+
+    text-shadow:
+        1px 1px #986377;
+
+}
+
+
+.window-content {
+
+    padding: 15px;
+
+}
+
+
+.window-buttons {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.intro {
+
+    padding: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8d7,
+            #fff0f5
+        );
+
+    border:
+        1px dashed #d6b86b;
+
+}
+
+
+.intro h2 {
+
+    margin-top: 0;
+
+    color: #aa6a80;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 25px;
+
+}
+
+
+.intro p {
+
+    line-height: 1.8;
+
+}
+
+
+.big-stars {
+
+    color:
+        #c4a241;
+
+    font-size: 18px;
+
+    letter-spacing: 5px;
+
+}
+
+
+/* =========================================================
+   QUEST CARD
+========================================================= */
+
+.quest-card {
+
+    padding: 20px;
+
+    min-height: 300px;
+
+    text-align: center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fffdf6,
+            #fff2f6
+        );
+
+    border:
+        1px dashed #d9b96b;
+
+}
+
+
+.quest-category {
+
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    color: white;
+
+    background:
+        #d18ba2;
+
+    font-weight: bold;
+
+}
+
+
+.quest-title {
+
+    margin:
+        18px 0 10px;
+
+    color:
+        #8c5d6d;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 28px;
+
+}
+
+
+.quest-description {
+
+    max-width: 600px;
+
+    margin:
+        0 auto 18px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+}
+
+
+.quest-info {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.badge {
+
+    padding: 6px 10px;
+
+    border:
+        1px solid #d8c078;
+
+    background:
+        #fff8d7;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.button {
+
+    margin: 6px;
+
+    padding:
+        9px 16px;
+
+    border:
+        1px solid #c7a550;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            #e0bc5d,
+            #c88ba0
+        );
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+.button:hover {
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+.button:disabled {
+
+    opacity: .5;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =========================================================
+   TIMER
+========================================================= */
+
+.timer {
+
+    margin:
+        18px auto;
+
+    padding: 14px;
+
+    max-width: 300px;
+
+    border:
+        1px solid #d9bd6a;
+
+    background:
+        #fff8d7;
+
+}
+
+
+.timer-number {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 42px;
+
+    color:
+        #aa7082;
+
+}
+
+
+.timer-label {
+
+    color:
+        #806c55;
+
+    font-weight: bold;
+
+}
+
+
+.timer.warning {
+
+    background:
+        #fff0f2;
+
+    border-color:
+        #d77f98;
+
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.progress {
+
+    height: 20px;
+
+    border:
+        1px solid #d0b765;
+
+    background:
+        #fff5c9;
+
+}
+
+
+.progress-fill {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+
+        linear-gradient(
+            to right,
+            #df91aa,
+            #efd66e
+        );
+
+    transition:
+        width .4s ease;
+
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.stat {
+
+    padding: 14px;
+
+    text-align: center;
+
+    border:
+        1px solid #ddc484;
+
+    background:
+        #fffbea;
+
+}
+
+
+.stat-number {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        #a66c7e;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 25px;
+
+}
+
+
+.stat-label {
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+}
+
+
+/* =========================================================
+   LEVEL
+========================================================= */
+
+.level-box {
+
+    padding: 18px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f5,
+            #fff8d7
+        );
+
+    border:
+        1px solid #ddc27d;
+
+}
+
+
+.level {
+
+    color:
+        #9e6577;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 28px;
+
+}
+
+
+/* =========================================================
+   HISTORY
+========================================================= */
+
+.history {
+
+    max-height: 350px;
+
+    overflow-y: auto;
+
+}
+
+
+.history-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 9px;
+
+    border-bottom:
+        1px solid #eadfca;
+
+}
+
+
+.history-item.success {
+
+    background:
+        #fff9dd;
+
+}
+
+
+.history-item.failed {
+
+    background:
+        #fff0f4;
+
+}
+
+
+.history-icon {
+
+    font-size: 17px;
+
+}
+
+
+/* =========================================================
+   CATEGORY GRID
+========================================================= */
+
+.category-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.category {
+
+    padding: 14px;
+
+    border:
+        1px solid #dcc07a;
+
+    background:
+        #fffbea;
+
+    cursor: pointer;
+
+}
+
+
+.category:hover {
+
+    background:
+        #fff0f5;
+
+}
+
+
+.category h3 {
+
+    margin:
+        0 0 5px;
+
+    color:
+        #a66b7d;
+
+    font-family:
+        Georgia,
+        serif;
+
+}
+
+
+.category p {
+
+    margin: 0;
+
+    font-size: 10px;
+
+}
+
+
+/* =========================================================
+   ADD QUEST
+========================================================= */
+
+.form-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+}
+
+
+label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-weight: bold;
+
+}
+
+
+input,
+textarea,
+select {
+
+    width: 100%;
+
+    padding: 9px;
+
+    border:
+        1px solid #d7c17e;
+
+    outline: none;
+
+    background:
+        #fffdf7;
+
+    color:
+        #675743;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+}
+
+
+textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+
+}
+
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    border-color:
+        #d48ba3;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    padding: 16px;
+
+    text-align: center;
+
+    color:
+        #806b55;
+
+    background:
+        #fff5dc;
+
+    border-top:
+        1px solid #dfc98e;
+
+    font-size: 10px;
+
+}
+
+
+footer a {
+
+    color:
+        #a46c7e;
+
+}
+
+.account-box {
+    margin: 14px 18px 0;
+    padding: 10px;
+    border: 1px solid #d99aae;
+    background: var(--yellow-light);
+    text-align: center;
+}
+
+.account-box input {
+    width: min(260px, 100%);
+    margin: 3px;
+    padding: 7px;
+    border: 1px solid #d9b85d;
+    font: inherit;
+}
+
+.account-box button {
+    margin: 3px;
+    padding: 7px 10px;
+    border: 1px solid var(--pink-dark);
+    color: white;
+    background: var(--pink-dark);
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.account-status {
+    margin: 6px 0 0;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:800px) {
+
+    .layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media(max-width:650px) {
+
+    .stats,
+    .category-grid,
+    .form-row {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .title {
+
+        font-size: 28px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="page">
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+
+    <div class="logo">
+
+
+        <div class="logo-box">
+
+            ✦
+
+        </div>
+
+
+        <div>
+
+            <h1 class="title">
+
+                LIFE QUEST
+
+            </h1>
+
+
+            <div class="subtitle">
+
+                pequeñas misiones para dias ordinarios ♡
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="header-stars">
+
+        ★ ✦ ★
+
+    </div>
+
+
+</header>
+
+<div class="account-box">
+    <input id="accountEmail" type="email" placeholder="Tu correo electrónico" autocomplete="email">
+    <input id="accountPassword" type="password" placeholder="Tu contraseña" autocomplete="current-password">
+    <button id="accountLogin" type="button">Entrar</button>
+    <button id="accountSignup" type="button">Crear cuenta</button>
+    <button id="accountLogout" type="button" hidden>Cerrar sesión</button>
+    <div class="account-status" id="accountStatus">Inicia sesión para guardar tu propio progreso.</div>
+</div>
+
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<nav>
+
+
+    <a href="index.html">
+        HOME
+    </a>
+
+    <a href="aboutme.html">
+        ABOUT ME
+    </a>
+
+    <a href="blog.html">
+        BLOG
+    </a>
+
+    <a href="hobbies.html">
+        HOBBIES
+    </a>
+
+    <a href="music.html">
+        MUSIC
+    </a>
+
+    <a href="agenda-login.html">
+        AGENDA
+    </a>
+
+    <a href="galery.html">
+        GALERY
+    </a>
+
+    <a href="dreams.html">
+        DREAMS
+    </a>
+
+    <a href="life.html">
+        LIFE
+    </a>
+
+    <a href="writiti.html">
+        WRITITI
+    </a>
+
+
+</nav>
+
+
+
+<!-- =====================================================
+     LAYOUT
+===================================================== -->
+
+<div class="layout">
+
+
+
+<!-- =====================================================
+     SIDEBAR
+===================================================== -->
+
+<aside class="sidebar">
+
+
+    <div class="sidebar-title">
+
+        ♡ QUEST MENU ♡
+
+    </div>
+
+
+    <button
+        class="side-btn active"
+        onclick="showSection('quest', this)"
+    >
+
+        🎲 NEW QUEST
+
+    </button>
+
+
+    <button
+        class="side-btn"
+        onclick="showSection('categories', this)"
+    >
+
+        ✦ CATEGORIES
+
+    </button>
+
+
+    <button
+        class="side-btn"
+        onclick="showSection('stats', this)"
+    >
+
+        ⭐ MY STATS
+
+    </button>
+
+
+    <button
+        class="side-btn"
+        onclick="showSection('history', this)"
+    >
+
+        📜 HISTORY
+
+    </button>
+
+
+    <button
+        class="side-btn"
+        onclick="showSection('add', this)"
+    >
+
+        + ADD QUEST
+
+    </button>
+
+
+    <button
+        class="side-btn"
+        onclick="resetUsedMissions()"
+    >
+
+        ♻ RESET QUESTS
+
+    </button>
+
+
+    <div
+        style="
+            padding:14px;
+            text-align:center;
+            line-height:1.8;
+            font-size:10px;
+        "
+    >
+
+        ✦ choose a quest
+
+        <br>
+
+        ✦ start timer
+
+        <br>
+
+        ✦ complete it
+
+        <br>
+
+        ♡ earn XP ♡
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+
+
+<!-- =====================================================
+     QUEST SECTION
+===================================================== -->
+
+<section
+    id="quest"
+    class="section"
+>
+
+
+<div class="window">
+
+
+    <div class="window-bar">
+
+        🎲 TODAY'S QUEST
+
+        <span class="window-buttons">
+
+            − □ ×
+
+        </span>
+
+    </div>
+
+
+    <div class="window-content">
+
+
+        <div class="intro">
+
+
+            <h2>
+
+                Bienvedio a Life Quest! ♡
+
+            </h2>
+
+
+            <p>
+
+                Aquí puedes recibir pequeñas misiones
+                para hacer tu día un poquito más
+                interesante, productivo o creativo.
+
+            </p>
+
+
+            <p>
+
+                Elige una misión, inicia el temporizador
+                y trata de completarla antes de que se
+                acabe el tiempo.
+
+            </p>
+
+
+            <div class="big-stars">
+
+                ☆ ✦ ☆ ✦ ☆
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="window">
+
+
+    <div class="window-bar">
+
+        ✦ CURRENT QUEST
+
+    </div>
+
+
+    <div class="window-content">
+
+
+        <div class="quest-card">
+
+
+            <div
+                id="questCategory"
+                class="quest-category"
+            >
+
+                READY?
+
+            </div>
+
+
+            <h2
+                id="questTitle"
+                class="quest-title"
+            >
+
+                Presiona el botón ♡
+
+            </h2>
+
+
+            <p
+                id="questDescription"
+                class="quest-description"
+            >
+
+                Tu próxima misión aparecerá aquí.
+
+            </p>
+
+
+            <div
+                id="questInfo"
+                class="quest-info"
+            >
+
+            </div>
+
+
+            <div
+                id="timer"
+                class="timer"
+                style="display:none;"
+            >
+
+                <div
+                    id="timerNumber"
+                    class="timer-number"
+                >
+
+                    00:00
+
+                </div>
+
+
+                <div class="timer-label">
+
+                    TIME REMAINING
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+
+                <button
+                    id="newQuestButton"
+                    class="button"
+                    onclick="newQuest()"
+                >
+
+                    🎲 GIVE ME A QUEST
+
+                </button>
+
+
+                <button
+                    id="startButton"
+                    class="button"
+                    onclick="startQuest()"
+                    disabled
+                >
+
+                    ▶ START QUEST
+
+                </button>
+
+
+                <button
+                    id="completeButton"
+                    class="button"
+                    onclick="completeQuest()"
+                    disabled
+                >
+
+                    ✓ I DID IT!
+
+                </button>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="window">
+
+
+    <div class="window-bar">
+
+        🔥 TODAY'S STREAK
+
+    </div>
+
+
+    <div class="window-content">
+
+
+        <div class="level-box">
+
+
+            <div
+                id="streakDisplay"
+                class="level"
+            >
+
+                🔥 0 days
+
+            </div>
+
+
+            <p>
+
+                Complete at least one quest today
+                to keep your streak alive.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     CATEGORIES
+===================================================== -->
+
+<section
+    id="categories"
+    class="section"
+    style="display:none;"
+>
+
+
+<div class="window">
+
+
+    <div class="window-bar">
+
+        ✦ QUEST CATEGORIES
+
+    </div>
+
+
+    <div class="window-content">
+
+
+        <div class="category-grid">
+
+
+            <div
+                class="category"
+                onclick="newQuest('LOVE')"
+            >
+
+                <h3>
+                    💌 LOVE
+                </h3>
+
+                <p>
+                    Reflexiones, comunicación y
+                    relaciones saludables.
+                </p>
+
+            </div>
+
+
+            <div
+                class="category"
+                onclick="newQuest('STUDIES')"
+            >
+
+                <h3>
+                    📚 STUDIES
+                </h3>
+
+                <p>
+                    Pequeñas misiones relacionadas
+                    con estudiar y organizarte.
+                </p>
+
+            </div>
+
+
+            <div
+                class="category"
+                onclick="newQuest('EVERYDAY')"
+            >
+
+                <h3>
+                    🌷 EVERYDAY
+                </h3>
+
+                <p>
+                    Cosas sencillas para mejorar
+                    tu día.
+                </p>
+
+            </div>
+
+
+            <div
+                class="category"
+                onclick="newQuest('CREATIVE')"
+            >
+
+                <h3>
+                    🎨 CREATIVE
+                </h3>
+
+                <p>
+                    Dibujar, escribir, crear y
+                    experimentar.
+                </p>
+
+            </div>
+
+
+            <div
+                class="category"
+                onclick="newQuest('FRIENDSHIP')"
+            >
+
+                <h3>
+                    👭 FRIENDSHIP
+                </h3>
+
+                <p>
+                    Ideas para cuidar tus
+                    amistades.
+                </p>
+
+            </div>
+
+
+            <div
+                class="category"
+                onclick="newQuest('GROWTH')"
+            >
+
+                <h3>
+                    🌟 SELF GROWTH
+                </h3>
+
+                <p>
+                    Reflexión, hábitos y objetivos
+                    personales.
+                </p>
+
+            </div>
+
+
+            <div
+                class="category"
+                onclick="newQuest('FUN')"
+            >
+
+                <h3>
+                    🎀 FUN
+                </h3>
+
+                <p>
+                    Misiones para romper la rutina.
+                </p>
+
+            </div>
+
+
+            <div
+                class="category"
+                onclick="newQuest('RANDOM')"
+            >
+
+                <h3>
+                    🎲 RANDOM
+                </h3>
+
+                <p>
+                    Absolutamente cualquier cosa.
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<section
+    id="stats"
+    class="section"
+    style="display:none;"
+>
+
+
+<div class="window">
+
+
+    <div class="window-bar">
+
+        ⭐ MY QUEST STATS
+
+    </div>
+
+
+    <div class="window-content">
+
+
+        <div class="stats">
+
+
+            <div class="stat">
+
+                <span
+                    id="completedStat"
+                    class="stat-number"
+                >
+
+                    0
+
+                </span>
+
+                <span class="stat-label">
+
+                    COMPLETED
+
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span
+                    id="failedStat"
+                    class="stat-number"
+                >
+
+                    0
+
+                </span>
+
+                <span class="stat-label">
+
+                    FAILED
+
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span
+                    id="xpStat"
+                    class="stat-number"
+                >
+
+                    0
+
+                </span>
+
+                <span class="stat-label">
+
+                    XP
+
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span
+                    id="streakStat"
+                    class="stat-number"
+                >
+
+                    0
+
+                </span>
+
+                <span class="stat-label">
+
+                    STREAK
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="window">
+
+
+    <div class="window-bar">
+
+        🆙 LEVEL
+
+    </div>
+
+
+    <div class="window-content">
+
+
+        <div class="level-box">
+
+
+            <div
+                id="levelDisplay"
+                class="level"
+            >
+
+                LEVEL 1
+
+            </div>
+
+
+            <p>
+
+                <span id="xpText">
+
+                    0 / 100 XP
+
+                </span>
+
+            </p>
+
+
+            <div class="progress">
+
+                <div
+                    id="levelProgress"
+                    class="progress-fill"
+                ></div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     HISTORY
+===================================================== -->
+
+<section
+    id="history"
+    class="section"
+    style="display:none;"
+>
+
+
+<div class="window">
+
+
+    <div class="window-bar">
+
+        📜 QUEST HISTORY
+
+    </div>
+
+
+    <div class="window-content">
+
+
+        <div
+            id="historyList"
+            class="history"
+        >
+
+            <p>
+                No quests yet ♡
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =====================================================
+     ADD QUEST
+===================================================== -->
+
+<section
+    id="add"
+    class="section"
+    style="display:none;"
+>
+
+
+<div class="window">
+
+
+    <div class="window-bar">
+
+        + CREATE YOUR OWN QUEST
+
+    </div>
+
+
+    <div class="window-content">
+
+
+        <div class="form-row">
+
+
+            <div>
+
+                <label>
+                    Quest name
+                </label>
+
+
+                <input
+                    id="customTitle"
+                    type="text"
+                    placeholder="e.g. Organize my desk"
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Category
+                </label>
+
+
+                <select id="customCategory">
+
+                    <option value="EVERYDAY">
+                        Everyday
+                    </option>
+
+                    <option value="STUDIES">
+                        Studies
+                    </option>
+
+                    <option value="LOVE">
+                        Love
+                    </option>
+
+                    <option value="FRIENDSHIP">
+                        Friendship
+                    </option>
+
+                    <option value="CREATIVE">
+                        Creative
+                    </option>
+
+                    <option value="GROWTH">
+                        Self Growth
+                    </option>
+
+                    <option value="FUN">
+                        Fun
+                    </option>
+
+                    <option value="RANDOM">
+                        Random
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+        <br>
+
+
+        <label>
+            Description
+        </label>
+
+
+        <textarea
+            id="customDescription"
+            placeholder="Describe your quest..."
+        ></textarea>
+
+
+        <br>
+
+
+        <div class="form-row">
+
+
+            <div>
+
+                <label>
+                    Difficulty
+                </label>
+
+
+                <select id="customDifficulty">
+
+                    <option value="EASY">
+                        ♡ EASY
+                    </option>
+
+                    <option value="MEDIUM">
+                        ♡♡ MEDIUM
+                    </option>
+
+                    <option value="HARD">
+                        ♡♡♡ HARD
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Time
+                </label>
+
+
+                <select id="customTime">
+
+                    <option value="5">
+                        5 minutes
+                    </option>
+
+                    <option value="10">
+                        10 minutes
+                    </option>
+
+                    <option value="20">
+                        20 minutes
+                    </option>
+
+                    <option value="30">
+                        30 minutes
+                    </option>
+
+                    <option value="60">
+                        1 hour
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+        <br>
+
+
+        <button
+            class="button"
+            onclick="addCustomQuest()"
+        >
+
+            + ADD QUEST TO MY GAME
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+</main>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    ✦ LIFE IS MADE OF LITTLE QUESTS ♡ ✦
+
+    <br><br>
+
+    <a href="index.html">
+        ← BACK TO HOME
+    </a>
+
+</footer>
+
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+
+/* =========================================================
+   QUEST DATABASE
+========================================================= */
+
+const quests = [
+
+/* ================= LOVE ================= */
+
+{
+category:"LOVE",
+title:"Write about healthy relationships",
+description:"Escribe tres cosas que consideras importantes para que una relación sea sana y respetuosa.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"LOVE",
+title:"Write three qualities you admire",
+description:"Piensa en tres cualidades que admiras en las personas que quieres.",
+difficulty:"EASY",
+time:5,
+xp:10
+},
+
+{
+category:"LOVE",
+title:"Think about your boundaries",
+description:"Escribe algunas cosas que quieres aprender a comunicar mejor cuando algo te incomoda.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"LOVE",
+title:"Write a kind message",
+description:"Escribe un mensaje amable para alguien que aprecias.",
+difficulty:"EASY",
+time:5,
+xp:10
+},
+
+{
+category:"LOVE",
+title:"Make a kindness list",
+description:"Haz una lista de cinco formas sencillas de demostrar cariño a las personas que quieres.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"LOVE",
+title:"Future relationship wishlist",
+description:"Escribe qué características te gustaría encontrar en una relación saludable.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"LOVE",
+title:"Write what respect means to you",
+description:"Explica con tus propias palabras qué significa respetar y ser respetada.",
+difficulty:"MEDIUM",
+time:10,
+xp:15
+},
+
+{
+category:"LOVE",
+title:"Appreciation note",
+description:"Escribe cinco cosas que aprecias de alguien importante para ti.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+/* ================= STUDIES ================= */
+
+{
+category:"STUDIES",
+title:"Study for 10 minutes",
+description:"Elige una asignatura y repasa algo durante diez minutos sin distracciones.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"STUDIES",
+title:"Organize your notes",
+description:"Ordena los apuntes de una asignatura.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"STUDIES",
+title:"Prepare your backpack",
+description:"Prepara tu mochila para el próximo día de clase.",
+difficulty:"EASY",
+time:5,
+xp:10
+},
+
+{
+category:"STUDIES",
+title:"Review something difficult",
+description:"Dedica veinte minutos a algo de clase que te resulte complicado.",
+difficulty:"HARD",
+time:20,
+xp:25
+},
+
+{
+category:"STUDIES",
+title:"Make a mini study plan",
+description:"Haz una pequeña lista de lo que necesitas estudiar esta semana.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"STUDIES",
+title:"Clean your study space",
+description:"Ordena tu zona de estudio durante diez minutos.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"STUDIES",
+title:"Finish one pending task",
+description:"Elige una tarea pendiente pequeña y termínala.",
+difficulty:"MEDIUM",
+time:20,
+xp:20
+},
+
+{
+category:"STUDIES",
+title:"Create flashcards",
+description:"Haz tarjetas de estudio para un tema que tengas que aprender.",
+difficulty:"MEDIUM",
+time:20,
+xp:20
+},
+
+{
+category:"STUDIES",
+title:"Teach yourself",
+description:"Explica en voz alta un concepto como si estuvieras enseñándoselo a otra persona.",
+difficulty:"MEDIUM",
+time:10,
+xp:15
+},
+
+{
+category:"STUDIES",
+title:"Review yesterday's lesson",
+description:"Repasa brevemente algo que aprendiste recientemente.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"STUDIES",
+title:"Make your desk cozy",
+description:"Haz que tu espacio de estudio sea más cómodo y ordenado.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"STUDIES",
+title:"Write tomorrow's priorities",
+description:"Escribe las tres cosas académicas más importantes para mañana.",
+difficulty:"EASY",
+time:5,
+xp:10
+},
+
+/* ================= EVERYDAY ================= */
+
+{
+category:"EVERYDAY",
+title:"Clean one small area",
+description:"Elige una pequeña zona de tu habitación y ordénala.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"EVERYDAY",
+title:"Prepare tomorrow",
+description:"Deja preparadas algunas cosas que necesitarás mañana.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"EVERYDAY",
+title:"Drink some water",
+description:"Haz una pausa y toma algo de agua.",
+difficulty:"EASY",
+time:5,
+xp:5
+},
+
+{
+category:"EVERYDAY",
+title:"Make your bed",
+description:"Ordena tu cama y deja tu habitación un poquito más agradable.",
+difficulty:"EASY",
+time:5,
+xp:5
+},
+
+{
+category:"EVERYDAY",
+title:"Organize your phone",
+description:"Ordena una pequeña parte de tu teléfono, como fotos o aplicaciones.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"EVERYDAY",
+title:"Delete old screenshots",
+description:"Elimina capturas de pantalla que ya no necesitas.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"EVERYDAY",
+title:"Make a to-do list",
+description:"Escribe una lista sencilla de las cosas que quieres hacer hoy.",
+difficulty:"EASY",
+time:5,
+xp:10
+},
+
+{
+category:"EVERYDAY",
+title:"Clean your school bag",
+description:"Saca papeles y cosas que ya no necesites de tu mochila.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"EVERYDAY",
+title:"Organize your clothes",
+description:"Ordena una pequeña sección de tu ropa.",
+difficulty:"MEDIUM",
+time:20,
+xp:15
+},
+
+{
+category:"EVERYDAY",
+title:"Make a cozy corner",
+description:"Crea un pequeño rincón agradable para leer, escuchar música o descansar.",
+difficulty:"MEDIUM",
+time:20,
+xp:20
+},
+
+{
+category:"EVERYDAY",
+title:"Write tomorrow's outfit",
+description:"Decide qué ropa quieres utilizar mañana para ahorrar tiempo.",
+difficulty:"EASY",
+time:5,
+xp:5
+},
+
+{
+category:"EVERYDAY",
+title:"Find five things to recycle",
+description:"Busca cinco cosas que puedan reciclarse o reutilizarse correctamente.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+/* ================= CREATIVE ================= */
+
+{
+category:"CREATIVE",
+title:"Draw something random",
+description:"Dibuja lo primero que se te ocurra durante diez minutos.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"CREATIVE",
+title:"Write a tiny story",
+description:"Escribe una historia de exactamente cinco frases.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"CREATIVE",
+title:"Create a moodboard",
+description:"Haz un pequeño moodboard sobre algo que te guste.",
+difficulty:"MEDIUM",
+time:20,
+xp:20
+},
+
+{
+category:"CREATIVE",
+title:"Design a new logo",
+description:"Inventa un logo para una marca ficticia.",
+difficulty:"MEDIUM",
+time:20,
+xp:20
+},
+
+{
+category:"CREATIVE",
+title:"Write a poem",
+description:"Escribe un poema corto sobre cualquier cosa.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"CREATIVE",
+title:"Take five interesting photos",
+description:"Busca cinco cosas interesantes a tu alrededor y fotografíalas.",
+difficulty:"EASY",
+time:15,
+xp:15
+},
+
+{
+category:"CREATIVE",
+title:"Make a playlist concept",
+description:"Inventa una playlist con un concepto específico y elige cinco canciones.",
+difficulty:"EASY",
+time:15,
+xp:10
+},
+
+{
+category:"CREATIVE",
+title:"Create a fictional character",
+description:"Inventa un personaje y escribe cinco características sobre él.",
+difficulty:"MEDIUM",
+time:20,
+xp:20
+},
+
+{
+category:"CREATIVE",
+title:"Decorate a digital page",
+description:"Diseña cómo sería una nueva página de tu web.",
+difficulty:"MEDIUM",
+time:20,
+xp:20
+},
+
+{
+category:"CREATIVE",
+title:"Write ten random ideas",
+description:"Escribe diez ideas sin juzgarlas ni pensar demasiado.",
+difficulty:"EASY",
+time:10,
+xp:15
+},
+
+/* ================= FRIENDSHIP ================= */
+
+{
+category:"FRIENDSHIP",
+title:"Send a nice message",
+description:"Manda un mensaje amable a una persona que aprecias.",
+difficulty:"EASY",
+time:5,
+xp:10
+},
+
+{
+category:"FRIENDSHIP",
+title:"Remember a funny memory",
+description:"Escribe una anécdota divertida que tengas con un amigo.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"FRIENDSHIP",
+title:"Make a friendship playlist",
+description:"Crea una playlist que te recuerde a tus amistades.",
+difficulty:"EASY",
+time:15,
+xp:10
+},
+
+{
+category:"FRIENDSHIP",
+title:"Write appreciation notes",
+description:"Escribe tres pequeñas cosas que aprecias de tus amigos.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"FRIENDSHIP",
+title:"Plan something fun",
+description:"Piensa en una actividad sencilla que puedas hacer con tus amigos.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"FRIENDSHIP",
+title:"Ask someone about their day",
+description:"Pregunta a alguien cómo ha ido su día y escucha atentamente.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"FRIENDSHIP",
+title:"Make a memory list",
+description:"Haz una lista de cinco recuerdos que quieras conservar.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+/* ================= GROWTH ================= */
+
+{
+category:"GROWTH",
+title:"Write three things you learned",
+description:"Piensa en tres cosas que hayas aprendido recientemente.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"GROWTH",
+title:"Future self note",
+description:"Escribe un pequeño mensaje para tu yo del futuro.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"GROWTH",
+title:"Make a goal list",
+description:"Escribe cinco objetivos que te gustaría conseguir.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"GROWTH",
+title:"Write about a challenge",
+description:"Piensa en algo que te haya resultado difícil y qué aprendiste de ello.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"GROWTH",
+title:"List your strengths",
+description:"Escribe cinco cualidades o habilidades que tengas.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"GROWTH",
+title:"Imagine your ideal day",
+description:"Describe cómo sería para ti un día ideal.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"GROWTH",
+title:"Make a small habit",
+description:"Elige una pequeña acción que quieras intentar convertir en hábito.",
+difficulty:"MEDIUM",
+time:10,
+xp:15
+},
+
+{
+category:"GROWTH",
+title:"Write your priorities",
+description:"Escribe las tres cosas que más te importan actualmente.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+/* ================= FUN ================= */
+
+{
+category:"FUN",
+title:"Make a silly playlist",
+description:"Crea una playlist con canciones que te hagan sonreír.",
+difficulty:"EASY",
+time:15,
+xp:10
+},
+
+{
+category:"FUN",
+title:"Have a nostalgia moment",
+description:"Busca algo que te recuerde a tu infancia y escribe por qué.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"FUN",
+title:"Design your dream room",
+description:"Dibuja o describe cómo sería tu habitación soñada.",
+difficulty:"MEDIUM",
+time:20,
+xp:20
+},
+
+{
+category:"FUN",
+title:"Make a random quiz",
+description:"Inventa cinco preguntas absurdas para tus amigos.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"FUN",
+title:"Create a fake magazine cover",
+description:"Diseña mentalmente o en papel una portada de revista sobre ti.",
+difficulty:"MEDIUM",
+time:20,
+xp:20
+},
+
+{
+category:"FUN",
+title:"Make a top five list",
+description:"Haz un top 5 de cualquier cosa que te guste.",
+difficulty:"EASY",
+time:5,
+xp:5
+},
+
+{
+category:"FUN",
+title:"Invent a fictional website",
+description:"Imagina una web completamente absurda y escribe qué tendría.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"FUN",
+title:"Create a mini bucket list",
+description:"Escribe cinco cosas pequeñas que te gustaría hacer próximamente.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+/* ================= RANDOM ================= */
+
+{
+category:"RANDOM",
+title:"Look outside and find something interesting",
+description:"Mira por la ventana o a tu alrededor y encuentra algo que normalmente no notes.",
+difficulty:"EASY",
+time:5,
+xp:5
+},
+
+{
+category:"RANDOM",
+title:"Write a random fact",
+description:"Escribe un dato curioso que conozcas.",
+difficulty:"EASY",
+time:5,
+xp:5
+},
+
+{
+category:"RANDOM",
+title:"Create a new nickname",
+description:"Inventa un apodo divertido para ti.",
+difficulty:"EASY",
+time:5,
+xp:5
+},
+
+{
+category:"RANDOM",
+title:"Make a list of impossible inventions",
+description:"Inventa cinco objetos que no existen.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"RANDOM",
+title:"Describe your day using emojis",
+description:"Cuenta cómo ha sido tu día utilizando solamente emojis.",
+difficulty:"EASY",
+time:5,
+xp:5
+},
+
+{
+category:"RANDOM",
+title:"Write a bizarre story",
+description:"Escribe una historia de cinco frases donde aparezcan tres objetos aleatorios.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"RANDOM",
+title:"Create a fictional holiday",
+description:"Inventa una festividad y explica cómo se celebraría.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"RANDOM",
+title:"Make a list of ten things you like",
+description:"Escribe diez cosas que te gusten sin pensarlo demasiado.",
+difficulty:"EASY",
+time:5,
+xp:10
+},
+
+{
+category:"RANDOM",
+title:"Invent a fictional café",
+description:"Inventa el nombre, decoración y menú de un café imaginario.",
+difficulty:"MEDIUM",
+time:20,
+xp:20
+},
+
+{
+category:"RANDOM",
+title:"Create a fictional character's playlist",
+description:"Imagina un personaje y elige cinco canciones que escucharías si fueras él.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"RANDOM",
+title:"Write a mystery opening",
+description:"Escribe el comienzo de una historia misteriosa en cinco frases.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"RANDOM",
+title:"Invent a secret society",
+description:"Inventa una organización ficticia y decide cuáles serían sus reglas.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+},
+
+{
+category:"RANDOM",
+title:"Make your own award ceremony",
+description:"Crea cinco premios absurdos para cosas que hayan pasado esta semana.",
+difficulty:"EASY",
+time:10,
+xp:10
+},
+
+{
+category:"RANDOM",
+title:"Create a dream destination",
+description:"Inventa un lugar al que te encantaría viajar y descríbelo.",
+difficulty:"MEDIUM",
+time:15,
+xp:15
+}
+
+];
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let accountUser = null;
+
+const defaultState = {
+
+    used: [],
+
+    completed: 0,
+
+    failed: 0,
+
+    xp: 0,
+
+    streak: 0,
+
+    lastCompletedDate: null,
+
+    history: [],
+
+    customQuests: []
+
+};
+
+let state = { ...defaultState, history: [], customQuests: [], used: [] };
+
+
+let currentQuest = null;
+
+let timerInterval = null;
+
+let remainingSeconds = 0;
+
+
+/* =========================================================
+   SAVE
+========================================================= */
+
+function saveState() {
+
+    if (!accountUser) return;
+
+    localStorage.setItem(
+        "lifeQuestState_" + accountUser.id,
+        JSON.stringify(state)
+    );
+
+}
+
+
+/* =========================================================
+   ALL QUESTS
+========================================================= */
+
+function allQuests() {
+
+    return quests.concat(
+        state.customQuests
+    );
+
+}
+
+function requireAccount() {
+
+    if (accountUser) return true;
+
+    document.getElementById("accountStatus").textContent =
+        "Inicia sesión para jugar y guardar tu progreso.";
+
+    return false;
+
+}
+
+
+/* =========================================================
+   NEW QUEST
+========================================================= */
+
+function newQuest(category = null) {
+
+    if (!requireAccount()) return;
+
+
+    stopTimer();
+
+
+    let available =
+        allQuests().filter(
+            function(q, index) {
+
+                return !state.used.includes(
+                    index
+                );
+
+            }
+        );
+
+
+    /*
+       Si se ha usado todo el banco,
+       empezamos un nuevo ciclo.
+    */
+
+    if (
+        available.length === 0
+    ) {
+
+        state.used = [];
+
+        saveState();
+
+        available =
+            allQuests();
+
+        alert(
+            "¡Has usado todas las misiones! ♡\n\nSe ha reiniciado tu colección."
+        );
+
+    }
+
+
+    if (category) {
+
+        const filtered =
+            available.filter(
+                q =>
+                    q.category === category
+            );
+
+
+        if (
+            filtered.length > 0
+        ) {
+
+            available = filtered;
+
+        }
+
+    }
+
+
+    const selected =
+        available[
+            Math.floor(
+                Math.random() *
+                available.length
+            )
+        ];
+
+
+    const index =
+        allQuests().indexOf(
+            selected
+        );
+
+
+    state.used.push(
+        index
+    );
+
+
+    saveState();
+
+
+    currentQuest =
+        selected;
+
+
+    document.getElementById(
+        "questCategory"
+    ).textContent =
+        selected.category;
+
+
+    document.getElementById(
+        "questTitle"
+    ).textContent =
+        selected.title;
+
+
+    document.getElementById(
+        "questDescription"
+    ).textContent =
+        selected.description;
+
+
+    document.getElementById(
+        "questInfo"
+    ).innerHTML = `
+
+        <span class="badge">
+            ${difficultyText(selected.difficulty)}
+        </span>
+
+        <span class="badge">
+            ⏱ ${selected.time} MIN
+        </span>
+
+        <span class="badge">
+            ⭐ +${selected.xp} XP
+        </span>
+
+    `;
+
+
+    document.getElementById(
+        "startButton"
+    ).disabled = false;
+
+
+    document.getElementById(
+        "completeButton"
+    ).disabled = true;
+
+
+    document.getElementById(
+        "timer"
+    ).style.display =
+        "none";
+
+
+    updateStats();
+
+}
+
+
+/* =========================================================
+   DIFFICULTY
+========================================================= */
+
+function difficultyText(
+    difficulty
+) {
+
+    if (
+        difficulty === "EASY"
+    ) {
+
+        return "♡ EASY";
+
+    }
+
+
+    if (
+        difficulty === "MEDIUM"
+    ) {
+
+        return "♡♡ MEDIUM";
+
+    }
+
+
+    return "♡♡♡ HARD";
+
+}
+
+
+/* =========================================================
+   START TIMER
+========================================================= */
+
+function startQuest() {
+
+    if (!requireAccount()) return;
+
+
+    if (
+        !currentQuest
+    ) {
+
+        return;
+
+    }
+
+
+    stopTimer();
+
+
+    remainingSeconds =
+        currentQuest.time * 60;
+
+
+    document.getElementById(
+        "timer"
+    ).style.display =
+        "block";
+
+
+    document.getElementById(
+        "startButton"
+    ).disabled =
+        true;
+
+
+    document.getElementById(
+        "newQuestButton"
+    ).disabled =
+        true;
+
+
+    document.getElementById(
+        "completeButton"
+    ).disabled =
+        false;
+
+
+    updateTimer();
+
+
+    timerInterval =
+        setInterval(
+            function() {
+
+                remainingSeconds--;
+
+                updateTimer();
+
+
+                if (
+                    remainingSeconds <= 0
+                ) {
+
+                    timeUp();
+
+                }
+
+            },
+            1000
+        );
+
+}
+
+
+/* =========================================================
+   TIMER DISPLAY
+========================================================= */
+
+function updateTimer() {
+
+
+    const minutes =
+        Math.floor(
+            remainingSeconds / 60
+        );
+
+
+    const seconds =
+        remainingSeconds % 60;
+
+
+    document.getElementById(
+        "timerNumber"
+    ).textContent =
+
+        String(minutes).padStart(
+            2,
+            "0"
+        )
+
+        +
+
+        ":"
+
+        +
+
+        String(seconds).padStart(
+            2,
+            "0"
+        );
+
+
+    const timer =
+        document.getElementById(
+            "timer"
+        );
+
+
+    if (
+        remainingSeconds <= 30
+    ) {
+
+        timer.classList.add(
+            "warning"
+        );
+
+    } else {
+
+        timer.classList.remove(
+            "warning"
+        );
+
+    }
+
+}
+
+
+/* =========================================================
+   TIME UP
+========================================================= */
+
+function timeUp() {
+
+
+    stopTimer();
+
+
+    state.failed++;
+
+
+    state.history.unshift({
+
+        title:
+            currentQuest.title,
+
+        category:
+            currentQuest.category,
+
+        result:
+            "failed",
+
+        date:
+            new Date().toLocaleString()
+
+    });
+
+
+    saveState();
+
+
+    alert(
+        "⏰ TIME'S UP!\n\nNo pasa nada ♡ Puedes intentarlo de nuevo cuando quieras."
+    );
+
+
+    resetQuestUI();
+
+
+    updateStats();
+
+}
+
+
+/* =========================================================
+   COMPLETE QUEST
+========================================================= */
+
+function completeQuest() {
+
+    if (!requireAccount()) return;
+
+
+    if (
+        !currentQuest
+    ) {
+
+        return;
+
+    }
+
+
+    stopTimer();
+
+
+    state.completed++;
+
+
+    state.xp +=
+        currentQuest.xp;
+
+
+    updateStreak();
+
+
+    state.history.unshift({
+
+        title:
+            currentQuest.title,
+
+        category:
+            currentQuest.category,
+
+        result:
+            "completed",
+
+        xp:
+            currentQuest.xp,
+
+        date:
+            new Date().toLocaleString()
+
+    });
+
+
+    saveState();
+
+
+    const level =
+        getLevel();
+
+
+    alert(
+
+        "QUEST COMPLETE! ♡\n\n"
+
+        +
+
+        "⭐ +"
+
+        +
+
+        currentQuest.xp
+
+        +
+
+        " XP\n\n"
+
+        +
+
+        "You are now LEVEL "
+
+        +
+
+        level
+
+        +
+
+        "!"
+
+    );
+
+
+    resetQuestUI();
+
+
+    updateStats();
+
+}
+
+
+/* =========================================================
+   RESET QUEST UI
+========================================================= */
+
+function resetQuestUI() {
+
+
+    currentQuest =
+        null;
+
+
+    document.getElementById(
+        "startButton"
+    ).disabled =
+        true;
+
+
+    document.getElementById(
+        "completeButton"
+    ).disabled =
+        true;
+
+
+    document.getElementById(
+        "newQuestButton"
+    ).disabled =
+        false;
+
+
+    document.getElementById(
+        "timer"
+    ).style.display =
+        "none";
+
+}
+
+
+/* =========================================================
+   STOP TIMER
+========================================================= */
+
+function stopTimer() {
+
+
+    if (
+        timerInterval
+    ) {
+
+        clearInterval(
+            timerInterval
+        );
+
+        timerInterval =
+            null;
+
+    }
+
+}
+
+
+/* =========================================================
+   LEVEL
+========================================================= */
+
+function getLevel() {
+
+    return Math.floor(
+        state.xp / 100
+    ) + 1;
+
+}
+
+
+/* =========================================================
+   LEVEL PROGRESS
+========================================================= */
+
+function updateLevel() {
+
+
+    const level =
+        getLevel();
+
+
+    const currentXP =
+        state.xp % 100;
+
+
+    document.getElementById(
+        "levelDisplay"
+    ).textContent =
+        "LEVEL " + level;
+
+
+    document.getElementById(
+        "xpText"
+    ).textContent =
+
+        currentXP
+
+        +
+
+        " / 100 XP";
+
+
+    document.getElementById(
+        "levelProgress"
+    ).style.width =
+
+        currentXP
+
+        +
+
+        "%";
+
+}
+
+
+/* =========================================================
+   STREAK
+========================================================= */
+
+function updateStreak() {
+
+
+    const today =
+        new Date()
+            .toISOString()
+            .slice(0,10);
+
+
+    if (
+        state.lastCompletedDate === today
+    ) {
+
+        return;
+
+    }
+
+
+    const yesterday =
+        new Date();
+
+
+    yesterday.setDate(
+        yesterday.getDate() - 1
+    );
+
+
+    const yesterdayString =
+        yesterday
+            .toISOString()
+            .slice(0,10);
+
+
+    if (
+        state.lastCompletedDate ===
+        yesterdayString
+    ) {
+
+        state.streak++;
+
+    } else {
+
+        state.streak = 1;
+
+    }
+
+
+    state.lastCompletedDate =
+        today;
+
+
+    saveState();
+
+}
+
+
+/* =========================================================
+   STATS
+========================================================= */
+
+function updateStats() {
+
+
+    document.getElementById(
+        "completedStat"
+    ).textContent =
+        state.completed;
+
+
+    document.getElementById(
+        "failedStat"
+    ).textContent =
+        state.failed;
+
+
+    document.getElementById(
+        "xpStat"
+    ).textContent =
+        state.xp;
+
+
+    document.getElementById(
+        "streakStat"
+    ).textContent =
+        state.streak;
+
+
+    document.getElementById(
+        "streakDisplay"
+    ).textContent =
+
+        "🔥 "
+
+        +
+
+        state.streak
+
+        +
+
+        " day"
+
+        +
+
+        (
+            state.streak === 1
+            ? ""
+            : "s"
+        );
+
+
+    updateLevel();
+
+
+    renderHistory();
+
+}
+
+
+/* =========================================================
+   HISTORY
+========================================================= */
+
+function renderHistory() {
+
+
+    const container =
+        document.getElementById(
+            "historyList"
+        );
+
+
+    if (
+        state.history.length === 0
+    ) {
+
+        container.innerHTML =
+
+            "<p>No quests yet ♡</p>";
+
+        return;
+
+    }
+
+
+    container.innerHTML = "";
+
+
+    state.history.forEach(
+        function(item) {
+
+
+            const div =
+                document.createElement(
+                    "div"
+                );
+
+
+            div.className =
+                "history-item "
+
+                +
+
+                (
+                    item.result ===
+                    "completed"
+
+                    ? "success"
+
+                    : "failed"
+                );
+
+
+            div.innerHTML = `
+
+                <span class="history-icon">
+
+                    ${
+                        item.result ===
+                        "completed"
+                        ? "✓"
+                        : "×"
+                    }
+
+                </span>
+
+                <div>
+
+                    <strong>
+                        ${item.title}
+                    </strong>
+
+                    <br>
+
+                    <small>
+
+                        ${item.category}
+                        •
+                        ${item.date}
+
+                        ${
+                            item.xp
+                            ? " • +" + item.xp + " XP"
+                            : ""
+                        }
+
+                    </small>
+
+                </div>
+
+            `;
+
+
+            container.appendChild(
+                div
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   RESET USED MISSIONS
+========================================================= */
+
+function resetUsedMissions() {
+
+
+    const answer =
+        confirm(
+
+            "¿Quieres reiniciar las misiones usadas?\n\n"
+
+            +
+
+            "Tus estadísticas NO se borrarán."
+
+        );
+
+
+    if (
+        !answer
+    ) {
+
+        return;
+
+    }
+
+
+    state.used = [];
+
+
+    saveState();
+
+
+    alert(
+        "♡ Colección de misiones reiniciada ♡"
+    );
+
+}
+
+
+/* =========================================================
+   ADD CUSTOM QUEST
+========================================================= */
+
+function addCustomQuest() {
+
+    if (!requireAccount()) return;
+
+
+    const title =
+        document.getElementById(
+            "customTitle"
+        ).value.trim();
+
+
+    const description =
+        document.getElementById(
+            "customDescription"
+        ).value.trim();
+
+
+    const category =
+        document.getElementById(
+            "customCategory"
+        ).value;
+
+
+    const difficulty =
+        document.getElementById(
+            "customDifficulty"
+        ).value;
+
+
+    const time =
+        Number(
+            document.getElementById(
+                "customTime"
+            ).value
+        );
+
+
+    if (
+        !title ||
+        !description
+    ) {
+
+        alert(
+            "Completa el nombre y la descripción ♡"
+        );
+
+        return;
+
+    }
+
+
+    let xp = 10;
+
+
+    if (
+        difficulty === "MEDIUM"
+    ) {
+
+        xp = 15;
+
+    }
+
+
+    if (
+        difficulty === "HARD"
+    ) {
+
+        xp = 25;
+
+    }
+
+
+    state.customQuests.push({
+
+        category:
+            category,
+
+        title:
+            title,
+
+        description:
+            description,
+
+        difficulty:
+            difficulty,
+
+        time:
+            time,
+
+        xp:
+            xp
+
+    });
+
+
+    saveState();
+
+
+    document.getElementById(
+        "customTitle"
+    ).value = "";
+
+
+    document.getElementById(
+        "customDescription"
+    ).value = "";
+
+
+    alert(
+        "♡ Tu misión se ha añadido al juego!"
+    );
+
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+function showSection(
+    name,
+    button
+) {
+
+
+    document
+        .querySelectorAll(
+            ".section"
+        )
+        .forEach(
+            function(section) {
+
+                section.style.display =
+                    "none";
+
+            }
+        );
+
+
+    document.getElementById(
+        name
+    ).style.display =
+        "block";
+
+
+    document
+        .querySelectorAll(
+            ".side-btn"
+        )
+        .forEach(
+            function(btn) {
+
+                btn.classList.remove(
+                    "active"
+                );
+
+            }
+        );
+
+
+    button.classList.add(
+        "active"
+    );
+
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+
+/* =========================================================
+   START
+========================================================= */
+
+const accountClient = window.supabase.createClient(
+    "https://tgvecrecqueikcbemnee.supabase.co",
+    "sb_publishable_rM4IuPpzAis_ad_GXthyhw_nPfi7-M5"
+);
+
+function loadAccountState(user) {
+
+    accountUser = user;
+
+    if (!user) {
+        document.getElementById("accountStatus").textContent =
+            "Inicia sesión para guardar tu propio progreso.";
+        document.getElementById("accountLogout").hidden = true;
+        return;
+    }
+
+    state = JSON.parse(
+        localStorage.getItem("lifeQuestState_" + user.id)
+    ) || { ...defaultState, history: [], customQuests: [], used: [] };
+
+    document.getElementById("accountEmail").value = user.email || "";
+    document.getElementById("accountEmail").disabled = true;
+    document.getElementById("accountPassword").hidden = true;
+    document.getElementById("accountLogin").hidden = true;
+    document.getElementById("accountSignup").hidden = true;
+    document.getElementById("accountLogout").hidden = false;
+    document.getElementById("accountStatus").textContent =
+        "Sesión iniciada: " + user.email;
+    updateStats();
+}
+
+document.getElementById("accountLogin").addEventListener("click", async () => {
+    const email = document.getElementById("accountEmail").value.trim();
+    const password = document.getElementById("accountPassword").value;
+    const { error } = await accountClient.auth.signInWithPassword({ email, password });
+    if (error) document.getElementById("accountStatus").textContent = "Correo o contraseña incorrectos.";
+});
+
+document.getElementById("accountSignup").addEventListener("click", async () => {
+    const email = document.getElementById("accountEmail").value.trim();
+    const password = document.getElementById("accountPassword").value;
+    if (!email || password.length < 6) {
+        document.getElementById("accountStatus").textContent = "Usa un correo y una contraseña de al menos 6 caracteres.";
+        return;
+    }
+    const { error } = await accountClient.auth.signUp({ email, password });
+    document.getElementById("accountStatus").textContent = error ? error.message : "Cuenta creada. Revisa tu correo para confirmarla.";
+});
+
+document.getElementById("accountLogout").addEventListener("click", () => accountClient.auth.signOut());
+accountClient.auth.onAuthStateChange((_event, session) => loadAccountState(session?.user || null));
+accountClient.auth.getSession().then(({ data: { session } }) => loadAccountState(session?.user || null));
+
+updateStats();
+
+
+</script>
+
+
+<script src="loading.js"></script>
+</body>
+
+</html>

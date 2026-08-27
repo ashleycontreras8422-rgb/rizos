@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>html, body, body * { cursor: url("images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Me · RIZOS</title>
+
+    <link rel="icon" type="image/png" href="icon.png">
+
+
+    <style>
+
+        /* =========================================
+           COLORES
+           ========================================= */
+
+        :root {
+
+            --rosa: #f49ac2;
+            --rosa-claro: #ffd6e8;
+            --rosa-suave: #fff0f6;
+
+            --amarillo: #f7df91;
+            --amarillo-claro: #fff4bd;
+            --amarillo-suave: #fffbea;
+
+            --texto: #765966;
+            --rosa-texto: #d45d8c;
+
+            --blanco: #ffffff;
+
+        }
+
+
+        /* =========================================
+           GENERAL
+           ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            padding: 25px 0;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            font-size: 12px;
+
+            color: var(--texto);
+
+            background-color: #fff8df;
+
+            background-image:
+                radial-gradient(
+                    #eadfbd 1px,
+                    transparent 1px
+                );
+
+            background-size: 8px 8px;
+
+        }
+
+
+        /* =========================================
+           PÁGINA
+           ========================================= */
+
+        .pagina {
+
+            width: 900px;
+
+            max-width: 94%;
+
+            margin: auto;
+
+            background: white;
+
+            border-left: 1px solid #efb3ca;
+
+            border-right: 1px solid #efb3ca;
+
+            box-shadow:
+                0 0 15px rgba(230, 160, 185, 0.35);
+
+        }
+
+
+        /* =========================================
+           BARRA SUPERIOR
+           ========================================= */
+
+        .topbar {
+
+            height: 42px;
+
+            padding: 6px 12px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #ffb9d8,
+                    #ee82b4
+                );
+
+            border-bottom: 2px solid #ffe5ef;
+
+            text-shadow:
+                1px 1px #b75a82;
+
+        }
+
+
+        .logo {
+
+            font-size: 19px;
+
+            font-weight: bold;
+
+        }
+
+
+        .logo span {
+
+            color: #fff6c9;
+
+        }
+
+
+        .top-right {
+
+            font-size: 11px;
+
+        }
+
+
+        /* =========================================
+           MENÚ
+           ========================================= */
+
+        .menu {
+
+            padding: 5px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #fff1ad,
+                    #f8d982
+                );
+
+            border-bottom: 1px solid #dfc16b;
+
+        }
+
+
+        .menu a {
+
+            color: #8a6070;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            padding: 2px 10px;
+
+            border-right: 1px solid #e6c977;
+
+        }
+
+
+        .menu a:last-child {
+
+            border-right: none;
+
+        }
+
+
+        .menu a:hover {
+
+            color: #d65d8c;
+
+            text-decoration: underline;
+
+        }
+
+
+        /* =========================================
+           CONTENIDO
+           ========================================= */
+
+        .contenido {
+
+            padding: 15px;
+
+        }
+
+
+        /* =========================================
+           TÍTULO
+           ========================================= */
+
+        .titulo-principal {
+
+            color: #d45d8c;
+
+            font-size: 26px;
+
+            margin: 0;
+
+            text-shadow:
+                1px 1px #ffeab0;
+
+        }
+
+
+        .subtitulo {
+
+            color: #b28b3f;
+
+            font-style: italic;
+
+            margin-top: 3px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* =========================================
+           CAJITAS
+           ========================================= */
+
+        .caja {
+
+            border: 1px solid #edb0c9;
+
+            margin-bottom: 15px;
+
+            background: white;
+
+        }
+
+
+        .titulo-caja {
+
+            padding: 4px 8px;
+
+            color: #805066;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    to right,
+                    var(--rosa-claro),
+                    var(--amarillo-claro),
+                    var(--rosa-claro)
+                );
+
+            border-bottom: 1px solid #e9b1c8;
+
+            text-shadow:
+                1px 1px white;
+
+        }
+
+
+        .contenido-caja {
+
+            padding: 12px;
+
+        }
+
+
+        /* =========================================
+           INTRODUCCIÓN
+           ========================================= */
+
+        .intro {
+
+            display: grid;
+
+            grid-template-columns: 190px 1fr;
+
+            gap: 15px;
+
+        }
+
+
+        /* =========================================
+           FOTO PRINCIPAL
+           ========================================= */
+
+        .foto-principal {
+
+            height: 190px;
+
+            min-width: 0;
+
+            position: relative;
+
+            overflow: hidden;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: #d5799d;
+
+            font-size: 38px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--rosa-claro),
+                    var(--amarillo-claro)
+                );
+
+            border: 3px solid white;
+
+            outline: 1px solid #e7a9bf;
+
+            box-shadow:
+                3px 3px 0 #ead77d;
+
+        }
+
+
+        .foto-principal img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            min-width: 0;
+
+        }
+
+
+        /* =========================================
+           TEXTO
+           ========================================= */
+
+        .texto {
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            color: #6f5962;
+
+        }
+
+
+        .texto p {
+
+            margin-top: 0;
+
+            margin-bottom: 13px;
+
+        }
+
+
+        .rosa {
+
+            color: var(--rosa-texto);
+
+            font-weight: bold;
+
+        }
+
+
+        .amarillo {
+
+            color: #b28b3f;
+
+            font-weight: bold;
+
+        }
+
+
+        /* =========================================
+           DOS COLUMNAS
+           ========================================= */
+
+        .dos-columnas {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+
+        }
+
+
+        /* =========================================
+           FACTS
+           ========================================= */
+
+        .fact {
+
+            padding: 6px 8px;
+
+            margin-bottom: 5px;
+
+            background: #fffbea;
+
+            border: 1px solid #f0df9e;
+
+        }
+
+
+        .fact strong {
+
+            color: #d45d8c;
+
+        }
+
+
+        /* =========================================
+           LISTAS
+           ========================================= */
+
+        .lista {
+
+            margin: 0;
+
+            padding-left: 20px;
+
+        }
+
+
+        .lista li {
+
+            margin-bottom: 7px;
+
+        }
+
+
+        /* =========================================
+           GALERÍA
+           ========================================= */
+
+        .galeria {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 10px;
+
+        }
+
+
+        .foto {
+
+            height: 150px;
+
+            min-width: 0;
+
+            position: relative;
+
+            overflow: hidden;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            color: #c87596;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff4bd,
+                    #ffd6e8
+                );
+
+            border: 3px solid white;
+
+            outline: 1px solid #e7b0c4;
+
+            box-shadow:
+                2px 2px 0 #ead77d;
+
+        }
+
+
+        .foto img {
+
+            width: 100%;
+
+            height: 100%;
+
+            display: block;
+
+            object-fit: cover;
+
+        }
+
+
+        /* =========================================
+           ESPACIO PARA ESCRIBIR
+           ========================================= */
+
+        .espacio-escritura {
+
+            min-height: 250px;
+
+            padding: 15px;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            color: #6f5962;
+
+            background:
+
+                repeating-linear-gradient(
+                    to bottom,
+                    #ffffff,
+                    #ffffff 27px,
+                    #f3dfe7 28px
+                );
+
+        }
+
+
+        /* =========================================
+           BLINKIES
+           ========================================= */
+
+        .blinkies {
+
+            text-align: center;
+
+        }
+
+
+        .blinkie {
+
+            display: inline-block;
+
+            padding: 4px 9px;
+
+            margin: 3px;
+
+            color: white;
+
+            font-size: 9px;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    to right,
+                    #ee8eb8,
+                    #f5d87e,
+                    #ee8eb8
+                );
+
+            border: 1px solid #dc8aaa;
+
+            box-shadow:
+                inset 0 1px rgba(255,255,255,0.8);
+
+        }
+
+
+        /* =========================================
+           DECORACIÓN
+           ========================================= */
+
+        .decoracion {
+
+            text-align: center;
+
+            margin: 12px 0;
+
+            color: #d99b5b;
+
+            font-size: 17px;
+
+            letter-spacing: 4px;
+
+        }
+
+
+        /* =========================================
+           BOTÓN VOLVER
+           ========================================= */
+
+        .botones {
+
+            text-align: center;
+
+            margin: 20px 0;
+
+        }
+
+
+        .boton {
+
+            display: inline-block;
+
+            padding: 5px 13px;
+
+            color: #87556a;
+
+            text-decoration: none;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #fff2b8,
+                    #f9d77d
+                );
+
+            border: 1px solid #d9b85d;
+
+            box-shadow:
+                inset 0 1px white,
+                1px 1px 1px #ddd;
+
+        }
+
+
+        .boton:hover {
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #ffd7e8,
+                    #f39cc2
+                );
+
+        }
+
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+
+        footer {
+
+            padding: 13px;
+
+            text-align: center;
+
+            color: #a9808f;
+
+            background: var(--rosa-suave);
+
+            border-top: 1px solid #edb4ca;
+
+            font-size: 10px;
+
+        }
+
+
+        /* =========================================
+           MÓVIL
+           ========================================= */
+
+        @media (max-width: 700px) {
+
+            .intro {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .dos-columnas {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .galeria {
+
+                grid-template-columns: 1fr 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="pagina">
+
+
+    <!-- =====================================
+         CABECERA
+         ===================================== -->
+
+    <header class="topbar">
+
+        <div class="logo">
+
+            RIZOS<span></span>
+
+        </div>
+
+
+        <div class="top-right">
+
+            ✧ bienvenido a cosas sobre mi ✧
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================
+         MENÚ
+         ===================================== -->
+
+    <nav class="menu">
+
+        <a href="./index.html">🏠 Home</a>
+
+        <a href="about.html">♡ About Me</a>
+
+        <a href="blog.html">✎ Blog</a>
+
+        <a href="hobbies.html">☆ Hobbies</a>
+
+        <a href="music.html">♫ Music</a>
+
+         <a href="agenda-login.html">⭐ Agenda</a>
+
+        <a href="galery.html">📸 Galery</a>
+
+        <a href="dreams.html">✧ Dreams</a>
+
+        <a href="life.html">❀ Life</a>
+
+        <a href="writiti.html"> ✎ Writiti</a>
+    
+
+    </nav>
+
+
+
+    <!-- =====================================
+         CONTENIDO
+         ===================================== -->
+
+    <main class="contenido">
+
+
+        <h1 class="titulo-principal">
+
+            About Me ᯓ★
+
+        </h1>
+
+
+        <div class="subtitulo">
+
+            Conoce a la persona detrás de esta pequeña página web  ♡
+
+        </div>
+
+
+
+        <!-- =================================
+             INTRO
+             ================================= -->
+
+        <section class="caja">
+
+            <div class="titulo-caja">
+
+                ✿ Un poco sobre mí
+
+            </div>
+
+
+            <div class="contenido-caja intro">
+
+
+                <!-- FOTO -->
+
+                <div class="foto-principal">
+
+                    <!--
+                    PARA PONER TU FOTO:
+
+                    1. Mete la imagen dentro de una carpeta
+                       llamada "imagenes".
+
+                    2. Llámala, por ejemplo:
+                       yo.jpg
+
+                    3. Sustituye este texto por:
+
+                    <img src="imagenes/yo.jpg"
+                         alt="Una foto mía">
+                    -->
+
+                </div>
+
+
+
+                <!-- TEXTO -->
+
+                <div class="texto about-editable">
+
+                    <p>
+
+                        Hiii!! ♡
+
+                    </p>
+
+
+                    <p>
+
+                        Mi nombre es
+
+                        <span class="rosa">
+                            [TU NOMBRE]
+                        </span>
+
+                        y este es mi pequeño rincón
+                        perdido en Internet.
+
+                    </p>
+
+
+                    <p>
+
+                        Aquí puedes escribir todo lo que
+                        quieras contar sobre ti.
+
+                        Qué haces, qué te gusta, cómo eres,
+                        qué cosas te interesan, tus proyectos,
+                        tus sueños, tus obsesiones del momento...
+
+                    </p>
+
+
+                    <p>
+
+                        Básicamente este espacio es
+
+                        <span class="amarillo">
+                            completamente tuyo
+                        </span>
+
+                        para escribir lo que quieras.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             DATOS + PERSONALIDAD
+             ================================= -->
+
+        <div class="dos-columnas">
+
+
+            <!-- RANDOM FACTS -->
+
+            <section class="caja">
+
+                <div class="titulo-caja">
+
+                    ★ Random Facts About Me
+
+                </div>
+
+
+                <div class="contenido-caja about-editable">
+
+
+                    <div class="fact">
+
+                        <strong>★ Nombre:</strong>
+
+                        [escribe aquí]
+
+                    </div>
+
+
+                    <div class="fact">
+
+                        <strong>♡ Edad:</strong>
+
+                        [escribe aquí]
+
+                    </div>
+
+
+                    <div class="fact">
+
+                        <strong>✧ Cumpleaños:</strong>
+
+                        [escribe aquí]
+
+                    </div>
+
+
+                    <div class="fact">
+
+                        <strong>☀ Lugar:</strong>
+
+                        [escribe aquí]
+
+                    </div>
+
+
+                    <div class="fact">
+
+                        <strong>♫ Música:</strong>
+
+                        [escribe aquí]
+
+                    </div>
+
+
+                    <div class="fact">
+
+                        <strong>★ Color:</strong>
+
+                        [escribe aquí]
+
+                    </div>
+
+
+                    <div class="fact">
+
+                        <strong>♡ Comida:</strong>
+
+                        [escribe aquí]
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ME -->
+
+            <section class="caja">
+
+                <div class="titulo-caja">
+
+                    ♡ Things About Me
+
+                </div>
+
+
+                <div class="contenido-caja about-editable">
+
+
+                    <ul class="lista">
+
+                        <li>
+                            Algo que me encanta...
+                        </li>
+
+                        <li>
+                            Algo que no me gusta...
+                        </li>
+
+                        <li>
+                            Algo que quiero aprender...
+                        </li>
+
+                        <li>
+                            Algo que me hace feliz...
+                        </li>
+
+                        <li>
+                            Algo que me da vergüenza...
+                        </li>
+
+                        <li>
+                            Algo que quiero hacer algún día...
+                        </li>
+
+                        <li>
+                            Mi pequeña obsesión actual...
+                        </li>
+
+                    </ul>
+
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+
+        <!-- =================================
+             MIS INTERESES
+             ================================= -->
+
+        <section class="caja">
+
+            <div class="titulo-caja">
+
+                ✧ Mis Intereses
+
+            </div>
+
+
+            <div class="contenido-caja about-editable">
+
+
+                <div class="dos-columnas">
+
+
+                    <div>
+
+                        <h3 class="rosa">
+
+                            ♡ Hobbies
+
+                        </h3>
+
+
+                        <ul class="lista">
+
+                            <li>
+                                [Hobby]
+                            </li>
+
+                            <li>
+                                [Hobby]
+                            </li>
+
+                            <li>
+                                [Hobby]
+                            </li>
+
+                            <li>
+                                [Hobby]
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+
+                    <div>
+
+                        <h3 class="amarillo">
+
+                            ★ Things I Like
+
+                        </h3>
+
+
+                        <ul class="lista">
+
+                            <li>
+                                [Algo que te gusta]
+                            </li>
+
+                            <li>
+                                [Algo que te gusta]
+                            </li>
+
+                            <li>
+                                [Algo que te gusta]
+                            </li>
+
+                            <li>
+                                [Algo que te gusta]
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             GALERÍA
+             ================================= -->
+
+        <section class="caja">
+
+
+            <div class="titulo-caja">
+
+                📷 Little Photo Corner
+
+            </div>
+
+
+            <div class="contenido-caja">
+
+
+                <p>
+
+                    Algunas imágenes que quiero
+                    guardar aquí ♡
+
+                </p>
+
+
+                <div class="galeria">
+
+
+                    <!-- FOTO 1 -->
+
+                    <div class="foto">
+
+                        <!--
+                        <img src="imagenes/foto1.jpg"
+                             alt="Foto 1">
+                        -->
+
+                        ★ PHOTO 01 ★
+
+                    </div>
+
+
+
+                    <!-- FOTO 2 -->
+
+                    <div class="foto">
+
+                        <!--
+                        <img src="imagenes/foto2.jpg"
+                             alt="Foto 2">
+                        -->
+
+                        ♡ PHOTO 02 ♡
+
+                    </div>
+
+
+
+                    <!-- FOTO 3 -->
+
+                    <div class="foto">
+
+                        <!--
+                        <img src="imagenes/foto3.jpg"
+                             alt="Foto 3">
+                        -->
+
+                        ✧ PHOTO 03 ✧
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             MÁS SOBRE MÍ
+             ================================= -->
+
+        <section class="caja">
+
+
+            <div class="titulo-caja">
+
+                ✿ More About Me
+
+            </div>
+
+
+            <div class="espacio-escritura">
+
+
+                <p>
+
+                    Aquí tienes MUCHO espacio para escribir
+                    sobre ti.
+
+                </p>
+
+
+                <p>
+
+                    Puedes contar una historia sobre cómo
+                    empezaste con alguno de tus hobbies,
+                    hablar de tus intereses, explicar por qué
+                    te gusta algo, escribir recuerdos,
+                    pensamientos...
+
+                </p>
+
+
+                <p>
+
+                    O simplemente borrar todo esto y
+                    escribir absolutamente lo que quieras.
+
+                </p>
+
+
+                <br>
+
+
+                <p>
+
+                    <span class="rosa">
+
+                        ✧ Empieza a escribir aquí...
+
+                    </span>
+
+                </p>
+
+
+                <br><br><br><br><br>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             BLINKIES
+             ================================= -->
+
+        <section class="caja">
+
+
+            <div class="titulo-caja">
+
+                ★ Little badges
+
+            </div>
+
+
+            <div class="contenido-caja blinkies">
+
+
+                <span class="blinkie">
+
+                    ONLINE ♡
+
+                </span>
+
+
+                <span class="blinkie">
+
+                    DREAMER
+
+                </span>
+
+
+                <span class="blinkie">
+
+                    Y2K WEB
+
+                </span>
+
+
+                <span class="blinkie">
+
+                    ★ BLOGGER ★
+
+                </span>
+
+
+                <span class="blinkie">
+
+                    MADE WITH LOVE
+
+                </span>
+
+
+                <span class="blinkie">
+
+                    INTERNET KID
+
+                </span>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             DECORACIÓN
+             ================================= -->
+
+        <div class="decoracion">
+
+            ☆ ★ ☆ ★ ☆ ★ ☆
+
+        </div>
+
+
+
+        <!-- VOLVER -->
+
+        <div class="botones">
+
+            <a href="./index.html" class="boton">
+
+                ← Back to Home
+
+            </a>
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+         ===================================== -->
+
+    <footer>
+
+        ✿ RIZOSᯓ★ · 2026 ✿
+
+        <br>
+
+        made with way too many ideas ♡
+
+    </footer>
+
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="access.js"></script>
+<script src="loading.js"></script>
+</body>
+
+</html>
+

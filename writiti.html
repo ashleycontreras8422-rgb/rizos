@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>html, body, body * { cursor: url("images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writiti · Hallooᯓ★</title>
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <style>
+        /* =========================================
+           COLORES
+           ========================================= */
+        :root {
+            --rosa: #f49ac2;
+            --rosa-claro: #ffd6e8;
+            --rosa-suave: #fff0f6;
+
+            --amarillo: #f7df91;
+            --amarillo-claro: #fff4bd;
+            --amarillo-suave: #fffbea;
+
+            --texto: #765966;
+            --rosa-texto: #d45d8c;
+            --borde: #edb0c9;
+            --blanco: #ffffff;
+        }
+
+        /* =========================================
+           GENERAL
+           ========================================= */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: var(--texto);
+            background-color: #fff8df;
+            background-image:
+                radial-gradient(
+                    #eadfbd 1px,
+                    transparent 1px
+                );
+            background-size: 8px 8px;
+        }
+
+        /* =========================================
+           PÁGINA
+           ========================================= */
+        .pagina {
+            width: 900px;
+            max-width: 94%;
+            margin: auto;
+            background: white;
+            border-left: 1px solid var(--borde);
+            border-right: 1px solid var(--borde);
+            box-shadow: 0 0 15px rgba(230, 160, 185, 0.35);
+        }
+
+        /* =========================================
+           BARRA SUPERIOR
+           ========================================= */
+        .topbar {
+            height: 42px;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            background: linear-gradient(to bottom, #ffb9d8, #ee82b4);
+            border-bottom: 2px solid #ffe5ef;
+            text-shadow: 1px 1px #b75a82;
+        }
+
+        .logo {
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #fff6c9;
+        }
+
+        .top-right {
+            font-size: 11px;
+        }
+
+        /* =========================================
+           MENÚ
+           ========================================= */
+        .menu {
+            padding: 5px;
+            text-align: center;
+            background: linear-gradient(to bottom, #fff1ad, #f8d982);
+            border-bottom: 1px solid #dfc16b;
+        }
+
+        .menu a {
+            color: #8a6070;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 2px 10px;
+            border-right: 1px solid #e6c977;
+        }
+
+        .menu a:last-child {
+            border-right: none;
+        }
+
+        .menu a:hover {
+            color: #d65d8c;
+            text-decoration: underline;
+        }
+
+        /* =========================================
+           CONTENIDO (Diseño de 2 columnas)
+           ========================================= */
+        .contenido {
+            display: grid;
+            grid-template-columns: 210px 1fr;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        /* =========================================
+           CAJAS
+           ========================================= */
+        .caja {
+            border: 1px solid var(--borde);
+            margin-bottom: 15px;
+            background: white;
+        }
+
+        .titulo-caja {
+            padding: 4px 8px;
+            color: #805066;
+            font-weight: bold;
+            background: linear-gradient(to right, var(--rosa-claro), var(--amarillo-claro), var(--rosa-claro));
+            border-bottom: 1px solid #e9b1c8;
+            text-shadow: 1px 1px white;
+        }
+
+        .contenido-caja {
+            padding: 12px;
+        }
+
+        /* =========================================
+           SIDEBAR LISTA
+           ========================================= */
+        .sidebar-lista {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar-lista li {
+            margin-bottom: 4px;
+        }
+
+        .sidebar-lista a {
+            display: block;
+            padding: 5px 7px;
+            color: #9a5874;
+            text-decoration: none;
+            background: #fffbea;
+            border-bottom: 1px dotted #e5c6d0;
+        }
+
+        .sidebar-lista a:hover {
+            background: var(--rosa-claro);
+            color: #d45d8c;
+        }
+
+        /* =========================================
+           TÍTULOS PRINCIPALES
+           ========================================= */
+        .titulo-writiti {
+            margin: 0;
+            color: #d45d8c;
+            font-size: 27px;
+            text-shadow: 1px 1px #ffeab0;
+        }
+
+        .subtitulo-writiti {
+            margin-top: 3px;
+            margin-bottom: 15px;
+            color: #b28b3f;
+            font-style: italic;
+        }
+
+        /* =========================================
+           ÁREA DE CHAT / MURO INTERACTIVO
+           ========================================= */
+        .chat-box {
+            background: #fffbea;
+            border: 1px solid #edb0c9;
+            height: 280px;
+            overflow-y: auto;
+            padding: 10px;
+            margin-bottom: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .mensaje-item {
+            background: #ffffff;
+            border: 1px dotted #e0b0c5;
+            padding: 6px 10px;
+            box-shadow: 1px 1px 2px rgba(230, 160, 185, 0.15);
+        }
+
+        .mensaje-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 10px;
+            color: #b28b3f;
+            margin-bottom: 3px;
+            border-bottom: 1px solid #fff0f6;
+            padding-bottom: 2px;
+        }
+
+        .mensaje-autor {
+            font-weight: bold;
+            color: #d45d8c;
+        }
+
+        .mensaje-texto {
+            color: #765966;
+            font-size: 11px;
+            word-break: break-word;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Formulario de envío */
+        .chat-form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background: #fff0f6;
+            border: 1px solid #edb0c9;
+            padding: 10px;
+        }
+
+        .campo-input {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #d9b85d;
+            background: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            color: #765966;
+            outline: none;
+        }
+
+        .campo-input:focus {
+            border-color: #d45d8c;
+        }
+
+        textarea.campo-input {
+            resize: vertical;
+            height: 55px;
+        }
+
+        .enviar-btn {
+            align-self: flex-end;
+            padding: 5px 14px;
+            color: #87556a;
+            font-size: 10px;
+            font-weight: bold;
+            background: linear-gradient(to bottom, #fff2b8, #f9d77d);
+            border: 1px solid #d9b85d;
+            box-shadow: inset 0 1px white, 1px 1px 1px #ddd;
+            cursor: pointer;
+        }
+
+        .enviar-btn:hover {
+            color: white;
+            background: linear-gradient(to bottom, #ffd7e8, #f39cc2);
+            border-color: #d45d8c;
+        }
+
+        /* =========================================
+           BLINKIES
+           ========================================= */
+        .blinkies {
+            text-align: center;
+        }
+
+        .blinkie {
+            display: inline-block;
+            padding: 4px 7px;
+            margin: 2px;
+            color: white;
+            font-size: 9px;
+            font-weight: bold;
+            background: linear-gradient(to right, #ee8eb8, #f5d87e, #ee8eb8);
+            border: 1px solid #dc8aaa;
+            box-shadow: inset 0 1px rgba(255,255,255,0.8);
+        }
+
+        /* =========================================
+           DECORACIÓN
+           ========================================= */
+        .decoracion {
+            text-align: center;
+            margin: 15px 0;
+            color: #d99b5b;
+            font-size: 16px;
+            letter-spacing: 4px;
+        }
+
+        /* =========================================
+           BOTÓN
+           ========================================= */
+        .botones {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 5px 12px;
+            color: #87556a;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: bold;
+            background: linear-gradient(to bottom, #fff2b8, #f9d77d);
+            border: 1px solid #d9b85d;
+            box-shadow: inset 0 1px white, 1px 1px 1px #ddd;
+        }
+
+        .boton:hover {
+            color: white;
+            background: linear-gradient(to bottom, #ffd7e8, #f39cc2);
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        footer {
+            padding: 13px;
+            text-align: center;
+            color: #a9808f;
+            background: var(--rosa-suave);
+            border-top: 1px solid #edb4ca;
+            font-size: 10px;
+        }
+
+        /* =========================================
+           MÓVIL
+           ========================================= */
+        @media (max-width: 700px) {
+            .contenido {
+                grid-template-columns: 1fr;
+            }
+            .top-right {
+                display: none;
+            }
+            .menu a {
+                display: inline-block;
+                padding: 4px 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="pagina">
+
+    <!-- =====================================
+         CABECERA
+         ===================================== -->
+    <header class="topbar">
+        <div class="logo">
+            RIZOS<span>ᯓ★</span>
+        </div>
+        <div class="top-right">
+            ✧ interactive chat ✧
+        </div>
+    </header>
+
+    <!-- =====================================
+         MENÚ
+         ===================================== -->
+    <nav class="menu">
+        <a href="index.html">🏠 Home</a>
+        <a href="aboutme.htlm.html">♡ About Me</a>
+        <a href="blog.html">✎ Blog</a>
+        <a href="hobbies.html">☆ Hobbies</a>
+        <a href="music.html">♫ Music</a>
+        <a href="agenda-login.html">⭐ Agenda</a>
+        <a href="galery.html">📸 Galery</a>
+        <a href="dreams.html">✧ Dreams</a>
+        <a href="life.html">❀ Life</a>
+        <a href="writiti.html"> ✎ Writiti</a>
+    </nav>
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+         ===================================== -->
+    <main class="contenido">
+
+        <!-- =================================
+             SIDEBAR
+             ================================= -->
+        <aside>
+            <section class="caja">
+                <div class="titulo-caja">
+                    ☆ Writiti Menu
+                </div>
+                <div class="contenido-caja">
+                    <ul class="sidebar-lista">
+                        <li><a href="writiti.html">💬 Live Guestbook</a></li>
+                        <li><a href="writiti.html">★ Leave a Note</a></li>
+                        <li><a href="writiti.html">✨ Local Storage</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="caja">
+                <div class="titulo-caja">
+                    ♡ Chat Stats
+                </div>
+                <div class="contenido-caja">
+                    <p><strong>✍️ Estado:</strong> Activo / Local</p>
+                    <p><strong>★ Interacción:</strong> Abierta</p>
+                    <p><strong>💬 Guardado:</strong> Automático</p>
+                </div>
+            </section>
+
+            <section class="caja">
+                <div class="titulo-caja">
+                    ✧ Writiti Blinkies
+                </div>
+                <div class="contenido-caja blinkies">
+                    <span class="blinkie">GUESTBOOK</span>
+                    <span class="blinkie">CHATBOX</span>
+                    <span class="blinkie">Y2K WRITE</span>
+                    <span class="blinkie">★ INTERACTIVE</span>
+                </div>
+            </section>
+        </aside>
+
+        <!-- =================================
+             COLUMNA DERECHA
+             ================================= -->
+        <section>
+            <h1 class="titulo-writiti">
+                Writiti Chat ✍️
+            </h1>
+            <div class="subtitulo-writiti">
+                deja tu marca y escribe algo en el chat ♡
+            </div>
+
+            <!-- SECCIÓN DEL CHAT / MURO INTERACTIVO -->
+            <section class="caja">
+                <div class="titulo-caja">
+                    💬 /root/writiti/live-chat.log
+                </div>
+                <div class="contenido-caja">
+                    
+                    <!-- Contenedor donde se muestran los mensajes -->
+                    <div id="chatBox" class="chat-box">
+                        <!-- Los mensajes se cargan aquí mediante JavaScript -->
+                    </div>
+
+                    <!-- Formulario para escribir -->
+                    <form id="chatForm" class="chat-form">
+                        <div>
+                            <label style="font-size: 10px; font-weight: bold; color: #805066; display: block; margin-bottom: 2px;">Tu Nombre / Apodo:</label>
+                            <input type="text" id="nombreInput" class="campo-input" placeholder="Ej. robert22" required autocomplete="off">
+                            <p id="usernameStatus" style="margin:4px 0 0;font-size:10px;color:#a15d78;"></p>
+                        </div>
+                        <div>
+                            <label style="font-size: 10px; font-weight: bold; color: #805066; display: block; margin-bottom: 2px;">Tu Mensaje:</label>
+                            <textarea id="mensajeInput" class="campo-input" placeholder="Escribe algo bonito o un saludo..." required></textarea>
+                        </div>
+                        <button type="submit" class="enviar-btn">Enviar Mensaje ✉️</button>
+                    </form>
+
+                </div>
+            </section>
+
+            <!-- SECCIÓN INFORMATIVA RETRO -->
+            <section class="caja">
+                <div class="titulo-caja">
+                    ✿ Interactive Feature note
+                </div>
+                <div class="contenido-caja">
+                    <p style="margin: 0; line-height: 1.5; font-size: 11px;">
+                        Este chat interactivo guarda los mensajes directamente en tu navegador usando <strong>LocalStorage</strong>. Los mensajes que escribas tú u otras personas desde este dispositivo se quedarán guardados y se actualizarán al instante. ★
+                    </p>
+                </div>
+            </section>
+
+            <div class="decoracion">
+                ✍️ ✨ ✍️ ✨ ✍️ ✨ ✍️
+            </div>
+
+            <!-- BOTÓN VOLVER -->
+            <div class="botones">
+                <a href="index.html" class="boton">
+                    ← Back to Home
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =====================================
+         FOOTER
+         ===================================== -->
+    <footer>
+        ✿ RIZOSᯓ★ · writiti interactive chat · 2026 ✿
+        <br>
+        made with pink, yellow & live messages ♡
+    </footer>
+
+</div>
+
+<!-- =========================================
+     JAVASCRIPT PARA INTERACCIÓN Y PERSISTENCIA
+     ========================================= -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="access.js"></script>
+<script src="loading.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const supabaseUrl = "https://tgvecrecqueikcbemnee.supabase.co/rest/v1";
+        const supabaseKey = "sb_publishable_rM4IuPpzAis_ad_GXthyhw_nPfi7-M5";
+        const chatBox = document.getElementById("chatBox");
+        const chatForm = document.getElementById("chatForm");
+        const nombreInput = document.getElementById("nombreInput");
+        const mensajeInput = document.getElementById("mensajeInput");
+
+        let mensajes = [
+            { autor: "System_Admin", texto: "¡Bienvenides al libro de visitas y chat de Writiti! Dejen su saludo por aquí 🌟", fecha: "26/08/2026 12:00" },
+            { autor: "Y2K_Lover", texto: "¡Qué aesthetic se ve esta página web! Me encanta el diseño pastel ♡", fecha: "26/08/2026 12:05" }
+        ];
+
+        const supabaseHeaders = {
+            "apikey": supabaseKey,
+            "Authorization": `Bearer ${supabaseKey}`,
+            "Content-Type": "application/json"
+        };
+
+        function renderizarMensajes() {
+            chatBox.innerHTML = "";
+            mensajes.forEach(msg => {
+                const div = document.createElement("div");
+                div.className = "mensaje-item";
+                div.innerHTML = `
+                    <div class="mensaje-header">
+                        <span class="mensaje-autor">★ ${escapeHtml(msg.autor)}</span>
+                        <span>${escapeHtml(msg.fecha)}</span>
+                    </div>
+                    <p class="mensaje-texto">${escapeHtml(msg.texto)}</p>
+                `;
+                chatBox.appendChild(div);
+            });
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function escapeHtml(text) {
+            return text
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        async function cargarMensajes() {
+            try {
+                const respuesta = await fetch(`${supabaseUrl}/mensajes?select=*&order=fecha.asc`, {
+                    headers: supabaseHeaders
+                });
+
+                if (!respuesta.ok) throw new Error("No se pudieron cargar los mensajes");
+
+                mensajes = await respuesta.json();
+                renderizarMensajes();
+            } catch (error) {
+                console.error(error);
+                renderizarMensajes();
+            }
+        }
+
+        chatForm.addEventListener("submit", async (e) => {
+            e.preventDefault();
+            if (!window.siteAccess.requireAuth()) return;
+            const autor = nombreInput.value.trim();
+            const texto = mensajeInput.value.trim();
+
+            if (!autor || !texto) return;
+
+            const botonEnviar = chatForm.querySelector("button[type='submit']");
+            botonEnviar.disabled = true;
+
+            try {
+                const respuesta = await fetch(`${supabaseUrl}/mensajes`, {
+                    method: "POST",
+                    headers: {
+                        ...supabaseHeaders,
+                        "Prefer": "return=representation"
+                    },
+                    body: JSON.stringify({ autor, texto })
+                });
+
+                if (!respuesta.ok) throw new Error("No se pudo guardar el mensaje");
+
+                mensajeInput.value = "";
+                await cargarMensajes();
+            } catch (error) {
+                console.error(error);
+                alert("No se pudo enviar el mensaje. Revisa la conexión con Supabase.");
+            } finally {
+                botonEnviar.disabled = false;
+            }
+        });
+
+        cargarMensajes();
+        setInterval(cargarMensajes, 5000);
+    });
+</script>
+
+</body>
+</html>

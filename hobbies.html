@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>html, body, body * { cursor: url("images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies · Hallooᯓ★</title>
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <style>
+        /* =========================================
+           COLORES
+           ========================================= */
+        :root {
+            --rosa: #f49ac2;
+            --rosa-claro: #ffd6e8;
+            --rosa-suave: #fff0f6;
+
+            --amarillo: #f7df91;
+            --amarillo-claro: #fff4bd;
+            --amarillo-suave: #fffbea;
+
+            --texto: #765966;
+            --rosa-texto: #d45d8c;
+            --borde: #edb0c9;
+            --blanco: #ffffff;
+        }
+
+        /* =========================================
+           GENERAL
+           ========================================= */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: var(--texto);
+            background-color: #fff8df;
+            background-image:
+                radial-gradient(
+                    #eadfbd 1px,
+                    transparent 1px
+                );
+            background-size: 8px 8px;
+        }
+
+        /* =========================================
+           PÁGINA
+           ========================================= */
+        .pagina {
+            width: 900px;
+            max-width: 94%;
+            margin: auto;
+            background: white;
+            border-left: 1px solid var(--borde);
+            border-right: 1px solid var(--borde);
+            box-shadow: 0 0 15px rgba(230, 160, 185, 0.35);
+        }
+
+        /* =========================================
+           BARRA SUPERIOR
+           ========================================= */
+        .topbar {
+            height: 42px;
+            padding: 6px 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            background: linear-gradient(to bottom, #ffb9d8, #ee82b4);
+            border-bottom: 2px solid #ffe5ef;
+            text-shadow: 1px 1px #b75a82;
+        }
+
+        .logo {
+            font-size: 19px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #fff6c9;
+        }
+
+        .top-right {
+            font-size: 11px;
+        }
+
+        /* =========================================
+           MENÚ
+           ========================================= */
+        .menu {
+            padding: 5px;
+            text-align: center;
+            background: linear-gradient(to bottom, #fff1ad, #f8d982);
+            border-bottom: 1px solid #dfc16b;
+        }
+
+        .menu a {
+            color: #8a6070;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 2px 10px;
+            border-right: 1px solid #e6c977;
+        }
+
+        .menu a:last-child {
+            border-right: none;
+        }
+
+        .menu a:hover {
+            color: #d65d8c;
+            text-decoration: underline;
+        }
+
+        /* =========================================
+           CONTENIDO (Diseño de 2 columnas)
+           ========================================= */
+        .contenido {
+            display: grid;
+            grid-template-columns: 210px 1fr;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        /* =========================================
+           CAJAS
+           ========================================= */
+        .caja {
+            border: 1px solid var(--borde);
+            margin-bottom: 15px;
+            background: white;
+        }
+
+        .titulo-caja {
+            padding: 4px 8px;
+            color: #805066;
+            font-weight: bold;
+            background: linear-gradient(to right, var(--rosa-claro), var(--amarillo-claro), var(--rosa-claro));
+            border-bottom: 1px solid #e9b1c8;
+            text-shadow: 1px 1px white;
+        }
+
+        .contenido-caja {
+            padding: 12px;
+        }
+
+        /* =========================================
+           SIDEBAR LISTA
+           ========================================= */
+        .sidebar-lista {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar-lista li {
+            margin-bottom: 4px;
+        }
+
+        .sidebar-lista a {
+            display: block;
+            padding: 5px 7px;
+            color: #9a5874;
+            text-decoration: none;
+            background: #fffbea;
+            border-bottom: 1px dotted #e5c6d0;
+        }
+
+        .sidebar-lista a:hover {
+            background: var(--rosa-claro);
+            color: #d45d8c;
+        }
+
+        /* =========================================
+           TÍTULOS PRINCIPALES
+           ========================================= */
+        .titulo-hobbies {
+            margin: 0;
+            color: #d45d8c;
+            font-size: 27px;
+            text-shadow: 1px 1px #ffeab0;
+        }
+
+        .subtitulo-hobbies {
+            margin-top: 3px;
+            margin-bottom: 15px;
+            color: #b28b3f;
+            font-style: italic;
+        }
+
+        .hobby-posts {
+            margin: 18px 0;
+        }
+
+        .hobby-admin,
+        .hobby-feed {
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid var(--borde);
+            background: #fffbea;
+        }
+
+        .hobby-admin h2,
+        .hobby-feed h2 {
+            margin: 0 0 9px;
+            color: var(--rosa-texto);
+            font-size: 17px;
+        }
+
+        .hobby-field {
+            width: 100%;
+            padding: 7px;
+            margin: 4px 0;
+            border: 1px solid #dfbd68;
+            color: var(--texto);
+            background: white;
+            font: inherit;
+        }
+
+        .hobby-action {
+            padding: 6px 11px;
+            border: 1px solid #d9b85d;
+            color: #87556a;
+            background: #fff2b8;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .hobby-action:hover {
+            color: white;
+            background: var(--rosa-texto);
+        }
+
+        .hobby-status {
+            margin: 7px 0 0;
+            color: #a15d78;
+            font-size: 11px;
+        }
+
+        .hobby-post {
+            padding: 10px;
+            margin-top: 12px;
+            border: 1px solid var(--borde);
+            background: white;
+        }
+
+        .hobby-post h3 {
+            margin: 0 0 4px;
+            color: var(--rosa-texto);
+            font-size: 17px;
+        }
+
+        .hobby-post-image {
+            display: block;
+            width: 100%;
+            max-height: 360px;
+            margin: 10px 0;
+            object-fit: contain;
+        }
+
+        .hobby-post-description {
+            white-space: pre-wrap;
+            line-height: 1.5;
+        }
+
+        .hobby-comments {
+            margin-top: 8px;
+        }
+
+        .hobby-comment {
+            padding: 5px 0;
+            border-top: 1px dotted #e4bfd0;
+            font-size: 11px;
+        }
+
+        /* =========================================
+           TARJETAS DE HOBBIES
+           ========================================= */
+        .hobby-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .hobby-card {
+            border: 1px solid #edb0c9;
+            background: #fffbea;
+            padding: 10px;
+        }
+
+        .hobby-card h3 {
+            margin: 0 0 6px 0;
+            color: #d45d8c;
+            font-size: 14px;
+        }
+
+        .hobby-card p {
+            margin: 0;
+            font-size: 11px;
+            line-height: 1.5;
+            color: #6f5962;
+        }
+
+        /* =========================================
+           LISTAS Y TEXTOS
+           ========================================= */
+        .lista {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .lista li {
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        .rosa {
+            color: var(--rosa-texto);
+            font-weight: bold;
+        }
+
+        .amarillo {
+            color: #b28b3f;
+            font-weight: bold;
+        }
+
+        /* =========================================
+           BLINKIES
+           ========================================= */
+        .blinkies {
+            text-align: center;
+        }
+
+        .blinkie {
+            display: inline-block;
+            padding: 4px 7px;
+            margin: 2px;
+            color: white;
+            font-size: 9px;
+            font-weight: bold;
+            background: linear-gradient(to right, #ee8eb8, #f5d87e, #ee8eb8);
+            border: 1px solid #dc8aaa;
+            box-shadow: inset 0 1px rgba(255,255,255,0.8);
+        }
+
+        /* =========================================
+           DECORACIÓN
+           ========================================= */
+        .decoracion {
+            text-align: center;
+            margin: 15px 0;
+            color: #d99b5b;
+            font-size: 16px;
+            letter-spacing: 4px;
+        }
+
+        /* =========================================
+           BOTÓN
+           ========================================= */
+        .botones {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 5px 12px;
+            color: #87556a;
+            text-decoration: none;
+            font-size: 10px;
+            font-weight: bold;
+            background: linear-gradient(to bottom, #fff2b8, #f9d77d);
+            border: 1px solid #d9b85d;
+            box-shadow: inset 0 1px white, 1px 1px 1px #ddd;
+        }
+
+        .boton:hover {
+            color: white;
+            background: linear-gradient(to bottom, #ffd7e8, #f39cc2);
+        }
+
+        /* =========================================
+           FOOTER
+           ========================================= */
+        footer {
+            padding: 13px;
+            text-align: center;
+            color: #a9808f;
+            background: var(--rosa-suave);
+            border-top: 1px solid #edb4ca;
+            font-size: 10px;
+        }
+
+        /* =========================================
+           MÓVIL
+           ========================================= */
+        @media (max-width: 700px) {
+            .contenido {
+                grid-template-columns: 1fr;
+            }
+            .hobby-grid {
+                grid-template-columns: 1fr;
+            }
+            .top-right {
+                display: none;
+            }
+            .menu a {
+                display: inline-block;
+                padding: 4px 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="pagina">
+
+    <!-- =====================================
+         CABECERA
+         ===================================== -->
+    <header class="topbar">
+        <div class="logo">
+            RIZOS<span>ᯓ★</span>
+        </div>
+        <div class="top-right">
+            ✧ mi unvierso y hoobies ✧
+        </div>
+    </header>
+
+    <!-- =====================================
+         MENÚ
+         ===================================== -->
+    <nav class="menu">
+        <a href="index.html">🏠 Home</a>
+        <a href="aboutme.htlm.html">♡ About Me</a>
+        <a href="blog.html">✎ Blog</a>
+        <a href="hobbies.html">☆ Hobbies</a>
+        <a href="music.html">♫ Music</a>
+        <a href="agenda-login.html">⭐ Agenda</a>
+        <a href="galery.html">📸 Galery</a>
+        <a href="dreams.html">✧ Dreams</a>
+        <a href="life.html">❀ Life</a>
+        <a href="writiti.html"> ✎ Writiti</a>
+    </nav>
+
+    <!-- =====================================
+         CONTENIDO PRINCIPAL
+         ===================================== -->
+    <main class="contenido">
+
+        <!-- =================================
+             SIDEBAR
+             ================================= -->
+        <aside>
+            <section class="caja">
+                <div class="titulo-caja">
+                    ☆ Hobbies Menu
+                </div>
+                <div class="contenido-caja">
+                    <ul class="sidebar-lista">
+                        <li><a href="#creativo">★ Creación & Web</a></li>
+                        <li><a href="#lectura">♡ Lectura & Ideas</a></li>
+                        <li><a href="#musica">♫ Música & Vibe</a></li>
+                        <li><a href="#coleccion">✧ Colecciones</a></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="caja">
+                <div class="titulo-caja">
+                    ♡ Current Status
+                </div>
+                <div class="contenido-caja">
+                    <p><strong>☀ Pasatiempo:</strong> programar webs retro</p>
+                    <p><strong>★ Obsesión:</strong> código limpio y pastel</p>
+                    <p><strong>☕ Energía:</strong> 100% creativa</p>
+                </div>
+            </section>
+
+            <section class="caja">
+                <div class="titulo-caja">
+                    ✧ Hobbies Blinkies
+                </div>
+                <div class="contenido-caja blinkies">
+                    <span class="blinkie">HOBBIES</span>
+                    <span class="blinkie">CREATIVE</span>
+                    <span class="blinkie">Y2K</span>
+                    <span class="blinkie">★ PASSION</span>
+                </div>
+            </section>
+        </aside>
+
+        <!-- =================================
+             COLUMNA DERECHA
+             ================================= -->
+        <section>
+            <h1 class="titulo-hobbies">
+                Mis Hobbies ᯓ★
+            </h1>
+            <div class="subtitulo-hobbies">
+                cosas que amo ♡
+            </div>
+
+            <section class="hobby-posts" aria-label="Publicaciones de hobbies">
+                <div class="hobby-admin">
+                    <h2>★ Área de publicación</h2>
+                    <div id="hobbyLoginArea">
+                        <input class="hobby-field" id="hobbyAdminEmail" type="email" placeholder="Correo de administradora" autocomplete="email">
+                        <input class="hobby-field" id="hobbyAdminPassword" type="password" placeholder="Contraseña" autocomplete="current-password">
+                        <button class="hobby-action" id="hobbyLogin" type="button">Entrar</button>
+                    </div>
+                    <div id="hobbyPublishArea" hidden>
+                        <input class="hobby-field" id="hobbyPostTitle" type="text" placeholder="Título">
+                        <select class="hobby-field" id="hobbyPostCategory">
+                            <option value="creativo">Creativo</option>
+                            <option value="lectura">Lectura</option>
+                            <option value="musica">Música</option>
+                            <option value="coleccion">Colecciones</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                        <input class="hobby-field" id="hobbyPostImage" type="file" accept="image/png,image/jpeg,image/gif,image/webp">
+                        <textarea class="hobby-field" id="hobbyPostText" rows="4" placeholder="Escribe tu publicación..."></textarea>
+                        <button class="hobby-action" id="hobbyPublish" type="button">Publicar</button>
+                        <button class="hobby-action" id="hobbyLogout" type="button">Cerrar sesión</button>
+                    </div>
+                    <p class="hobby-status" id="hobbyAdminStatus">Solo la administradora puede publicar.</p>
+                </div>
+
+                <div class="hobby-feed">
+                    <h2>♡ Publicaciones</h2>
+                    <input class="hobby-field" id="hobbySearch" type="search" placeholder="Buscar publicaciones...">
+                    <div id="hobbyPosts"><p class="hobby-status">Cargando publicaciones...</p></div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 1: INTRODUCCIÓN -->
+            <section class="caja">
+                <div class="titulo-caja">
+                    ✿ Bienvenido a mi rincón creativo
+                </div>
+                <div class="contenido-caja">
+                    <p style="font-size: 13px; line-height: 1.6;">
+                        Aquí es donde guardo todas esas pasiones, pasatiempos y pequeñas obsesiones que hacen que el día a día sea mucho más divertido. Desde diseñar páginas web estilo <span class="rosa">Y2K</span> hasta perder horas escribiendo ideas locas en libreta o buscando música nueva. ★
+                    </p>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 2: GRID DE HOBBIES -->
+            <section class="caja">
+                <div class="titulo-caja" id="creativo">
+                    ★ What I love to do
+                </div>
+                <div class="contenido-caja">
+                    <div class="hobby-grid">
+                        <div class="hobby-card" id="lectura">
+                            <h3>♡ Web Design & Coding</h3>
+                            <p>Crear interfaces nostálgicas, experimentar con CSS, gradientes suaves y recuperar la esencia de la web antigua.</p>
+                        </div>
+                        <div class="hobby-card" id="musica">
+                            <h3>♫ Collecting Music</h3>
+                            <p>Armar playlists infinitas para cada estado de ánimo, descubrir canciones perdidas y coleccionar melodías.</p>
+                        </div>
+                        <div class="hobby-card">
+                            <h3>✎ Writing & Brain Dumps</h3>
+                            <p>Anotar pensamientos a las 3:00 AM, redactar entradas en el blog y plasmar historias o ideas sin filtros.</p>
+                        </div>
+                        <div class="hobby-card" id="coleccion">
+                            <h3>✧ Digital Collecting</h3>
+                            <p>Guardar imágenes bonitas, sellos/blinkies retro, iconos y pequeños tesoros estéticos encontrados por internet.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECCIÓN 3: LISTA DETALLADA -->
+            <section class="caja">
+                <div class="titulo-caja">
+                    ✿ More things that keep me busy
+                </div>
+                <div class="contenido-caja">
+                    <ul class="lista">
+                        <li><strong>Experimentar con ideas:</strong> Dejar que una chispa de inspiración se convierta en un proyecto completo de diseño o escritura.</li>
+                        <li><strong>Dormir:</strong> Disfrutar de una siesta y dormir las horas correspondientes es algo que deja una grata satisfacción.</li>
+                        <li><strong>Fotografía casual:</strong> Capturar pequeños detalles cotidianos que parecen sacados de otra época.</li>
+                        <li><strong>Organización estética:</strong> Ordenar carpetas, colores, notas y colores pastel hasta que todo encaje a la perfección.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="decoracion">
+                ☆ ★ ☆ ★ ☆ ★ ☆
+            </div>
+
+            <!-- BOTÓN VOLVER -->
+            <div class="botones">
+                <a href="index.html" class="boton">
+                    ← Back to Home
+                </a>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =====================================
+         FOOTER
+         ===================================== -->
+    <footer>
+        ✿ RIZOSᯓ★ · hobbies page · 2026 ✿
+        <br>
+        made with pink, yellow & too many ideas ♡
+    </footer>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="access.js"></script>
+<script src="loading.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const client = window.supabase.createClient(
+            "https://tgvecrecqueikcbemnee.supabase.co",
+            "sb_publishable_rM4IuPpzAis_ad_GXthyhw_nPfi7-M5"
+        );
+        const adminEmail = "ashleycontreras8422@gmail.com";
+        const postsElement = document.getElementById("hobbyPosts");
+        const statusElement = document.getElementById("hobbyAdminStatus");
+        const loginArea = document.getElementById("hobbyLoginArea");
+        const publishArea = document.getElementById("hobbyPublishArea");
+        const visitorId = localStorage.getItem("hobby_visitor_id") || crypto.randomUUID();
+        localStorage.setItem("hobby_visitor_id", visitorId);
+        let posts = [];
+        let isAdmin = false;
+
+        const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({
+            "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;"
+        }[character]));
+
+        async function loadInteractions(postId) {
+            const post = document.querySelector(`[data-post-id="${postId}"]`);
+            if (!post) return;
+            const [{ data: likes }, { data: comments }] = await Promise.all([
+                client.from("hobby_likes").select("id").eq("post_id", postId),
+                client.from("hobby_comments").select("*").eq("post_id", postId).order("created_at")
+            ]);
+            post.querySelector(".hobby-like-count").textContent = likes?.length || 0;
+            post.querySelector(".hobby-comments").innerHTML = (comments || []).map(comment =>
+                `<div class="hobby-comment"><strong>${escapeHtml(comment.author)}:</strong> ${escapeHtml(comment.text)}</div>`
+            ).join("");
+        }
+
+        function renderPosts() {
+            const search = document.getElementById("hobbySearch").value.trim().toLowerCase();
+            const filtered = posts.filter(post => `${post.title} ${post.text} ${post.category}`.toLowerCase().includes(search));
+            postsElement.innerHTML = filtered.length ? filtered.map(post => `
+                <article class="hobby-post" data-post-id="${post.id}">
+                    <h3>${escapeHtml(post.title)}</h3>
+                    <small>${escapeHtml(post.category)} · ${new Date(post.created_at).toLocaleString("es-ES")}</small>
+                    ${post.image_url ? `<img class="hobby-post-image" src="${escapeHtml(post.image_url)}" alt="${escapeHtml(post.title)}">` : ""}
+                    <p class="hobby-post-description">${escapeHtml(post.text)}</p>
+                    <button class="hobby-action hobby-like" type="button">♡ Me gusta (<span class="hobby-like-count">0</span>)</button>
+                    <div class="hobby-comments"></div>
+                    <input class="hobby-field comment-author" type="text" placeholder="Tu nombre o apodo">
+                    <input class="hobby-field comment-text" type="text" placeholder="Escribe un comentario...">
+                    <button class="hobby-action add-comment" type="button">Comentar</button>
+                </article>`).join("") : "<p class=\"hobby-status\">No hay publicaciones que coincidan.</p>";
+            filtered.forEach(post => loadInteractions(post.id));
+        }
+
+        async function loadPosts() {
+            const { data, error } = await client.from("hobby_posts").select("*").order("created_at", { ascending: false });
+            if (error) {
+                postsElement.innerHTML = "<p class=\"hobby-status\">No se pudieron cargar las publicaciones.</p>";
+                return;
+            }
+            posts = data || [];
+            renderPosts();
+        }
+
+        function updateAdmin(session) {
+            isAdmin = session?.user?.email?.toLowerCase() === adminEmail;
+            loginArea.hidden = isAdmin;
+            publishArea.hidden = !isAdmin;
+            statusElement.textContent = isAdmin ? "Sesión iniciada como administradora." : "Solo la administradora puede publicar.";
+        }
+
+        document.getElementById("hobbyLogin").addEventListener("click", async () => {
+            const email = document.getElementById("hobbyAdminEmail").value.trim();
+            const password = document.getElementById("hobbyAdminPassword").value;
+            const { error } = await client.auth.signInWithPassword({ email, password });
+            if (error) statusElement.textContent = "Correo o contraseña incorrectos.";
+        });
+        document.getElementById("hobbyLogout").addEventListener("click", () => client.auth.signOut());
+        document.getElementById("hobbySearch").addEventListener("input", renderPosts);
+
+        document.getElementById("hobbyPublish").addEventListener("click", async () => {
+            const title = document.getElementById("hobbyPostTitle").value.trim();
+            const category = document.getElementById("hobbyPostCategory").value;
+            const text = document.getElementById("hobbyPostText").value.trim();
+            const image = document.getElementById("hobbyPostImage").files[0];
+            const { data: { session } } = await client.auth.getSession();
+            if (!session || !isAdmin || !title || !text) return;
+            let imageUrl = null;
+            if (image) {
+                const fileName = `${crypto.randomUUID()}-${image.name.replace(/[^a-zA-Z0-9._-]/g, "")}`;
+                const { error } = await client.storage.from("blog-images").upload(fileName, image);
+                if (error) { statusElement.textContent = "No se pudo subir la imagen."; return; }
+                imageUrl = client.storage.from("blog-images").getPublicUrl(fileName).data.publicUrl;
+            }
+            const { error } = await client.from("hobby_posts").insert({ title, category, text, image_url: imageUrl });
+            statusElement.textContent = error ? "No se pudo publicar." : "Publicado correctamente.";
+            if (!error) { document.getElementById("hobbyPostTitle").value = ""; document.getElementById("hobbyPostText").value = ""; document.getElementById("hobbyPostImage").value = ""; loadPosts(); }
+        });
+
+        postsElement.addEventListener("click", async event => {
+            const post = event.target.closest(".hobby-post");
+            if (!post) return;
+            const postId = post.dataset.postId;
+            if (event.target.closest(".hobby-like")) {
+                if (!window.siteAccess.requireAuth()) return;
+                await client.from("hobby_likes").upsert({ post_id: postId, visitor_id: visitorId }, { onConflict: "post_id,visitor_id", ignoreDuplicates: true });
+            } else if (event.target.closest(".add-comment")) {
+                if (!window.siteAccess.requireAuth()) return;
+                const author = post.querySelector(".comment-author").value.trim();
+                const text = post.querySelector(".comment-text").value.trim();
+                if (!author || !text) return;
+                await client.from("hobby_comments").insert({ post_id: postId, author, text });
+                post.querySelector(".comment-author").value = "";
+                post.querySelector(".comment-text").value = "";
+            }
+            loadInteractions(postId);
+        });
+
+        client.auth.getSession().then(({ data: { session } }) => updateAdmin(session));
+        client.auth.onAuthStateChange((_event, session) => updateAdmin(session));
+        loadPosts();
+        setInterval(loadPosts, 10000);
+    });
+</script>
+
+</body>
+</html>

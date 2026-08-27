@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>html, body, body * { cursor: url("images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Secret Agenda ᯓ★</title>
+
+    <link rel="icon" type="image/png" href="icon.png">
+
+
+<style>
+
+/* =====================================================
+   COLORES
+===================================================== */
+
+:root {
+
+    --rosa: #f49ac2;
+    --rosa-fuerte: #d96898;
+    --rosa-claro: #ffd6e8;
+    --rosa-suave: #fff0f6;
+
+    --amarillo: #f3d477;
+    --amarillo-claro: #fff2b5;
+    --amarillo-suave: #fffbea;
+
+    --texto: #765966;
+    --texto-claro: #9b7584;
+
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    color: var(--texto);
+
+    background-color: #fff9df;
+
+    background-image:
+        radial-gradient(
+            #e5dcbf 1px,
+            transparent 1px
+        );
+
+    background-size: 8px 8px;
+
+}
+
+
+/* =====================================================
+   VENTANA PRINCIPAL
+===================================================== */
+
+.pagina {
+
+    width: 650px;
+
+    max-width: 92%;
+
+    background: white;
+
+    border:
+        1px solid #dfa9c0;
+
+    box-shadow:
+        7px 7px 0 var(--amarillo),
+        0 0 20px rgba(220,150,180,0.25);
+
+}
+
+
+/* =====================================================
+   CABECERA
+===================================================== */
+
+.cabecera {
+
+    padding: 8px 12px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffb9d8,
+            #ee82b4
+        );
+
+    border-bottom:
+        2px solid #ffeaf3;
+
+    text-shadow:
+        1px 1px #b85c83;
+
+}
+
+
+.logo {
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+.logo span {
+
+    color:
+        var(--amarillo-claro);
+
+}
+
+
+.estado {
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   MENÚ
+===================================================== */
+
+.menu {
+
+    padding: 5px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #fff4bd,
+            #f5d77d
+        );
+
+    border-bottom:
+        1px solid #dbc16b;
+
+}
+
+
+.menu a {
+
+    margin: 0 8px;
+
+    color: #825f70;
+
+    text-decoration: none;
+
+}
+
+
+.menu a:hover {
+
+    color:
+        var(--rosa-fuerte);
+
+    text-decoration:
+        underline;
+
+}
+
+
+/* =====================================================
+   CONTENIDO
+===================================================== */
+
+.contenido {
+
+    padding: 30px;
+
+}
+
+
+.titulo {
+
+    margin: 0;
+
+    text-align: center;
+
+    color:
+        var(--rosa-fuerte);
+
+    font-size: 28px;
+
+    text-shadow:
+        2px 2px #fff0ad;
+
+}
+
+
+.subtitulo {
+
+    margin-top: 6px;
+
+    text-align: center;
+
+    color:
+        var(--texto-claro);
+
+    font-style: italic;
+
+}
+
+
+.estrellitas {
+
+    margin:
+        15px 0;
+
+    text-align: center;
+
+    color:
+        #dba05e;
+
+    font-size: 17px;
+
+    letter-spacing: 5px;
+
+}
+
+
+/* =====================================================
+   CAJA LOGIN
+===================================================== */
+
+.login-box {
+
+    max-width: 450px;
+
+    margin: 20px auto 5px;
+
+    border:
+        1px solid #dfa9c0;
+
+    box-shadow:
+        3px 3px 0 #ead77d;
+
+}
+
+
+/* =====================================================
+   BARRA DE VENTANA
+===================================================== */
+
+.barra {
+
+    padding: 6px 8px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: white;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            to right,
+            #ee82b4,
+            #f5d87e
+        );
+
+    border-bottom:
+        1px solid #dfa0b9;
+
+    text-shadow:
+        1px 1px #ad6683;
+
+}
+
+
+.botones {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =====================================================
+   INTERIOR
+===================================================== */
+
+.interior {
+
+    padding: 20px;
+
+    background:
+        #fffdf9;
+
+}
+
+
+/* =====================================================
+   MENSAJE
+===================================================== */
+
+.bienvenida {
+
+    margin-bottom: 18px;
+
+    padding: 10px;
+
+    text-align: center;
+
+    line-height: 1.7;
+
+    background:
+        var(--amarillo-suave);
+
+    border:
+        1px dashed #d7b85b;
+
+}
+
+
+.bienvenida strong {
+
+    color:
+        var(--rosa-fuerte);
+
+}
+
+
+/* =====================================================
+   CAMPOS
+===================================================== */
+
+.campo {
+
+    margin-bottom: 13px;
+
+}
+
+
+.campo label {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color:
+        #925d73;
+
+    font-weight: bold;
+
+}
+
+
+.campo input {
+
+    width: 100%;
+
+    padding: 9px;
+
+    border:
+        1px solid #dfa8bf;
+
+    outline: none;
+
+    background:
+        #fffaf0;
+
+    color:
+        var(--texto);
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 12px;
+
+}
+
+
+.campo input:focus {
+
+    border-color:
+        #ed82b2;
+
+    background:
+        #fff8fb;
+
+    box-shadow:
+        0 0 4px #f5c4d8;
+
+}
+
+
+/* =====================================================
+   BOTÓN
+===================================================== */
+
+.boton-container {
+
+    text-align: center;
+
+    margin-top: 18px;
+
+}
+
+
+.boton {
+
+    padding:
+        8px 28px;
+
+    border:
+        1px solid #d3b45c;
+
+    color:
+        #765966;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #fff3bd,
+            #f3d477
+        );
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        inset 0 1px white,
+        1px 1px 2px #ccc;
+
+}
+
+
+.boton:hover {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffd6e8,
+            #ef8fba
+        );
+
+}
+
+
+.boton:active {
+
+    transform:
+        translate(1px,1px);
+
+}
+
+
+/* =====================================================
+   MENSAJE DE ERROR / ÉXITO
+===================================================== */
+
+.mensaje {
+
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-weight: bold;
+
+}
+
+
+.error {
+
+    color:
+        #c75b7e;
+
+}
+
+
+.exito {
+
+    color:
+        #8c9d55;
+
+}
+
+
+/* =====================================================
+   DECORACIÓN
+===================================================== */
+
+.decoracion-final {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    color:
+        #dba05e;
+
+}
+
+
+footer {
+
+    padding: 10px;
+
+    text-align: center;
+
+    color:
+        #a9808f;
+
+    background:
+        var(--rosa-suave);
+
+    border-top:
+        1px solid #edb4ca;
+
+    font-size: 10px;
+
+}
+
+
+footer a {
+
+    color:
+        var(--rosa-fuerte);
+
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 500px) {
+
+    .contenido {
+
+        padding: 18px;
+
+    }
+
+    .titulo {
+
+        font-size: 23px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="pagina">
+
+
+<!-- =================================================
+     CABECERA
+================================================== -->
+
+<header class="cabecera">
+
+    <div class="logo">
+
+        RIZOS
+        <span>ᯓ★</span>
+
+    </div>
+
+    <div class="estado">
+
+        ✧ private area ✧
+
+    </div>
+
+</header>
+
+
+
+<!-- =================================================
+     MENÚ
+================================================== -->
+
+<nav class="menu">
+
+    <a href="index.html">
+        🏠 Home
+    </a>
+
+    <a href="agenda-login.html">
+        📚 Agenda
+    </a>
+
+</nav>
+
+
+
+<!-- =================================================
+     CONTENIDO
+================================================== -->
+
+<main class="contenido">
+
+
+<h1 class="titulo">
+
+    My Secret Agenda ᯓ★
+
+</h1>
+
+
+<div class="subtitulo">
+
+    solo puede entrar el dueño ♡
+
+</div>
+
+
+<div class="estrellitas">
+
+    ☆ ✧ ☆ ✧ ☆
+
+</div>
+
+
+
+<!-- =================================================
+     LOGIN
+================================================== -->
+
+<div class="login-box">
+
+
+    <div class="barra">
+
+        🔐 TOP SECRET
+
+        <span class="botones">
+
+            − □ ×
+
+        </span>
+
+    </div>
+
+
+
+    <div class="interior">
+
+
+        <div class="bienvenida">
+
+            <strong>
+                ¡Bienvenida a mi agenda secreta! ♡
+            </strong>
+
+            <br>
+
+            Para entrar necesitas el Gmail y la
+            contraseña de la cuenta administradora.
+
+            <br>
+
+            ✧ Gmail + contraseña ✧
+
+        </div>
+
+
+
+        <form id="agendaLogin">
+
+
+            <!-- GMAIL -->
+
+            <div class="campo">
+
+                <label for="agendaEmail">
+
+                    ✉ Gmail
+
+                </label>
+
+
+                <input
+                    type="email"
+                    id="agendaEmail"
+                    autocomplete="email"
+                    placeholder="tu Gmail..."
+                >
+
+            </div>
+
+
+
+            <!-- PASSWORD -->
+
+            <div class="campo">
+
+                <label for="agendaPassword">
+
+                    🔑 Contraseña
+
+                </label>
+
+
+                <input
+                    type="password"
+                    id="agendaPassword"
+                    autocomplete="current-password"
+                    placeholder="tu contraseña..."
+                >
+
+            </div>
+
+
+
+            <div class="campo" hidden>
+
+                <label for="palabra2">
+
+                    🌼 Secret word #2
+
+                </label>
+
+
+                <input
+                    type="text"
+                    id="palabra2"
+                    autocomplete="off"
+                    placeholder="second secret word..."
+                >
+
+            </div>
+
+
+
+            <!-- BOTÓN -->
+
+            <div class="boton-container">
+
+                <button
+                    type="submit"
+                    class="boton"
+                >
+
+                    ENTER ★
+
+                </button>
+
+            </div>
+
+
+            <!-- MENSAJE -->
+
+            <div
+                id="mensaje"
+                class="mensaje"
+            ></div>
+
+
+        </form>
+
+
+        <div class="decoracion-final">
+
+            ♡ ─── ☆ ─── ♡
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+</main>
+
+
+
+<!-- =================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    RIZOSᯓ★ · zona secreta de estudiante
+
+    <br><br>
+
+    <a href="index.html">
+        ← Back to Home
+    </a>
+
+</footer>
+
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="access.js"></script>
+<script src="loading.js"></script>
+<script>
+    const agendaClient = window.siteAccess.client;
+    const agendaForm = document.getElementById("agendaLogin");
+    const agendaMessage = document.getElementById("mensaje");
+    agendaForm.addEventListener("submit", async event => {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        const email = document.getElementById("agendaEmail").value.trim();
+        const password = document.getElementById("agendaPassword").value;
+        const { data, error } = await agendaClient.auth.signInWithPassword({ email, password });
+        if (error || data.user?.email?.toLowerCase() !== window.siteAccess.ownerEmail) {
+            if (!error) await agendaClient.auth.signOut();
+            agendaMessage.textContent = "Solo la cuenta administradora puede entrar a la agenda.";
+            agendaMessage.className = "mensaje error";
+            return;
+        }
+        sessionStorage.setItem("agendaAutorizada", "true");
+        window.location.href = "agenda.html";
+    });
+
+    </script><script type="text/plain">
+    sessionStorage.removeItem("agendaAutorizada");
+    window.addEventListener("pageshow", function() {
+        sessionStorage.removeItem("agendaAutorizada");
+    });
+    /* =====================================================
+
+/* =====================================================
+   🔐 CAMBIA AQUÍ TUS TRES SECRETOS
+===================================================== */
+
+
+/*
+   Puedes cambiar estas tres cosas por lo que quieras.
+
+   EJEMPLO:
+
+   password = "luna123"
+   palabra1 = "fresa"
+   palabra2 = "estrellas"
+
+*/
+
+
+/* =====================================================
+   FORMULARIO
+===================================================== */
+
+const formulario =
+    document.getElementById(
+        "agendaLogin"
+    );
+
+
+const mensaje =
+    document.getElementById(
+        "mensaje"
+    );
+
+
+
+/* =====================================================
+   CUANDO PRESIONAS ENTER
+===================================================== */
+
+formulario.addEventListener(
+    "submit",
+    function(event) {
+
+
+        /*
+           Esto evita que el navegador
+           recargue la página.
+        */
+
+        event.preventDefault();
+
+
+
+        const password =
+            document.getElementById(
+                "password"
+            ).value.trim();
+
+
+        const palabra1 =
+            document.getElementById(
+                "palabra1"
+            ).value.trim();
+
+
+        const palabra2 =
+            document.getElementById(
+                "palabra2"
+            ).value.trim();
+
+
+
+        /* =================================================
+           COMPROBAR LAS TRES
+        ================================================= */
+
+
+        if (
+
+            password === PASSWORD_CORRECTA
+
+            &&
+
+            palabra1.toLowerCase()
+                ===
+            PALABRA_1_CORRECTA.toLowerCase()
+
+            &&
+
+            palabra2.toLowerCase()
+                ===
+            PALABRA_2_CORRECTA.toLowerCase()
+
+        ) {
+
+
+            /* =============================================
+               TODO CORRECTO
+            ============================================= */
+
+            mensaje.textContent =
+                "♡ Access granted! Welcome back ♡";
+
+
+            mensaje.className =
+                "mensaje exito";
+
+
+            /*
+               Esperamos un poquito para que
+               se vea el mensaje bonito.
+            */
+
+            setTimeout(
+                function() {
+                    sessionStorage.setItem("agendaAutorizada", "true");
+
+                    window.location.href =
+                        "agenda.html";
+
+                },
+                500
+            );
+
+
+        } else {
+
+
+            /* =============================================
+               ALGO ESTÁ MAL
+            ============================================= */
+
+            mensaje.textContent =
+                "✖ Something is wrong... try again ♡";
+
+
+            mensaje.className =
+                "mensaje error";
+
+
+            /*
+               Limpiamos los campos.
+            */
+
+            document.getElementById(
+                "password"
+            ).value = "";
+
+
+            document.getElementById(
+                "palabra1"
+            ).value = "";
+
+
+            document.getElementById(
+                "palabra2"
+            ).value = "";
+
+
+            /*
+               Volvemos al primer campo.
+            */
+
+            document.getElementById(
+                "password"
+            ).focus();
+
+        }
+
+
+    }
+
+);
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>♡ My Photos ♡</title>
+
+<style>
+
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+
+    font-family: "Trebuchet MS", Arial, sans-serif;
+
+    color: #91456d;
+
+    background-color: #fff9d9;
+
+    background-image:
+        radial-gradient(#f3b6d4 1px, transparent 1px);
+
+    background-size: 9px 9px;
+}
+
+
+/* =========================================
+   PAGINA
+========================================= */
+
+.page {
+
+    width: 1000px;
+
+    max-width: 96%;
+
+    margin: auto;
+
+    background: #fffdf8;
+
+    border: 4px solid #ef9fc6;
+
+    box-shadow:
+        7px 7px 0 #efd775;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+header {
+
+    padding: 25px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            #ffc5e1,
+            #f29bc3
+        );
+
+    border-bottom:
+        3px solid #dc7eac;
+
+    text-shadow:
+        1px 1px #a34574,
+        2px 2px #d5689b;
+}
+
+header h1 {
+
+    margin: 0;
+
+    font-size: 36px;
+
+    letter-spacing: 3px;
+}
+
+header p {
+
+    margin: 8px 0 0;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   NAVEGACION
+========================================= */
+
+.nav {
+
+    padding: 9px;
+
+    text-align: center;
+
+    background: #fff0aa;
+
+    border-bottom:
+        2px solid #efa0c5;
+}
+
+.nav a {
+
+    display: inline-block;
+
+    margin: 3px;
+
+    padding: 6px 13px;
+
+    background: white;
+
+    color: #a33f72;
+
+    border:
+        2px solid #ee9fc4;
+
+    box-shadow:
+        2px 2px 0 #e4c967;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.nav a:hover {
+
+    background: #ffd9e9;
+}
+
+
+/* =========================================
+   CONTENIDO
+========================================= */
+
+.content {
+
+    padding: 18px;
+}
+
+
+/* =========================================
+   BARRA DE CONTROL
+========================================= */
+
+.controls {
+
+    margin-bottom: 18px;
+
+    padding: 12px;
+
+    text-align: center;
+
+    background: #fff1ae;
+
+    border:
+        2px dashed #dec55c;
+}
+
+.controls button {
+
+    margin: 4px;
+
+    padding: 9px 14px;
+
+    background:
+        linear-gradient(
+            white,
+            #ffd3e7
+        );
+
+    color: #963d6c;
+
+    border:
+        2px solid #d97eaa;
+
+    box-shadow:
+        3px 3px 0 #dfc765;
+
+    font-family: inherit;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.controls button:hover {
+
+    background: #fff0a4;
+}
+
+.controls button:active {
+
+    transform:
+        translate(2px, 2px);
+
+    box-shadow:
+        1px 1px 0 #dfc765;
+}
+
+
+/* =========================================
+   GALERIA
+========================================= */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =========================================
+   MARCO
+========================================= */
+
+.photo-card {
+
+    background: white;
+
+    padding: 9px;
+
+    border:
+        3px solid #efa1c5;
+
+    box-shadow:
+        4px 4px 0 #eed878;
+}
+
+
+/* =========================================
+   ZONA DE IMAGEN
+========================================= */
+
+.photo-area {
+
+    width: 100%;
+
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #fff4c4;
+
+    border:
+        2px solid #efb2ce;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+/*
+   La imagen se adapta al cuadro
+   sin deformarse.
+*/
+
+.photo-area img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================
+   CUADRO VACIO
+========================================= */
+
+.empty-photo {
+
+    text-align: center;
+
+    color: #b45d85;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+    padding: 10px;
+}
+
+.empty-photo .big {
+
+    display: block;
+
+    font-size: 35px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   BOTONES DE CADA FOTO
+========================================= */
+
+.photo-buttons {
+
+    display: flex;
+
+    gap: 6px;
+
+    margin-top: 8px;
+}
+
+.photo-buttons button {
+
+    flex: 1;
+
+    padding: 6px;
+
+    background: #fff6c9;
+
+    border:
+        1px solid #dda4bd;
+
+    color: #91446c;
+
+    font-family: inherit;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.photo-buttons button:hover {
+
+    background: #ffd9e9;
+}
+
+
+/* =========================================
+   BOTON AÑADIR CUADRO
+========================================= */
+
+.add-card {
+
+    min-height: 220px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #fff9d8;
+
+    border:
+        3px dashed #e2c85e;
+
+    cursor: pointer;
+
+    transition: .15s;
+}
+
+.add-card:hover {
+
+    background: #fff0ae;
+
+    transform:
+        translateY(-2px);
+}
+
+.add-card-content {
+
+    text-align: center;
+
+    color: #a54b75;
+
+    font-weight: bold;
+
+    font-size: 12px;
+}
+
+.add-card-content span {
+
+    display: block;
+
+    font-size: 38px;
+
+    margin-bottom: 5px;
+}
+
+
+/* =========================================
+   INPUT OCULTO
+========================================= */
+
+.hidden-input {
+
+    display: none;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    padding: 15px;
+
+    text-align: center;
+
+    background: #ffd9e9;
+
+    border-top:
+        2px solid #efa0c5;
+
+    color: #914d70;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   MOVIL
+========================================= */
+
+@media(max-width: 750px) {
+
+    body {
+        padding: 8px;
+    }
+
+    .gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media(max-width: 500px) {
+
+    .gallery {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    header h1 {
+
+        font-size: 27px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+<!-- =====================================
+     HEADER
+===================================== -->
+
+<header>
+
+    <h1>
+        ♡ AARONIS ♡
+    </h1>
+
+    <p>
+        ✦ pequeños recuerdos ✦
+    </p>
+
+</header>
+
+
+<!-- =====================================
+     MENU
+===================================== -->
+
+<nav class="nav">
+
+    <a href="index.html">
+        HOME
+    </a>
+
+</nav>
+
+
+<!-- =====================================
+     CONTENIDO
+===================================== -->
+
+<main class="content">
+
+
+<!-- =====================================
+     CONTROLES
+===================================== -->
+
+<div class="controls">
+
+    <button onclick="addPhotoBox()">
+
+        ＋ ADD PHOTO BOX
+
+    </button>
+
+
+    <button onclick="savePhotos()">
+
+        💾 SAVE
+
+    </button>
+
+
+    <button onclick="resetPhotos()">
+
+        ↻ RESET
+
+    </button>
+
+</div>
+
+
+<!-- =====================================
+     GALERIA
+===================================== -->
+
+<div
+    class="gallery"
+    id="gallery">
+</div>
+
+
+</main>
+
+
+<footer>
+
+    ♡ la bibi ♡
+
+    <br>
+
+    ✦ made with love & pixels ✦
+
+</footer>
+
+
+</div>
+
+
+<script>
+
+
+/* =========================================
+   DATOS INICIALES
+========================================= */
+
+
+/*
+   Al principio tendremos 3 cuadritos vacíos.
+*/
+
+const defaultPhotos = [
+
+    {
+        image: ""
+    },
+
+    {
+        image: ""
+    },
+
+    {
+        image: ""
+    }
+
+];
+
+
+let photos =
+    JSON.parse(
+        localStorage.getItem(
+            "myPhotoWall"
+        )
+    ) || defaultPhotos;
+
+
+/* =========================================
+   MOSTRAR GALERIA
+========================================= */
+
+function renderPhotos() {
+
+    const gallery =
+        document.getElementById(
+            "gallery"
+        );
+
+
+    gallery.innerHTML = "";
+
+
+    /*
+       Creamos cada cuadrito.
+    */
+
+    photos.forEach(
+        (photo, index) => {
+
+
+            const card =
+                document.createElement(
+                    "div"
+                );
+
+            card.className =
+                "photo-card";
+
+
+            /* =============================
+               ZONA DE FOTO
+            ============================= */
+
+            const photoArea =
+                document.createElement(
+                    "div"
+                );
+
+            photoArea.className =
+                "photo-area";
+
+
+            /*
+               Si existe una imagen,
+               la mostramos.
+            */
+
+            if (photo.image) {
+
+
+                const image =
+                    document.createElement(
+                        "img"
+                    );
+
+
+                image.src =
+                    photo.image;
+
+
+                image.alt =
+                    "My photo";
+
+
+                photoArea.appendChild(
+                    image
+                );
+
+
+            }
+
+            else {
+
+
+                /*
+                   Si está vacío,
+                   mostramos un mensaje.
+                */
+
+                const empty =
+                    document.createElement(
+                        "div"
+                    );
+
+                empty.className =
+                    "empty-photo";
+
+
+                empty.innerHTML =
+
+                    '<span class="big">📷</span>' +
+
+                    'CLICK HERE<br>' +
+
+                    'TO ADD A PHOTO';
+
+
+                photoArea.appendChild(
+                    empty
+                );
+
+            }
+
+
+            /*
+               Al hacer click en el cuadro
+               se puede elegir/cambiar foto.
+            */
+
+            photoArea.onclick =
+                function() {
+
+                    chooseImage(index);
+
+                };
+
+
+            card.appendChild(
+                photoArea
+            );
+
+
+            /* =============================
+               BOTONES
+            ============================= */
+
+            const buttons =
+                document.createElement(
+                    "div"
+                );
+
+            buttons.className =
+                "photo-buttons";
+
+
+            /*
+               CAMBIAR
+            */
+
+            const change =
+                document.createElement(
+                    "button"
+                );
+
+            change.textContent =
+                "✏ CHANGE";
+
+
+            change.onclick =
+                function() {
+
+                    chooseImage(index);
+
+                };
+
+
+            /*
+               BORRAR
+            */
+
+            const remove =
+                document.createElement(
+                    "button"
+                );
+
+            remove.textContent =
+                "🗑 DELETE";
+
+
+            remove.onclick =
+                function() {
+
+                    deletePhoto(index);
+
+                };
+
+
+            buttons.appendChild(
+                change
+            );
+
+            buttons.appendChild(
+                remove
+            );
+
+
+            card.appendChild(
+                buttons
+            );
+
+
+            gallery.appendChild(
+                card
+            );
+
+        }
+    );
+
+
+    /* =====================================
+       CUADRO PARA AÑADIR OTRO
+    ===================================== */
+
+    const addCard =
+        document.createElement(
+            "div"
+        );
+
+    addCard.className =
+        "add-card";
+
+
+    addCard.innerHTML =
+
+        '<div class="add-card-content">' +
+
+        '<span>＋</span>' +
+
+        'ADD ANOTHER PHOTO' +
+
+        '</div>';
+
+
+    addCard.onclick =
+        function() {
+
+            addPhotoBox();
+
+        };
+
+
+    gallery.appendChild(
+        addCard
+    );
+
+}
+
+
+/* =========================================
+   AÑADIR CUADRO
+========================================= */
+
+function addPhotoBox() {
+
+    photos.push({
+
+        image: ""
+
+    });
+
+
+    renderPhotos();
+
+    savePhotos();
+
+
+    /*
+       Bajamos automáticamente
+       hacia el nuevo espacio.
+    */
+
+    setTimeout(
+        function() {
+
+            window.scrollTo({
+
+                top:
+                    document.body.scrollHeight,
+
+                behavior:
+                    "smooth"
+
+            });
+
+        },
+        100
+    );
+
+}
+
+
+/* =========================================
+   ELEGIR IMAGEN
+========================================= */
+
+function chooseImage(index) {
+
+
+    /*
+       Creamos un input temporal.
+       Así no necesitas tener inputs
+       escritos en el HTML.
+    */
+
+    const input =
+        document.createElement(
+            "input"
+        );
+
+
+    input.type =
+        "file";
+
+
+    input.accept =
+        "image/*";
+
+
+    /*
+       Cuando eliges una imagen...
+    */
+
+    input.onchange =
+        function(event) {
+
+
+            const file =
+                event.target.files[0];
+
+
+            if (!file) {
+
+                return;
+
+            }
+
+
+            /*
+               Convertimos la imagen
+               para poder mostrarla.
+            */
+
+            const reader =
+                new FileReader();
+
+
+            reader.onload =
+                function(e) {
+
+
+                    photos[index].image =
+                        e.target.result;
+
+
+                    renderPhotos();
+
+                    savePhotos();
+
+                };
+
+
+            reader.readAsDataURL(
+                file
+            );
+
+        };
+
+
+    input.click();
+
+}
+
+
+/* =========================================
+   BORRAR FOTO
+========================================= */
+
+function deletePhoto(index) {
+
+
+    if (
+        confirm(
+            "¿Quieres eliminar este cuadrito?"
+        )
+    ) {
+
+
+        photos.splice(
+            index,
+            1
+        );
+
+
+        renderPhotos();
+
+        savePhotos();
+
+    }
+
+}
+
+
+/* =========================================
+   GUARDAR
+========================================= */
+
+function savePhotos() {
+
+    localStorage.setItem(
+
+        "myPhotoWall",
+
+        JSON.stringify(
+            photos
+        )
+
+    );
+
+}
+
+
+/* =========================================
+   RESTABLECER
+========================================= */
+
+function resetPhotos() {
+
+
+    if (
+        confirm(
+            "¿Quieres borrar todas las fotos y volver al principio?"
+        )
+    ) {
+
+
+        photos =
+            JSON.parse(
+                JSON.stringify(
+                    defaultPhotos
+                )
+            );
+
+
+        savePhotos();
+
+        renderPhotos();
+
+    }
+
+}
+
+
+/* =========================================
+   INICIAR
+========================================= */
+
+renderPhotos();
+
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2573 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>html, body, body * { cursor: url("images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TATE MCRAE ★</title>
+
+<link rel="icon" type="image/png" href="icon.png">
+
+
+<style>
+
+/* =====================================================
+   ✦ TATE MCRAE — Y2K GOLD
+===================================================== */
+
+:root {
+
+    --gold: #d4a936;
+    --gold-light: #f4df8a;
+    --gold-pale: #fff4c7;
+
+    --champagne: #f7edcf;
+    --cream: #fffaf0;
+
+    --black: #171717;
+    --dark: #292929;
+    --gray: #6d6a62;
+
+    --white: #ffffff;
+
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    color: var(--gray);
+
+    background-color: #f4e8bd;
+
+    background-image:
+
+        radial-gradient(
+            #d9bd63 1px,
+            transparent 1px
+        );
+
+    background-size: 9px 9px;
+
+}
+
+
+/* =====================================================
+   PÁGINA PRINCIPAL
+===================================================== */
+
+.pagina {
+
+    width: 1100px;
+
+    max-width: 94%;
+
+    margin: 25px auto;
+
+    background:
+        rgba(255,255,255,0.97);
+
+    border:
+        1px solid #c7aa52;
+
+    box-shadow:
+
+        8px 8px 0 #191919,
+
+        0 0 25px
+        rgba(80,60,15,0.25);
+
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+
+    min-height: 135px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+
+        linear-gradient(
+            120deg,
+            #161616,
+            #343434,
+            #c9a33d,
+            #f0d878
+        );
+
+    border-bottom:
+        3px solid white;
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+}
+
+
+.logo-symbol {
+
+    width: 72px;
+
+    height: 72px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #fff3bd;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    border:
+        2px solid #f4d978;
+
+    box-shadow:
+        3px 3px 0 #171717;
+
+    font-size: 34px;
+
+}
+
+
+.titulo {
+
+    margin: 0;
+
+    color: white;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 36px;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        2px 2px #9d7c20;
+
+}
+
+
+.subtitulo {
+
+    margin-top: 6px;
+
+    color: #f9e8a4;
+
+    letter-spacing: 3px;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   MENÚ SUPERIOR
+===================================================== */
+
+.menu {
+
+    padding: 7px;
+
+    text-align: center;
+
+    background:
+        #fff7d9;
+
+    border-bottom:
+        1px solid #d3b75f;
+
+}
+
+
+.menu a {
+
+    display: inline-block;
+
+    margin: 0 12px;
+
+    padding: 5px 11px;
+
+    color:
+        #6b571f;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+
+.menu a:hover {
+
+    color: white;
+
+    background:
+        #b9952d;
+
+}
+
+
+/* =====================================================
+   LAYOUT
+===================================================== */
+
+.layout {
+
+    display: grid;
+
+    grid-template-columns:
+        190px 1fr;
+
+    gap: 18px;
+
+    padding: 18px;
+
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+
+    background:
+        #fffdf3;
+
+    border:
+        1px solid #cbb05c;
+
+    align-self:
+        start;
+
+}
+
+
+.sidebar-title {
+
+    padding: 9px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            to right,
+            #181818,
+            #4b4b4b,
+            #b9932e
+        );
+
+    border-bottom:
+        1px solid #c8a63f;
+
+    font-weight: bold;
+
+}
+
+
+.sidebar-button {
+
+    display: block;
+
+    width: 100%;
+
+    padding: 12px 8px;
+
+    border: none;
+
+    border-bottom:
+        1px solid #e2d6a9;
+
+    color:
+        #62562f;
+
+    background:
+        #fffdf5;
+
+    text-align: left;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.sidebar-button:hover {
+
+    color: white;
+
+    background:
+        #c09d32;
+
+}
+
+
+.sidebar-button.active {
+
+    color: white;
+
+    background:
+        #252525;
+
+    box-shadow:
+        inset 4px 0 #e4c95c;
+
+}
+
+
+/* =====================================================
+   VENTANAS
+===================================================== */
+
+.ventana {
+
+    margin-bottom: 18px;
+
+    border:
+        1px solid #c9af58;
+
+    background:
+        white;
+
+    box-shadow:
+        3px 3px 0 #ded5b4;
+
+}
+
+
+.barra {
+
+    padding: 7px 9px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: white;
+
+    background:
+
+        linear-gradient(
+            to right,
+            #202020,
+            #484848,
+            #b18e2c
+        );
+
+    border-bottom:
+        1px solid #b08f32;
+
+    font-weight: bold;
+
+    text-shadow:
+        1px 1px #111;
+
+}
+
+
+.window-buttons {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.interior {
+
+    padding: 15px;
+
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    display: grid;
+
+    grid-template-columns:
+        220px 1fr;
+
+    gap: 18px;
+
+}
+
+
+.foto-principal {
+
+    min-height: 285px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid #c7ae5b;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #f8edc4,
+            #fffdf6,
+            #e2c96d
+        );
+
+    color:
+        #897536;
+
+    text-align: center;
+
+}
+
+
+.foto-principal img {
+
+    width: 100%;
+
+    height: 100%;
+
+    max-height: 330px;
+
+    object-fit: cover;
+
+}
+
+
+.intro h2 {
+
+    margin-top: 0;
+
+    color:
+        #8c7021;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 26px;
+
+}
+
+
+.intro p {
+
+    color:
+        #66645d;
+
+    line-height:
+        1.8;
+
+}
+
+
+.frase {
+
+    margin-top: 15px;
+
+    padding: 11px;
+
+    color:
+        #665728;
+
+    background:
+        #fff5c8;
+
+    border-left:
+        4px solid #d1ad38;
+
+    font-style:
+        italic;
+
+}
+
+
+/* =====================================================
+   TEXTO
+===================================================== */
+
+.texto {
+
+    color:
+        #66645d;
+
+    line-height:
+        1.9;
+
+}
+
+
+.texto strong {
+
+    color:
+        #8b7023;
+
+}
+
+
+/* =====================================================
+   MARCO DORADO
+===================================================== */
+
+.marco-destacado {
+
+    padding: 15px;
+
+    border:
+        1px solid #c7aa4c;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fff8dc,
+            #fffdf8
+        );
+
+}
+
+
+.marco-destacado h3 {
+
+    margin-top: 0;
+
+    color:
+        #8b7024;
+
+    font-family:
+        Georgia,
+        serif;
+
+}
+
+
+/* =====================================================
+   GALERÍA
+===================================================== */
+
+.galeria {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.foto {
+
+    min-height: 180px;
+
+    border:
+        1px solid #c7af61;
+
+    background:
+        #fbf6e6;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        #8b7c4e;
+
+    text-align: center;
+
+}
+
+
+.foto img {
+
+    width: 100%;
+
+    height: 180px;
+
+    object-fit: cover;
+
+}
+
+
+.caption {
+
+    padding: 6px;
+
+    color:
+        #736b50;
+
+    background:
+        #fff6cf;
+
+    text-align: center;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   ALBUMES
+===================================================== */
+
+.album-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+
+}
+
+
+.album {
+
+    padding: 8px;
+
+    border:
+        1px solid #cbb15c;
+
+    background:
+        #fffdf5;
+
+}
+
+
+.album-cover {
+
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+
+        linear-gradient(
+            145deg,
+            #292929,
+            #666,
+            #d7b743
+        );
+
+    border:
+        1px solid #9d8431;
+
+    color:
+        #fff0a9;
+
+    text-align: center;
+
+}
+
+
+.album-cover img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.album-name {
+
+    margin-top: 8px;
+
+    color:
+        #80671f;
+
+    font-weight: bold;
+
+    text-align: center;
+
+}
+
+
+.album-note {
+
+    margin-top: 5px;
+
+    color:
+        #85806e;
+
+    text-align: center;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   LISTAS
+===================================================== */
+
+.lista {
+
+    margin: 0;
+
+    padding-left: 20px;
+
+}
+
+
+.lista li {
+
+    margin-bottom: 8px;
+
+    color:
+        #67645a;
+
+}
+
+
+.lista li::marker {
+
+    color:
+        #c49e2c;
+
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+
+}
+
+
+.stat {
+
+    padding: 12px;
+
+    text-align: center;
+
+    border:
+        1px solid #cfb660;
+
+    background:
+        #fffbea;
+
+}
+
+
+.stat-number {
+
+    display: block;
+
+    color:
+        #8a6f20;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+.stat-label {
+
+    color:
+        #817a67;
+
+    font-size: 9px;
+
+}
+
+
+/* =====================================================
+   TEXTAREA
+===================================================== */
+
+.opinion {
+
+    min-height: 180px;
+
+    padding: 14px;
+
+    background:
+        #fffdf6;
+
+    border:
+        1px dashed #c5aa55;
+
+}
+
+
+.opinion textarea {
+
+    width: 100%;
+
+    min-height: 150px;
+
+    padding: 10px;
+
+    resize: vertical;
+
+    outline: none;
+
+    border:
+        1px solid #c7ae59;
+
+    color:
+        #5f5c53;
+
+    background:
+        white;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 11px;
+
+}
+
+
+.opinion textarea:focus {
+
+    border-color:
+        #b28d28;
+
+}
+
+
+/* =====================================================
+   BOTÓN
+===================================================== */
+
+.boton {
+
+    padding:
+        6px 12px;
+
+    border:
+        1px solid #977927;
+
+    color:
+        white;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            #d2b249,
+            #8c6e20
+        );
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+}
+
+
+.boton:hover {
+
+    background:
+        #a17e24;
+
+}
+
+.editor-panel {
+    margin: 0 18px 18px;
+    padding: 8px 10px;
+    color: #665728;
+    background: #fff5c8;
+    border: 1px solid #c7aa4c;
+    text-align: center;
+}
+
+.editor-button,
+.editor-delete {
+    padding: 5px 9px;
+    border: 1px solid #977927;
+    color: white;
+    background: #8c6e20;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.editor-delete {
+    display: none;
+    margin-top: 5px;
+    color: #fff;
+    background: #8b3545;
+}
+
+.editando [contenteditable="true"] {
+    outline: 1px dashed #c09d32;
+    background: #fffdf3;
+}
+
+.editando .editor-delete {
+    display: inline-block;
+}
+
+.editor-actions {
+    display: none;
+    margin-top: 8px;
+    text-align: center;
+}
+
+.editando .editor-actions {
+    display: block;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 15px;
+
+    text-align: center;
+
+    color:
+        #81785d;
+
+    background:
+        #f8f0d7;
+
+    border-top:
+        1px solid #d2bd76;
+
+    font-size: 10px;
+
+}
+
+
+footer a {
+
+    color:
+        #866d25;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .layout {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .hero {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .galeria,
+    .album-grid,
+    .stats {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+    .titulo {
+
+        font-size: 25px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="pagina">
+
+
+<!-- =================================================
+     HEADER
+================================================== -->
+
+<header>
+
+
+    <div class="logo">
+
+
+        <div class="logo-symbol">
+
+            ★
+
+        </div>
+
+
+        <div>
+
+            <h1 class="titulo">
+
+                TATE MCRAE
+
+            </h1>
+
+
+            <div class="subtitulo">
+
+                THE POP STAR ♡
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div style="font-size:28px; color:#f4dc80;">
+
+        ✦
+
+    </div>
+
+
+</header>
+
+<div class="editor-panel">
+    <button class="editor-button" id="toggleEditor" type="button">✎ Editar página</button>
+    <span id="editorStatus">Activa la edición para cambiar tu contenido.</span>
+</div>
+
+
+
+<!-- =================================================
+     MENÚ
+================================================== -->
+
+<nav class="menu">
+
+   
+    <a href="index.html">
+        HOME
+    </a>
+
+    <a href="aboutme.html">
+        ABOUT ME
+    </a>
+
+    <a href="blog.html">
+        BLOG
+    </a>
+
+    <a href="hobbies.html">
+        HOBBIES
+    </a>
+
+    <a href="music.html">
+        MUSIC
+    </a>
+
+    <a href="agenda-login.html">
+        AGENDA
+    </a>
+
+    <a href="galery.html">
+        GALERY
+    </a>
+
+    <a href="dreams.html">
+        DREAMS
+    </a>
+
+    <a href="life.html">
+        LIFE
+    </a>
+
+    <a href="writiti.html">
+        WRITITI
+    </a>
+
+
+</nav>
+
+
+
+<!-- =================================================
+     LAYOUT
+================================================== -->
+
+<div class="layout">
+
+
+
+<!-- =================================================
+     SIDEBAR
+================================================== -->
+
+<aside class="sidebar">
+
+
+    <div class="sidebar-title">
+
+        ★ TATE MCRAE ★
+
+    </div>
+
+
+    <button
+        class="sidebar-button active"
+        onclick="mostrarSeccion('inicio', this)"
+    >
+
+        ♡ HOME
+
+    </button>
+
+
+    <button
+        class="sidebar-button"
+        onclick="mostrarSeccion('albums', this)"
+    >
+
+        ♪ ALBUMS
+
+    </button>
+
+
+    <button
+        class="sidebar-button"
+        onclick="mostrarSeccion('playlist', this)"
+    >
+
+        ♫ PLAYLIST
+
+    </button>
+
+
+    <button
+        class="sidebar-button"
+        onclick="mostrarSeccion('songs', this)"
+    >
+
+        ♪ SONGS
+
+    </button>
+
+
+    <button
+        class="sidebar-button"
+        onclick="mostrarSeccion('galeria', this)"
+    >
+
+        ▣ GALLERY
+
+    </button>
+
+
+    <div
+        style="
+            padding:12px;
+            text-align:center;
+            color:#88784a;
+            font-size:10px;
+            line-height:1.7;
+        "
+    >
+
+        ✦
+
+        <br>
+
+        gold era
+
+        <br>
+
+        pop star energy
+
+        <br>
+
+        ♡
+
+    </div>
+
+
+</aside>
+
+
+
+<!-- =================================================
+     CONTENIDO
+================================================== -->
+
+<main class="main">
+
+
+
+<!-- =================================================
+     HOME
+================================================== -->
+
+<section
+    id="inicio"
+    class="seccion"
+>
+
+
+<!-- HERO -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ★ BIENVEDIO A MI RINCON DE TATE MCRAE
+
+        <span class="window-buttons">
+
+            − □ ×
+
+        </span>
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="hero">
+
+
+            <!-- FOTO -->
+
+            <div class="foto-principal">
+
+
+                <!--
+
+                PARA PONER TU FOTO:
+
+                guarda una imagen como:
+
+                tate1.jpg
+
+                y reemplaza esto por:
+
+                <img src="tate1.jpg">
+
+                -->
+
+
+                <div>
+
+                    📷
+
+                    <br><br>
+
+                    YOUR TATE PHOTO
+
+                    <br>
+
+                    <small>
+
+                        tate1.jpg
+
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- HISTORIA -->
+
+            <div class="intro" data-edit-key="home-intro">
+
+
+                <h2>
+
+                    TATE MCRAE ✦
+
+                </h2>
+
+
+                <p>
+
+                    Bienvenid@ a mi pequeño rincón
+                    dedicado a Tate McRae.
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        ¿Cómo la conocí?
+                    </strong>
+
+                    <br><br>
+
+                    AQUÍ PUEDES CONTAR TU HISTORIA.
+
+                    Escribe cuándo escuchaste su música
+                    por primera vez, cuál fue la canción
+                    que descubriste primero y qué fue lo
+                    que hizo que quisieras seguir
+                    escuchándola.
+
+                </p>
+
+
+                <div class="frase">
+
+                    ✦ POP STAR ENERGY ✦
+
+                    <br><br>
+
+                    Escribe aquí una frase tuya
+                    relacionada con Tate.
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     GOLD ERA
+================================================== -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ✦ THE GOLD ERA ✦
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="marco-destacado" data-edit-key="home-era">
+
+
+            <h3>
+
+                ★ MY FAVORITE TATE ERA
+
+            </h3>
+
+
+            <div class="texto">
+
+
+                <p>
+
+                    Aquí puedes escribir sobre la era de
+                    Tate que más te gusta y explicar qué
+                    significa para ti.
+
+                </p>
+
+
+                <p>
+
+                    Puedes hablar de la estética,
+                    los videoclips, las canciones,
+                    los outfits, las actuaciones,
+                    las coreografías o cualquier cosa
+                    que te haya llamado la atención.
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Mi opinión:
+                    </strong>
+
+                    escribe aquí todo lo que quieras ♡
+
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     MI EXPERIENCIA
+================================================== -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        📝 MY TATE EXPERIENCE
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="texto" data-edit-key="home-experience">
+
+
+            <p>
+
+                <strong>
+                    My story:
+                </strong>
+
+            </p>
+
+
+            <p>
+
+                Este espacio es completamente tuyo.
+
+                Puedes escribir sobre cuándo empezaste
+                a escucharla, qué canciones significan
+                algo para ti, si has visto alguna actuación
+                suya o simplemente qué es lo que más
+                te gusta de ella como artista.
+
+            </p>
+
+
+            <p>
+
+                Puedes hacer esta sección tan larga
+                como quieras.
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     PHOTO WALL
+================================================== -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ▣ TATE PHOTO WALL
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="galeria">
+
+
+            <div>
+
+                <div class="foto">
+
+                    📷
+
+                    <br>
+
+                    PHOTO 01
+
+                </div>
+
+
+                <div class="caption">
+
+                    favorite look ✦
+
+                </div>
+
+            </div>
+
+
+
+            <div>
+
+                <div class="foto">
+
+                    📷
+
+                    <br>
+
+                    PHOTO 02
+
+                </div>
+
+
+                <div class="caption">
+
+                    favorite era
+
+                </div>
+
+            </div>
+
+
+
+            <div>
+
+                <div class="foto">
+
+                    📷
+
+                    <br>
+
+                    PHOTO 03
+
+                </div>
+
+
+                <div class="caption">
+
+                    pop star moment
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     STATS
+================================================== -->
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ✦ MY TATE STATS
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="stats">
+
+
+            <div class="stat">
+
+                <span class="stat-number">
+
+                    00
+
+                </span>
+
+                <span class="stat-label">
+
+                    FAVORITE SONGS
+
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span class="stat-number">
+
+                    00
+
+                </span>
+
+                <span class="stat-label">
+
+                    YEARS LISTENING
+
+                </span>
+
+            </div>
+
+
+            <div class="stat">
+
+                <span class="stat-number">
+
+                    00
+
+                </span>
+
+                <span class="stat-label">
+
+                    FAVORITE ERA
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     ALBUMS
+================================================== -->
+
+<section
+    id="albums"
+    class="seccion"
+    style="display:none;"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ♪ ALBUM COLLECTION
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <p class="texto">
+
+            Aquí puedes poner las portadas de los
+            álbumes/proyectos que quieras y escribir
+            tus opiniones debajo.
+
+        </p>
+
+
+        <div class="album-grid" id="albumGrid">
+
+
+            <div class="album">
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 01
+
+                </div>
+
+                <div class="album-name">
+
+                    ALBUM / ERA
+
+                </div>
+
+                <div class="album-note">
+
+                    My thoughts...
+
+                </div>
+
+            </div>
+
+
+
+            <div class="album">
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 02
+
+                </div>
+
+                <div class="album-name">
+
+                    ALBUM / ERA
+
+                </div>
+
+                <div class="album-note">
+
+                    My thoughts...
+
+                </div>
+
+            </div>
+
+
+
+            <div class="album">
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 03
+
+                </div>
+
+                <div class="album-name">
+
+                    ALBUM / ERA
+
+                </div>
+
+                <div class="album-note">
+
+                    My thoughts...
+
+                </div>
+
+            </div>
+
+
+
+            <div class="album">
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 04
+
+                </div>
+
+                <div class="album-name">
+
+                    ALBUM / ERA
+
+                </div>
+
+                <div class="album-note">
+
+                    My thoughts...
+
+                </div>
+
+            </div>
+
+
+
+            <div class="album">
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 05
+
+                </div>
+
+                <div class="album-name">
+
+                    ALBUM / ERA
+
+                </div>
+
+                <div class="album-note">
+
+                    My thoughts...
+
+                </div>
+
+            </div>
+
+
+
+            <div class="album">
+
+                <div class="album-cover">
+
+                    📀
+
+                    <br>
+
+                    COVER 06
+
+                </div>
+
+                <div class="album-name">
+
+                    ALBUM / ERA
+
+                </div>
+
+                <div class="album-note">
+
+                    My thoughts...
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="editor-actions">
+    <button class="editor-button" id="addAlbum" type="button">+ Añadir álbum</button>
+</div>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        📝 MY ALBUM NOTES
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="opinion">
+
+
+            <textarea
+                placeholder="Write everything you think about Tate's music here..."
+            ></textarea>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     PLAYLIST
+================================================== -->
+
+<section
+    id="playlist"
+    class="seccion"
+    style="display:none;"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ♫ MY TATE PLAYLIST
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="marco-destacado">
+
+
+            <h3>
+
+                ✦ CURRENT ROTATION
+
+            </h3>
+
+
+            <ol class="lista" id="playlistList">
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+                <li>
+                    SONG NAME
+                </li>
+
+
+            </ol>
+
+            <div class="editor-actions">
+                <button class="editor-button" id="addPlaylistSong" type="button">+ Añadir canción</button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        💭 WHY THESE SONGS?
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="opinion">
+
+
+            <textarea
+                placeholder="Write why you chose these songs..."
+            ></textarea>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     SONGS
+================================================== -->
+
+<section
+    id="songs"
+    class="seccion"
+    style="display:none;"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ♪ MY FAVORITE TATE SONGS
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="marco-destacado">
+
+
+            <h3>
+
+                ★ TOP SONGS
+
+            </h3>
+
+
+            <ol class="lista" id="songsList">
+
+
+                <li>
+                    SONG #01 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #02 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #03 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #04 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #05 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #06 — why I love it...
+                </li>
+
+
+                <li>
+                    SONG #07 — why I love it...
+                </li>
+
+
+            </ol>
+
+            <div class="editor-actions">
+                <button class="editor-button" id="addFavoriteSong" type="button">+ Añadir canción</button>
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        📝 SONG MEMORIES
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="opinion">
+
+
+            <textarea
+                placeholder="Write about the songs that mean something to you..."
+            ></textarea>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+<!-- =================================================
+     GALLERY
+================================================== -->
+
+<section
+    id="galeria"
+    class="seccion"
+    style="display:none;"
+>
+
+
+<div class="ventana">
+
+
+    <div class="barra">
+
+        ▣ GOLDEN PHOTO ARCHIVE
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div class="galeria">
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+            <div class="foto">
+
+                PHOTO
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+</section>
+
+
+
+</main>
+
+
+</div>
+
+
+
+<!-- =================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    ★ TATE MCRAE CORNER · GOLD ERA ♡
+
+    <br><br>
+
+    <a href="index.html">
+
+        ← BACK TO HOME
+
+    </a>
+
+</footer>
+
+
+</div>
+
+
+
+<!-- =================================================
+     JAVASCRIPT
+================================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="access.js"></script>
+<script src="loading.js"></script>
+<script>
+
+
+function mostrarSeccion(
+    nombre,
+    boton
+) {
+
+
+    /*
+       Ocultamos todas las secciones
+    */
+
+    const secciones =
+        document.querySelectorAll(
+            ".seccion"
+        );
+
+
+    secciones.forEach(
+        function(seccion) {
+
+            seccion.style.display =
+                "none";
+
+        }
+    );
+
+
+
+    /*
+       Mostramos la sección seleccionada
+    */
+
+    document.getElementById(
+        nombre
+    ).style.display =
+        "block";
+
+
+
+    /*
+       Quitamos active de todos
+    */
+
+    const botones =
+        document.querySelectorAll(
+            ".sidebar-button"
+        );
+
+
+    botones.forEach(
+        function(b) {
+
+            b.classList.remove(
+                "active"
+            );
+
+        }
+    );
+
+
+
+    /*
+       Activamos el botón pulsado
+    */
+
+    boton.classList.add(
+        "active"
+    );
+
+
+
+    /*
+       Volvemos arriba
+    */
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+
+/* =====================================================
+   EDITOR PERSONAL
+===================================================== */
+
+const editorButton = document.getElementById("toggleEditor");
+const editorStatus = document.getElementById("editorStatus");
+const albumGrid = document.getElementById("albumGrid");
+const playlistList = document.getElementById("playlistList");
+const songsList = document.getElementById("songsList");
+let editando = false;
+
+function guardarEditor() {
+    if (!window.siteAccess.requireOwner()) return;
+    document.querySelectorAll("[data-edit-key]").forEach(elemento => {
+        localStorage.setItem("tate_" + elemento.dataset.editKey, elemento.innerHTML);
+    });
+    document.querySelectorAll(".opinion textarea").forEach((textarea, indice) => {
+        localStorage.setItem("tate_textarea_" + indice, textarea.value);
+    });
+    localStorage.setItem("tate_albumGrid", albumGrid.innerHTML);
+    localStorage.setItem("tate_playlistList", playlistList.innerHTML);
+    localStorage.setItem("tate_songsList", songsList.innerHTML);
+}
+
+function prepararAlbum(album) {
+    album.querySelectorAll(".album-cover, .album-name, .album-note").forEach(elemento => {
+        elemento.contentEditable = window.siteAccess.isOwner() ? "true" : "false";
+    });
+    if (!album.querySelector(".editor-delete")) {
+        const button = document.createElement("button");
+        button.className = "editor-delete";
+        button.type = "button";
+        button.textContent = "Eliminar álbum";
+        album.appendChild(button);
+    }
+}
+
+function prepararLista(lista) {
+    lista.querySelectorAll("li").forEach(item => {
+        item.contentEditable = window.siteAccess.isOwner() ? "true" : "false";
+        if (!item.querySelector(".editor-delete")) {
+            const button = document.createElement("button");
+            button.className = "editor-delete";
+            button.type = "button";
+            button.textContent = "Eliminar";
+            item.appendChild(button);
+        }
+    });
+}
+
+function cargarEditor() {
+    document.querySelectorAll("[data-edit-key]").forEach(elemento => {
+        const contenido = localStorage.getItem("tate_" + elemento.dataset.editKey);
+        if (contenido !== null) elemento.innerHTML = contenido;
+    });
+    const albumGuardado = localStorage.getItem("tate_albumGrid");
+    const playlistGuardada = localStorage.getItem("tate_playlistList");
+    const songsGuardadas = localStorage.getItem("tate_songsList");
+    if (albumGuardado) albumGrid.innerHTML = albumGuardado;
+    if (playlistGuardada) playlistList.innerHTML = playlistGuardada;
+    if (songsGuardadas) songsList.innerHTML = songsGuardadas;
+    albumGrid.querySelectorAll(".album").forEach(prepararAlbum);
+    prepararLista(playlistList);
+    prepararLista(songsList);
+    document.querySelectorAll(".opinion textarea").forEach((textarea, indice) => {
+        const contenido = localStorage.getItem("tate_textarea_" + indice);
+        if (contenido !== null) textarea.value = contenido;
+    });
+}
+
+editorButton.addEventListener("click", () => {
+    if (!window.siteAccess.requireOwner()) return;
+    editando = !editando;
+    document.body.classList.toggle("editando", editando);
+    document.querySelectorAll("[data-edit-key], .opinion textarea, .album-cover, .album-name, .album-note, .lista li").forEach(elemento => {
+        if (elemento.matches("textarea")) elemento.disabled = !editando;
+        else elemento.contentEditable = editando ? "true" : "false";
+    });
+    editorButton.textContent = editando ? "✓ Terminar edición" : "✎ Editar página";
+    editorStatus.textContent = editando ? "Escribe, agrega o elimina contenido y se guardará automáticamente." : "Cambios guardados en este navegador.";
+});
+
+document.addEventListener("input", event => {
+    if (editando && window.siteAccess.isOwner() && (event.target.matches("[contenteditable='true']") || event.target.matches("textarea"))) guardarEditor();
+});
+
+document.addEventListener("click", event => {
+    if (event.target.matches(".editor-delete")) {
+        if (!window.siteAccess.requireOwner()) return;
+        event.target.closest(".album, li").remove();
+        guardarEditor();
+    }
+});
+
+document.getElementById("addAlbum").addEventListener("click", () => {
+    if (!window.siteAccess.requireOwner()) return;
+    const album = document.createElement("div");
+    album.className = "album";
+    album.innerHTML = '<div class="album-cover">📀<br>COVER</div><div class="album-name">ALBUM / ERA</div><div class="album-note">My thoughts...</div>';
+    albumGrid.appendChild(album);
+    prepararAlbum(album);
+    guardarEditor();
+});
+
+function agregarCancion(lista) {
+    if (!window.siteAccess.requireOwner()) return;
+    const item = document.createElement("li");
+    item.textContent = "SONG NAME";
+    lista.appendChild(item);
+    prepararLista(lista);
+    guardarEditor();
+}
+
+document.getElementById("addPlaylistSong").addEventListener("click", () => agregarCancion(playlistList));
+document.getElementById("addFavoriteSong").addEventListener("click", () => agregarCancion(songsList));
+cargarEditor();
+
+
+</script>
+
+
+</body>
+
+</html> 

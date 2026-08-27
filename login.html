@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>html, body, body * { cursor: url("web/images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" href="icon.png">
+
+    <title>Hallooᯓ★ · Welcome</title>
+
+
+    <style>
+
+        /* =========================================
+           COLORES
+        ========================================= */
+
+        :root {
+
+            --rosa: #f49ac2;
+            --rosa-fuerte: #df6f9e;
+            --rosa-claro: #ffd6e8;
+            --rosa-suave: #fff0f6;
+
+            --amarillo: #f3d477;
+            --amarillo-claro: #fff2b5;
+            --amarillo-suave: #fffbea;
+
+            --texto: #765966;
+            --texto-claro: #9b7584;
+
+            --borde-rosa: #e5abc3;
+            --borde-amarillo: #dcc16a;
+
+        }
+
+
+        /* =========================================
+           GENERAL
+        ========================================= */
+
+        * {
+
+            box-sizing: border-box;
+
+        }
+
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            font-size: 12px;
+
+            color: var(--texto);
+
+            background-color: #fff9df;
+
+            /*
+                Fondo de puntitos tipo web antigua
+            */
+
+            background-image:
+                radial-gradient(
+                    #e5dcbf 1px,
+                    transparent 1px
+                );
+
+            background-size: 8px 8px;
+
+        }
+
+
+        /* =========================================
+           PÁGINA
+        ========================================= */
+
+        .pagina {
+
+            width: 850px;
+
+            max-width: 94%;
+
+            margin: 35px auto;
+
+            background: white;
+
+            border: 1px solid var(--borde-rosa);
+
+            box-shadow:
+
+                6px 6px 0 var(--amarillo),
+
+                0 0 15px
+                rgba(220, 150, 180, 0.25);
+
+        }
+
+
+        /* =========================================
+           CABECERA ROSA
+        ========================================= */
+
+        .cabecera {
+
+            height: 48px;
+
+            padding: 7px 12px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #ffb9d8,
+                    #ee82b4
+                );
+
+            border-bottom:
+                2px solid #ffeaf3;
+
+            text-shadow:
+                1px 1px #b85c83;
+
+        }
+
+
+        .logo {
+
+            font-size: 21px;
+
+            font-weight: bold;
+
+        }
+
+
+        .logo .estrella {
+
+            color: #fff2b5;
+
+        }
+
+
+        .estado {
+
+            font-size: 10px;
+
+        }
+
+
+        /* =========================================
+           MENÚ AMARILLO
+        ========================================= */
+
+        .menu {
+
+            padding: 5px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #fff4bd,
+                    #f5d77d
+                );
+
+            border-bottom:
+                1px solid var(--borde-amarillo);
+
+        }
+
+
+        .menu a {
+
+            display: inline-block;
+
+            padding:
+                2px 12px;
+
+            color: #825f70;
+
+            text-decoration: none;
+
+            font-weight: bold;
+
+            border-right:
+                1px solid #dfc46e;
+
+        }
+
+
+        .menu a:last-child {
+
+            border-right: none;
+
+        }
+
+
+        .menu a:hover {
+
+            color: var(--rosa-fuerte);
+
+            text-decoration: underline;
+
+        }
+
+
+        /* =========================================
+           CONTENIDO
+        ========================================= */
+
+        .contenido {
+
+            padding: 28px;
+
+        }
+
+
+        .titulo {
+
+            margin: 0;
+
+            text-align: center;
+
+            color: var(--rosa-fuerte);
+
+            font-size: 29px;
+
+            text-shadow:
+                2px 2px #fff0ad;
+
+        }
+
+
+        .subtitulo {
+
+            margin-top: 6px;
+
+            text-align: center;
+
+            color: var(--texto-claro);
+
+            font-style: italic;
+
+        }
+
+
+        /* =========================================
+           ESTRELLITAS
+        ========================================= */
+
+        .decoracion {
+
+            margin: 14px 0;
+
+            text-align: center;
+
+            color: #dba05e;
+
+            font-size: 17px;
+
+            letter-spacing: 5px;
+
+        }
+
+
+        /* =========================================
+           VENTANA DE LOGIN
+        ========================================= */
+
+        .ventana {
+
+            width: 500px;
+
+            max-width: 100%;
+
+            margin:
+                25px auto;
+
+            background: white;
+
+            border:
+                1px solid var(--borde-rosa);
+
+            box-shadow:
+                5px 5px 0 #ead77d;
+
+        }
+
+
+        /* =========================================
+           BARRA DE VENTANA
+        ========================================= */
+
+        .barra-ventana {
+
+            height: 28px;
+
+            padding:
+                5px 8px;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            color: white;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    to right,
+                    #ee82b4,
+                    #f5d87e
+                );
+
+            border-bottom:
+                1px solid #dfa0b9;
+
+            text-shadow:
+                1px 1px #ad6683;
+
+        }
+
+
+        .botones-ventana {
+
+            letter-spacing: 3px;
+
+            font-size: 10px;
+
+        }
+
+
+        /* =========================================
+           INTERIOR
+        ========================================= */
+
+        .ventana-interior {
+
+            padding: 28px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffffff,
+                    #fffbea
+                );
+
+        }
+
+
+        .candado {
+
+            font-size: 53px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .hola {
+
+            margin: 5px 0;
+
+            color: var(--rosa-fuerte);
+
+            font-size: 21px;
+
+            font-weight: bold;
+
+        }
+
+
+        .descripcion {
+
+            width: 90%;
+
+            margin:
+                12px auto 20px;
+
+            line-height: 1.6;
+
+        }
+
+
+        /* =========================================
+           FORMULARIO
+        ========================================= */
+
+        #loginForm {
+
+            margin: 0;
+
+        }
+
+
+        .etiqueta {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #925d73;
+
+            font-weight: bold;
+
+        }
+
+
+        #password {
+
+            width: 270px;
+
+            max-width: 90%;
+
+            padding: 8px;
+
+            border:
+                1px solid #dfa8bf;
+
+            outline: none;
+
+            background: #fffdf1;
+
+            color: var(--texto);
+
+            font-family: Arial, sans-serif;
+
+            font-size: 12px;
+
+            box-shadow:
+                inset 1px 1px 3px
+                rgba(0,0,0,0.08);
+
+        }
+
+
+        #password:focus {
+
+            border-color: #ed82b2;
+
+            background: #fff8fb;
+
+        }
+
+        #pantallaCarga {
+            position: fixed;
+            inset: 0;
+            z-index: 20;
+            display: none;
+            place-items: center;
+            overflow: hidden;
+            background: #86b9df;
+        }
+
+        #pantallaCarga.visible {
+            display: grid;
+            animation: aparecerCarga .35s ease-out;
+        }
+
+        .carga-cielo {
+            position: absolute;
+            inset: 0;
+            background-color: #86b9df;
+            background-image: url("web/loading.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .carga-cielo::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: .22;
+            background-image: radial-gradient(#fff 1px, transparent 1px);
+            background-size: 5px 5px;
+        }
+
+        .carga-flores {
+            display: none;
+        }
+
+        .carga-flores span:nth-child(2n) {
+            transform: translateY(24px) rotate(-8deg);
+            color: #ff4d9c;
+        }
+
+        .carga-panel {
+            position: relative;
+            width: min(390px, 86%);
+            padding: 22px;
+            text-align: center;
+            color: #765966;
+            background: rgba(255, 249, 223, .94);
+            border: 3px solid white;
+            outline: 1px solid #db78a7;
+            box-shadow: 6px 6px 0 #f3d477;
+        }
+
+        .carga-panel h2 {
+            margin: 0 0 8px;
+            color: #df6f9e;
+            font-size: 22px;
+        }
+
+        .carga-barra {
+            height: 18px;
+            margin-top: 14px;
+            padding: 3px;
+            background: white;
+            border: 1px solid #d5799d;
+        }
+
+        .carga-progreso {
+            width: 0;
+            height: 100%;
+            background: repeating-linear-gradient(90deg, #ee82b4 0 12px, #f5d87e 12px 24px);
+            animation: progresoCarga 1.8s linear forwards;
+        }
+
+        @keyframes progresoCarga { to { width: 100%; } }
+        @keyframes aparecerCarga { from { opacity: 0; } to { opacity: 1; } }
+
+
+        /* =========================================
+           BOTÓN RETRO
+        ========================================= */
+
+        #entrar {
+
+            display: block;
+
+            margin:
+                13px auto 0;
+
+            padding:
+                7px 24px;
+
+            border:
+                1px solid #d3b45c;
+
+            color: #765966;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #fff3bd,
+                    #f3d477
+                );
+
+            font-family: Arial, sans-serif;
+
+            font-size: 11px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            box-shadow:
+
+                inset 0 1px white,
+
+                1px 1px 2px #ccc;
+
+        }
+
+
+        #entrar:hover {
+
+            color: white;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    #ffd6e8,
+                    #ef8fba
+                );
+
+            border-color:
+                #d77fa4;
+
+        }
+
+
+        #entrar:active {
+
+            transform:
+                translate(
+                    1px,
+                    1px
+                );
+
+        }
+
+
+        /* =========================================
+           MENSAJE
+        ========================================= */
+
+        #mensaje {
+
+            min-height: 20px;
+
+            margin-top: 12px;
+
+            color: var(--rosa-fuerte);
+
+            font-weight: bold;
+
+        }
+
+
+        /* =========================================
+           NOTITA AMARILLA
+        ========================================= */
+
+        .nota {
+
+            width: 82%;
+
+            margin:
+                20px auto 0;
+
+            padding: 9px;
+
+            color: #866b3b;
+
+            background:
+                var(--amarillo-claro);
+
+            border:
+                1px dashed #d5b85c;
+
+            font-size: 10px;
+
+        }
+
+
+        /* =========================================
+           DECORACIÓN INFERIOR
+        ========================================= */
+
+        .mini-banner {
+
+            width: 230px;
+
+            margin:
+                20px auto;
+
+            padding: 7px;
+
+            text-align: center;
+
+            color: white;
+
+            font-size: 10px;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    to right,
+                    #f49ac2,
+                    #f5d87e,
+                    #f49ac2
+                );
+
+            border:
+                1px solid #e0abc0;
+
+            box-shadow:
+                2px 2px 0 #ead77d;
+
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            padding: 12px;
+
+            text-align: center;
+
+            color: #a9808f;
+
+            background:
+                var(--rosa-suave);
+
+            border-top:
+                1px solid #edb4ca;
+
+            font-size: 10px;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =========================================
+           MÓVIL
+        ========================================= */
+
+        @media (max-width: 600px) {
+
+
+            .pagina {
+
+                margin:
+                    15px auto;
+
+            }
+
+
+            .cabecera {
+
+                height: auto;
+
+                display: block;
+
+                text-align: center;
+
+            }
+
+
+            .estado {
+
+                margin-top: 5px;
+
+            }
+
+
+            .menu a {
+
+                padding:
+                    4px 6px;
+
+            }
+
+
+            .contenido {
+
+                padding: 15px;
+
+            }
+
+
+            .ventana-interior {
+
+                padding: 20px 10px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="pagina">
+
+
+    <!-- =====================================
+         CABECERA
+    ====================================== -->
+
+    <header class="cabecera">
+
+
+        <div class="logo">
+
+            RIZOS
+            <span class="estrella">ᯓ★</span>
+
+        </div>
+
+
+        <div class="estado">
+
+            ✧ bienvenido a mi sitio web ✧
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =====================================
+         CONTENIDO
+    ====================================== -->
+
+    <main class="contenido">
+
+
+        <h1 class="titulo">
+
+            Bienvenido de nuevo ᯓ★
+
+        </h1>
+
+
+        <div class="subtitulo">
+
+            encontraste la entrada secreta...
+
+        </div>
+
+
+        <div class="decoracion">
+
+            ☆ ✧ ☆ ✧ ☆
+
+        </div>
+
+
+
+        <!-- =================================
+             VENTANA DE CONTRASEÑA
+        ================================== -->
+
+        <div class="ventana">
+
+
+            <div class="barra-ventana">
+
+
+                <span>
+
+                    🔒 Private Area
+
+                </span>
+
+
+                <span class="botones-ventana">
+
+                    − □ ×
+
+                </span>
+
+
+            </div>
+
+
+
+            <div class="ventana-interior">
+
+
+                <div class="candado">
+
+                    🔐
+
+                </div>
+
+
+                <div class="hola">
+
+                    Hallo! ♡
+
+                </div>
+
+
+                <p class="descripcion">
+
+                    Este pequeño rincón de mi sitio web
+                    es privado.
+
+                    <br>
+
+                    Si conoces la contraseña,
+                    puedes entrar. ★
+
+                </p>
+
+
+                <div class="decoracion">
+
+                    ☆ ✧ ☆ ✧ ☆
+
+                </div>
+
+
+
+                <!-- =========================
+                     FORMULARIO
+                ========================== -->
+
+                <div id="loginForm">
+
+
+                    <label
+                        class="etiqueta"
+                        for="password"
+                    >
+
+                        Enter password:
+
+                    </label>
+
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="type password here..."
+                        autocomplete="new-password"
+                    >
+
+
+                    <button
+                        id="entrar"
+                        type="button"
+                    >
+
+                        ENTER ★
+
+                    </button>
+
+
+                    <div id="mensaje"></div>
+
+
+                </div>
+
+
+
+                <div class="nota">
+
+                    ♡ Pista: no hay pista,
+                    es muy facil ♡
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="mini-banner">
+
+            ★ BIENVENIDO A MI RINCÓN SECRETO ★
+
+        </div>
+
+
+        <div class="decoracion">
+
+            ✿ ★ ✿ ★ ✿
+
+        </div>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer>
+
+        RIZOSᯓ★ · pequeño rincón privado · 2026
+
+        <br>
+
+        made with pink, yellow & too many ideas ♡
+
+    </footer>
+
+
+</div>
+
+<div id="pantallaCarga" aria-live="polite" aria-label="Cargando la página">
+    <div class="carga-cielo"></div>
+    <div class="carga-flores" aria-hidden="true">
+        <span>🌷</span><span>🌷</span><span>🌷</span><span>🌷</span><span>🌷</span>
+    </div>
+    <div class="carga-panel">
+        <h2>♡ Password correct! ♡</h2>
+        <div>Bienvenido a mi pequeño mundo...</div>
+        <div class="carga-barra"><div class="carga-progreso"></div></div>
+        <small>loading memories ★</small>
+    </div>
+</div>
+
+
+
+<!-- =========================================
+     JAVASCRIPT
+========================================== -->
+
+<script>
+
+
+    /*
+       Cogemos los elementos de la página
+    */
+
+    const formulario =
+        document.getElementById("loginForm");
+
+
+    const password =
+        document.getElementById("password");
+
+
+    const mensaje =
+        document.getElementById("mensaje");
+
+
+
+    const entrar =
+        document.getElementById("entrar");
+
+
+    function comprobarPassword() {
+
+
+
+            /*
+               CAMBIA "1234" POR TU CONTRASEÑA
+            */
+
+            if (password.value === "842") {
+
+
+                /*
+                   CONTRASEÑA CORRECTA
+
+                                     index.html está dentro de la
+                                     carpeta web.
+                */
+
+                mensaje.textContent = "♡ Password correct! Loading... ♡";
+                mensaje.style.color = "#df6f9e";
+                entrar.disabled = true;
+                password.disabled = true;
+                document.getElementById("pantallaCarga").classList.add("visible");
+                setTimeout(function() {
+                    window.location.href = "./web/index.html";
+                }, 1800);
+                    
+
+
+            } else {
+
+
+                /*
+                   CONTRASEÑA INCORRECTA
+                */
+
+                mensaje.textContent =
+                    "✖ Incorrect password... try again ♡";
+
+
+                password.value = "";
+
+
+                password.focus();
+
+            }
+
+    }
+
+
+    entrar.addEventListener("click", comprobarPassword);
+
+
+    password.addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter") {
+
+            event.preventDefault();
+            comprobarPassword();
+
+        }
+
+    });
+
+
+</script>
+
+
+</body>
+
+</html>

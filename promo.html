@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>html, body, body * { cursor: url("images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y2K Sweet Journal ~ Estética 2000s</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka+One&family=Comic+Neue:wght@700&family=VT323&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-pink: #fff0f5;
+            --pastel-pink: #ffb6c1;
+            --deep-pink: #ff69b4;
+            --pastel-yellow: #fffacd;
+            --bright-yellow: #ffeb3b;
+            --accent-purple: #dda0dd;
+            --text-color: #4a4a4a;
+            --window-border: #ff1493;
+            --font-title: 'Bubblegum Sans', cursive;
+            --font-body: 'Gill Sans', 'Gill Sans MT', Calibri, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            user-select: none;
+        }
+
+        body {
+            background-color: var(--bg-pink);
+            background-image: 
+                radial-gradient(var(--pastel-pink) 15%, transparent 16%),
+                radial-gradient(var(--pastel-yellow) 15%, transparent 16%);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+            font-family: var(--font-body);
+            color: var(--text-color);
+            min-height: 100vh;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Barra de Estilo Winamp/Retro */
+        .retro-header {
+            width: 100%;
+            background: linear-gradient(90deg, #ff1493, #dda0dd, #ff69b4);
+            padding: 8px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px dashed #fff;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            z-index: 1000;
+        }
+
+        .retro-title {
+            font-family: var(--font-title);
+            color: #fff;
+            font-size: 1.8rem;
+            text-shadow: 2px 2px #ff1493, -2px -2px #000;
+            letter-spacing: 2px;
+        }
+
+        .global-toolbar {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Botones Estilo Y2K */
+        .y2k-btn {
+            background: linear-gradient(to bottom, #ffffff, var(--pastel-pink));
+            border: 2px solid #fff;
+            border-top-color: var(--deep-pink);
+            border-left-color: var(--deep-pink);
+            border-radius: 4px;
+            padding: 6px 14px;
+            font-family: 'Comic Neue', cursive, sans-serif;
+            font-weight: bold;
+            color: #444;
+            cursor: pointer;
+            box-shadow: 2px 2px 0px #ff1493;
+            transition: all 0.1s ease;
+        }
+
+        .y2k-btn:active {
+            transform: translate(2px, 2px);
+            box-shadow: 0px 0px 0px #ff1493;
+        }
+
+        .y2k-btn:hover {
+            background: var(--bright-yellow);
+        }
+
+        /* Contenedor Principal */
+        .main-container {
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+
+        /* VISTA 1: Estantería de Libros */
+        #bookshelf-view {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .shelf-header {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .shelf-header h1 {
+            font-family: var(--font-title);
+            font-size: 3.5rem;
+            color: var(--deep-pink);
+            text-shadow: 3px 3px 0px var(--pastel-yellow), 5px 5px 0px #ff1493;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 30px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .book-card {
+            background: linear-gradient(135deg, #fff, var(--pastel-yellow));
+            border: 4px ridge var(--deep-pink);
+            border-radius: 12px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+            box-shadow: 5px 5px 15px rgba(255, 105, 180, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            height: 280px;
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px) rotate(1deg);
+            box-shadow: 8px 12px 20px rgba(255, 20, 147, 0.6);
+        }
+
+        .book-spine-preview {
+            width: 100%;
+            flex: 1;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+            border: 2px dashed #ff69b4;
+        }
+
+        .book-title {
+            font-family: var(--font-title);
+            font-size: 1.6rem;
+            color: var(--deep-pink);
+            margin-top: 10px;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 100%;
+        }
+
+        .book-actions {
+            display: flex;
+            gap: 5px;
+            margin-top: 8px;
+        }
+
+        /* VISTA 2: Libro Abierto & Editor de Portada/Páginas */
+        #journal-view {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeIn 0.4s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .journal-nav-bar {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1000px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            border-radius: 15px;
+            border: 2px solid var(--deep-pink);
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            align-items: center;
+        }
+
+        /* Estructura del Libro Abierto (Efecto 3D Realista) */
+        .book-binder {
+            position: relative;
+            width: 1000px;
+            height: 650px;
+            background: #8b4513;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4), inset 0 0 30px rgba(0,0,0,0.5);
+            display: flex;
+            padding: 20px;
+            perspective: 2000px;
+        }
+
+        .book-page-spread {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            background: #fffdf9;
+            border-radius: 5px;
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-center-shadow {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 40px;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, rgba(0,0,0,0.15), rgba(0,0,0,0.02) 50%, rgba(0,0,0,0.15));
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        .page-half {
+            flex: 1;
+            height: 100%;
+            padding: 30px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .page-left {
+            border-right: 1px solid #f0e6d2;
+            background-image: linear-gradient(#e1f0ff 1px, transparent 1px);
+            background-size: 100% 28px;
+        }
+
+        .page-right {
+            background-image: linear-gradient(#e1f0ff 1px, transparent 1px);
+            background-size: 100% 28px;
+        }
+
+        /* Elementos Libres en Páginas y Portada (Drag & Drop con Interact.js o Nativo Mejorado) */
+        .draggable-item {
+            position: absolute;
+            cursor: move;
+            display: inline-block;
+            touch-action: none;
+            user-select: none;
+            z-index: 10;
+        }
+
+        .draggable-item.sticker {
+            font-size: 2.5rem;
+            filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2));
+            transition: transform 0.1s;
+        }
+
+        .draggable-item.sticker:hover {
+            transform: scale(1.15);
+        }
+
+        .draggable-item.image-node img {
+            max-width: 180px;
+            max-height: 180px;
+            border: 3px solid #fff;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+            border-radius: 6px;
+        }
+
+        .item-delete-btn {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: #ff1493;
+            color: #fff;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+            display: none;
+            z-index: 100;
+        }
+
+        .draggable-item:hover .item-delete-btn {
+            display: block;
+        }
+
+        /* Controles de Páginas y Texto */
+        .page-title-input {
+            font-family: var(--font-title);
+            font-size: 2rem;
+            color: var(--deep-pink);
+            border: none;
+            border-bottom: 2px dashed var(--pastel-pink);
+            background: transparent;
+            outline: none;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .page-text-area {
+            flex: 1;
+            border: none;
+            background: transparent;
+            resize: none;
+            outline: none;
+            font-size: 1.1rem;
+            line-height: 28px;
+            font-family: var(--font-body);
+            color: var(--text-color);
+            width: 100%;
+        }
+
+        /* Cajón de Pegatinas y Emojis (Modal Desplegable / Flotante) */
+        #sticker-drawer {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 340px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 4px solid var(--deep-pink);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.3);
+            display: none;
+            flex-direction: column;
+            z-index: 2000;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+
+        .drawer-header {
+            background: var(--deep-pink);
+            color: white;
+            padding: 8px 15px;
+            font-family: var(--font-title);
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .drawer-close {
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .drawer-tabs {
+            display: flex;
+            background: var(--pastel-pink);
+            border-bottom: 2px solid var(--deep-pink);
+        }
+
+        .drawer-tab {
+            flex: 1;
+            padding: 6px;
+            text-align: center;
+            font-size: 0.9rem;
+            cursor: pointer;
+            font-weight: bold;
+            color: #fff;
+            background: rgba(0,0,0,0.05);
+        }
+
+        .drawer-tab.active {
+            background: #fff;
+            color: var(--deep-pink);
+            border-bottom: none;
+        }
+
+        .drawer-content {
+            padding: 10px;
+            max-height: 220px;
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+
+        .sticker-option {
+            font-size: 1.8rem;
+            text-align: center;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 6px;
+            transition: background 0.1s;
+        }
+
+        .sticker-option:hover {
+            background: var(--pastel-yellow);
+            transform: scale(1.2);
+        }
+
+        /* Reproductor de Música Flotante Winamp Retro */
+        #retro-player {
+            position: fixed;
+            top: 70px;
+            right: 20px;
+            width: 280px;
+            background: #2b2b2b;
+            border: 3px solid #ff1493;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            z-index: 1500;
+            color: #00ffcc;
+            font-family: 'VT323', monospace;
+            cursor: grab;
+        }
+
+        #retro-player:active {
+            cursor: grabbing;
+        }
+
+        .player-titlebar {
+            background: linear-gradient(90deg, #ff1493, #8a2be2);
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .player-body {
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            background: #1a1a1a;
+        }
+
+        .player-screen {
+            background: #000;
+            border: 2px inset #444;
+            padding: 6px;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #00ffcc;
+            text-shadow: 0 0 5px #00ffcc;
+        }
+
+        .player-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .player-btn {
+            background: #333;
+            color: #fff;
+            border: 1px solid #ff1493;
+            padding: 4px 10px;
+            font-family: 'VT323', monospace;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        .player-btn:hover {
+            background: #ff1493;
+        }
+
+        /* Modales Generales (Contraseña, Config Tipografía, etc.) */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(3px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+        }
+
+        .modal-box {
+            background: #fff;
+            border: 4px solid var(--deep-pink);
+            border-radius: 15px;
+            padding: 25px;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            text-align: center;
+        }
+
+        .modal-box h3 {
+            font-family: var(--font-title);
+            color: var(--deep-pink);
+            font-size: 2rem;
+        }
+
+        .modal-box input, .modal-box select {
+            padding: 8px;
+            border: 2px solid var(--pastel-pink);
+            border-radius: 5px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            outline: none;
+        }
+
+        /* Utilidades */
+        .hidden { display: none !important; }
+        .flex { display: flex; }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera Retro Estilo Winamp/Web 2.0 -->
+    <header class="retro-header">
+        <div class="retro-title">✨ Y2K Sweet Journal ✨</div>
+        <div class="global-toolbar">
+            <button class="y2k-btn" onclick="openCreateBookModal()">📖 Nuevo Diario</button>
+            <button class="y2k-btn" onclick="togglePlayer()">🎵 Reproductor</button>
+            <button class="y2k-btn" onclick="toggleStickerDrawer()">⭐ Pegatinas</button>
+            <button class="y2k-btn" onclick="openSettingsModal()">⚙️ Ajustes</button>
+        </div>
+    </header>
+
+    <!-- Reproductor de Música Flotante (Estilo Winamp Retro) -->
+    <div id="retro-player" class="draggable-window">
+        <div class="player-titlebar" id="player-drag-handle">
+            <span>Winamp Y2K.mp3</span>
+            <span style="cursor:pointer;" onclick="togglePlayer()">[x]</span>
+        </div>
+        <div class="player-body">
+            <div class="player-screen" id="track-name">No track loaded...</div>
+            <audio id="audio-element" style="display:none;"></audio>
+            <div class="player-controls">
+                <button class="player-btn" onclick="document.getElementById('audio-file-input').click()">📁 Cargar</button>
+                <button class="player-btn" id="play-pause-btn" onclick="togglePlayAudio()">▶ Play</button>
+                <input type="file" id="audio-file-input" accept="audio/mp3,audio/m4a,audio/*" style="display:none" onchange="loadAudioFile(event)">
+            </div>
+        </div>
+    </div>
+
+    <!-- Cajón Desplegable de Pegatinas y Emojis -->
+    <div id="sticker-drawer">
+        <div class="drawer-header">
+            <span>Cajón de Pegatinas</span>
+            <span class="drawer-close" onclick="toggleStickerDrawer()">×</span>
+        </div>
+        <div class="drawer-tabs">
+            <div class="drawer-tab active" onclick="switchStickerTab('cute')">💖 Kawaii</div>
+            <div class="drawer-tab" onclick="switchStickerTab('objects')">🎀 Objetos</div>
+            <div class="drawer-tab" onclick="switchStickerTab('faces')">😊 Emojis</div>
+        </div>
+        <div class="drawer-content" id="drawer-stickers-container">
+            <!-- Rellenado por JS -->
+        </div>
+    </div>
+
+    <!-- Contenedor Principal de Vistas -->
+    <div class="main-container">
+
+        <!-- VISTA 1: Estantería -->
+        <div id="bookshelf-view">
+            <div class="shelf-header">
+                <h1>Mis Diarios Secretos</h1>
+                <p>Haz clic en un diario para abrirlo o crea uno nuevo con total libertad de diseño.</p>
+            </div>
+            <div class="books-grid" id="books-grid">
+                <!-- Tarjetas de libros inyectadas por JS -->
+            </div>
+        </div>
+
+        <!-- VISTA 2: Diario Abierto con Efecto de Libro y Portada Libre -->
+        <div id="journal-view">
+            <div class="journal-nav-bar">
+                <button class="y2k-btn" onclick="backToShelf()">📚 Volver a Estantería</button>
+                <div style="display: flex; gap: 10px; align-items: center;">
+                    <input type="text" id="search-page-input" placeholder="Buscar página..." style="padding: 5px; border-radius: 4px; border: 1px solid var(--deep-pink);" oninput="searchPages(this.value)">
+                    <button class="y2k-btn" onclick="prevPage()">⬅ Página Ant.</button>
+                    <span id="page-indicator" style="font-weight: bold; font-family: var(--font-title);">Portada</span>
+                    <button class="y2k-btn" onclick="nextPage()">Página Sig. ➡</button>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <button class="y2k-btn" onclick="addNewPage()">➕ Nueva Página</button>
+                    <button class="y2k-btn" onclick="triggerImageUpload()">🖼️ Subir Imagen</button>
+                    <input type="file" id="image-upload-input" accept="image/*" style="display:none" onchange="insertImageToCurrentPage(event)">
+                </div>
+            </div>
+
+            <!-- Estructura del Libro Abierto (Spread de 2 Páginas) -->
+            <div class="book-binder">
+                <div class="book-page-spread" id="book-spread">
+                    <div class="book-center-shadow"></div>
+                    
+                    <!-- Página Izquierda -->
+                    <div class="page-half page-left" id="left-page-container">
+                        <!-- Contenido dinámico según índice (Portada o Páginas Pares) -->
+                    </div>
+
+                    <!-- Página Derecha -->
+                    <div class="page-half page-right" id="right-page-container">
+                        <!-- Contenido dinámico según índice (Portada o Páginas Impares) -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- MODAL: Crear / Editar Libro -->
+    <div class="modal-overlay" id="book-modal">
+        <div class="modal-box">
+            <h3 id="modal-book-title">Crear Nuevo Diario</h3>
+            <input type="text" id="input-book-name" placeholder="Título del Diario...">
+            <label style="display: flex; align-items: center; gap: 8px; justify-content: center; font-size: 0.95rem;">
+                <input type="checkbox" id="input-book-private"> 🔒 Proteger con contraseña
+            </label>
+            <input type="password" id="input-book-password" placeholder="Contraseña..." class="hidden">
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <button class="y2k-btn" onclick="saveBookConfig()">Guardar</button>
+                <button class="y2k-btn" onclick="closeBookModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Solicitar Contraseña -->
+    <div class="modal-overlay" id="password-modal">
+        <div class="modal-box">
+            <h3>🔒 Diario Protegido</h3>
+            <p>Introduce la contraseña para abrir este diario:</p>
+            <input type="password" id="unlock-password-input" placeholder="Contraseña...">
+            <div style="display: flex; gap: 10px; justify-content: center;">
+                <button class="y2k-btn" onclick="verifyPassword()">Abrir</button>
+                <button class="y2k-btn" onclick="closePasswordModal()">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: Ajustes de Tipografía Globales -->
+    <div class="modal-overlay" id="settings-modal">
+        <div class="modal-box">
+            <h3>⚙️ Ajustes Tipográficos</h3>
+            <label>Tipografía del Título / Portada:</label>
+            <select id="select-font-title" onchange="updateGlobalFonts()">
+                <option value="'Bubblegum Sans', cursive">Bubblegum Sans (Y2K Bubble)</option>
+                <option value="'Fredoka One', cursive">Fredoka One</option>
+                <option value="'Comic Neue', cursive">Comic Neue</option>
+                <option value="'VT323', monospace">VT323 (Retro Pixel)</option>
+            </select>
+            <label>Tipografía del Interior (Gill Sans por defecto):</label>
+            <select id="select-font-body" onchange="updateGlobalFonts()">
+                <option value="'Gill Sans', 'Gill Sans MT', Calibri, sans-serif">Gill Sans (Limpia)</option>
+                <option value="'Comic Neue', cursive">Comic Neue</option>
+                <option value="'VT323', monospace">VT323 (Pixel)</option>
+            </select>
+            <button class="y2k-btn" onclick="closeSettingsModal()">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Script Principal con LocalStorage, Drag & Drop Libre y Animaciones -->
+    <script>
+        // --- BASE DE DATOS LOCAL (LocalStorage) ---
+        let db = JSON.parse(localStorage.getItem('y2k_sweet_journal_db')) || {
+            books: [
+                {
+                    id: 'book_default_1',
+                    title: 'Mi Primer Diario Y2K ✨',
+                    isPrivate: false,
+                    password: '',
+                    coverElements: [
+                        { type: 'sticker', content: '💖', x: 50, y: 80 },
+                        { type: 'sticker', content: '🎀', x: 220, y: 150 }
+                    ],
+                    pages: [
+                        { title: '¡Hola Mundo 2000!', text: 'Este es mi diario personal con estética Y2K sweet. ¡Puedo poner pegatinas donde quiera!', elements: [] }
+                    ]
+                }
+            ],
+            settings: {
+                titleFont: "'Bubblegum Sans', cursive",
+                bodyFont: "'Gill Sans', 'Gill Sans MT', Calibri, sans-serif"
+            }
+        };
+
+        let currentBookId = null;
+        let currentSpreadIndex = 0; // 0 = Portada, 1 = Páginas 1 y 2, etc.
+        let pendingBookIdToUnlock = null;
+        let activeDraggableItem = null;
+
+        // Categorías de Pegatinas y Emojis
+        const stickerCategories = {
+            cute: ['💖', '✨', '🎀', '🌸', '🍓', '🧸', '🍭', '⭐', '🦋', '💌', '🧁', '🍒', '💫', '🐰', '🦄'],
+            objects: ['💿', '📞', '💾', '📼', '📷', '💻', '🎮', '📱', '🎧', '⚡', '💊', '🛍️', '💄', '👠', '🕶️'],
+            faces: ['😊', '🥰', '😎', '😜', '🥺', '😇', '🥳', '👻', '👽', '✌️', '💋', '👑', '🔥', '💧', '🍀']
+        };
+
+        function saveDB() {
+            localStorage.setItem('y2k_sweet_journal_db', JSON.stringify(db));
+        }
+
+        // --- INICIALIZACIÓN ---
+        window.onload = function() {
+            applyGlobalFonts();
+            renderBookshelf();
+            initStickerDrawer('cute');
+            initPlayerDraggable();
+        };
+
+        function applyGlobalFonts() {
+            document.documentElement.style.setProperty('--font-title', db.settings.titleFont);
+            document.documentElement.style.setProperty('--font-body', db.settings.bodyFont);
+        }
+
+        // --- RENDERIZADO DE ESTANTERÍA ---
+        function renderBookshelf() {
+            const grid = document.getElementById('books-grid');
+            grid.innerHTML = '';
+
+            db.books.forEach(book => {
+                const card = document.createElement('div');
+                card.className = 'book-card';
+                card.onclick = () => tryOpenBook(book.id);
+
+                let firstSticker = book.coverElements && book.coverElements.length > 0 ? book.coverElements[0].content : '📖';
+
+                card.innerHTML = `
+                    <div class="book-spine-preview">
+                        <span style="font-size: 3rem;">${firstSticker}</span>
+                        ${book.isPrivate ? '<span style="position:absolute; top:5px; right:5px; font-size:1.2rem;">🔒</span>' : ''}
+                    </div>
+                    <div class="book-title">${escapeHTML(book.title)}</div>
+                    <div class="book-actions" onclick="event.stopPropagation()">
+                        <button class="y2k-btn" style="font-size:0.8rem; padding: 2px 6px;" onclick="openEditBookModal('${book.id}')">✏️</button>
+                        <button class="y2k-btn" style="font-size:0.8rem; padding: 2px 6px; color:red;" onclick="deleteBook('${book.id}')">🗑️</button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // --- APERTURA DE LIBROS Y SEGURIDAD ---
+        function tryOpenBook(bookId) {
+            const book = db.books.find(b => b.id === bookId);
+            if (book.isPrivate) {
+                pendingBookIdToUnlock = bookId;
+                document.getElementById('unlock-password-input').value = '';
+                document.getElementById('password-modal').style.display = 'flex';
+            } else {
+                openBook(bookId);
+            }
+        }
+
+        function verifyPassword() {
+            const pwd = document.getElementById('unlock-password-input').value;
+            const book = db.books.find(b => b.id === pendingBookIdToUnlock);
+            if (book && book.password === pwd) {
+                closePasswordModal();
+                openBook(pendingBookIdToUnlock);
+            } else {
+                alert('¡Contraseña incorrecta! ❌');
+            }
+        }
+
+        function closePasswordModal() {
+            document.getElementById('password-modal').style.display = 'none';
+            pendingBookIdToUnlock = null;
+        }
+
+        function openBook(bookId) {
+            currentBookId = bookId;
+            currentSpreadIndex = 0;
+            document.getElementById('bookshelf-view').style.display = 'none';
+            document.getElementById('journal-view').style.display = 'flex';
+            renderCurrentSpread();
+        }
+
+        function backToShelf() {
+            currentBookId = null;
+            document.getElementById('journal-view').style.display = 'none';
+            document.getElementById('bookshelf-view').style.display = 'flex';
+            renderBookshelf();
+        }
+
+        // --- GESTIÓN DE PÁGINAS Y VISTA DE LIBRO ABIERTO ---
+        function getCurrentBook() {
+            return db.books.find(b => b.id === currentBookId);
+        }
+
+        function renderCurrentSpread() {
+            const book = getCurrentBook();
+            const leftContainer = document.getElementById('left-page-container');
+            const rightContainer = document.getElementById('right-page-container');
+            const indicator = document.getElementById('page-indicator');
+
+            leftContainer.innerHTML = '';
+            rightContainer.innerHTML = '';
+
+            if (currentSpreadIndex === 0) {
+                // SPREAD 0: Portada (Izquierda) y Página 1 o Índice (Derecha)
+                indicator.textContent = 'Portada & Página 1';
+
+                // Portada Libre (Izquierda)
+                leftContainer.innerHTML = `
+                    <div style="text-align: center; margin-top: 40px; pointer-events: none;">
+                        <h1 style="font-family: var(--font-title); font-size: 3rem; color: var(--deep-pink); text-shadow: 2px 2px var(--pastel-yellow);">${escapeHTML(book.title)}</h1>
+                        <p style="font-size: 0.9rem; color: #888; margin-top: 10px;">Arrastra elementos para decorar la portada</p>
+                    </div>
+                `;
+                renderElementsToContainer(book.coverElements, leftContainer, 'cover');
+
+                // Página 1 (Derecha) si existe
+                if (book.pages.length > 0) {
+                    renderPageIntoContainer(book.pages[0], 0, rightContainer);
+                } else {
+                    rightContainer.innerHTML = `<p style="text-align:center; color:#aaa; margin-top:50px;">Libro vacío. ¡Añade una página!</p>`;
+                }
+
+            } else {
+                // SPREAD N: Páginas intermitentes (Impar en izq, Par en der)
+                let leftPageIndex = (currentSpreadIndex - 1) * 2 + 1;
+                let rightPageIndex = leftPageIndex + 1;
+
+                indicator.textContent = `Páginas ${leftPageIndex}-${rightPageIndex}`;
+
+                if (book.pages[leftPageIndex]) {
+                    renderPageIntoContainer(book.pages[leftPageIndex], leftPageIndex, leftContainer);
+                } else {
+                    leftContainer.innerHTML = `<p style="text-align:center; color:#aaa; margin-top:50px;">Fin del diario</p>`;
+                }
+
+                if (book.pages[rightPageIndex]) {
+                    renderPageIntoContainer(book.pages[rightPageIndex], rightPageIndex, rightContainer);
+                } else {
+                    rightContainer.innerHTML = `<p style="text-align:center; color:#aaa; margin-top:50px;">Página en blanco</p>`;
+                }
+            }
+        }
+
+        function renderPageIntoContainer(pageObj, pageIndex, container) {
+            container.innerHTML = `
+                <input type="text" class="page-title-input" value="${escapeHTML(pageObj.title)}" placeholder="Título de página..." oninput="updatePageTitle(${pageIndex}, this.value)">
+                <textarea class="page-text-area" placeholder="Escribe tus pensamientos aquí..." oninput="updatePageText(${pageIndex}, this.value)">${escapeHTML(pageObj.text)}</textarea>
+            `;
+            renderElementsToContainer(pageObj.elements, container, 'page', pageIndex);
+        }
+
+        function renderElementsToContainer(elements, container, targetType, pageIndex = null) {
+            if (!elements) return;
+            elements.forEach((el, elemIndex) => {
+                const node = document.createElement('div');
+                node.className = `draggable-item ${el.type === 'sticker' ? 'sticker' : 'image-node'}`;
+                node.style.left = `${el.x}px`;
+                node.style.top = `${el.y}px`;
+
+                if (el.type === 'sticker') {
+                    node.innerHTML = `${el.content}<span class="item-delete-btn" onclick="deleteElement('${targetType}', ${pageIndex}, ${elemIndex})">×</span>`;
+                } else {
+                    node.innerHTML = `<img src="${el.content}"><span class="item-delete-btn" onclick="deleteElement('${targetType}', ${pageIndex}, ${elemIndex})">×</span>`;
+                }
+
+                makeDraggable(node, (newX, newY) => {
+                    el.x = newX;
+                    el.y = newY;
+                    saveDB();
+                });
+
+                container.appendChild(node);
+            });
+        }
+
+        // --- NAVEGACIÓN DE PÁGINAS ---
+        function nextPage() {
+            const book = getCurrentBook();
+            let maxSpread = Math.ceil((book.pages.length - 1) / 2);
+            if (currentSpreadIndex < maxSpread) {
+                currentSpreadIndex++;
+                renderCurrentSpread();
+            }
+        }
+
+        function prevPage() {
+            if (currentSpreadIndex > 0) {
+                currentSpreadIndex--;
+                renderCurrentSpread();
+            }
+        }
+
+        function addNewPage() {
+            const book = getCurrentBook();
+            book.pages.push({ title: 'Nueva Página', text: '', elements: [] });
+            saveDB();
+            currentSpreadIndex = Math.ceil((book.pages.length - 1) / 2);
+            renderCurrentSpread();
+        }
+
+        function updatePageTitle(pageIndex, val) {
+            const book = getCurrentBook();
+            book.pages[pageIndex].title = val;
+            saveDB();
+        }
+
+        function updatePageText(pageIndex, val) {
+            const book = getCurrentBook();
+            book.pages[pageIndex].text = val;
+            saveDB();
+        }
+
+        function searchPages(query) {
+            if (!query.trim()) return;
+            const book = getCurrentBook();
+            const foundIndex = book.pages.findIndex(p => p.title.toLowerCase().includes(query.toLowerCase()) || p.text.toLowerCase().includes(query.toLowerCase()));
+            if (foundIndex !== -1) {
+                if (foundIndex === 0) {
+                    currentSpreadIndex = 0;
+                } else {
+                    currentSpreadIndex = Math.ceil(foundIndex / 2);
+                }
+                renderCurrentSpread();
+            }
+        }
+
+        // --- SISTEMA DE DRAG & DROP LIBRE Y PRECISO ---
+        function makeDraggable(element, onDragEnd) {
+            let isDragging = false;
+            let startX, startY, initialLeft, initialTop;
+
+            element.addEventListener('pointerdown', (e) => {
+                if (e.target.classList.contains('item-delete-btn')) return;
+                isDragging = true;
+                element.setPointerCapture(e.pointerId);
+                
+                const parentRect = element.parentElement.getBoundingClientRect();
+                const elemRect = element.getBoundingClientRect();
+
+                initialLeft = elemRect.left - parentRect.left;
+                initialTop = elemRect.top - parentRect.top;
+
+                startX = e.clientX;
+                startY = e.clientY;
+                e.stopPropagation();
+            });
+
+            element.addEventListener('pointermove', (e) => {
+                if (!isDragging) return;
+                const dx = e.clientX - startX;
+                const dy = e.clientY - startY;
+
+                let newX = initialLeft + dx;
+                let newY = initialTop + dy;
+
+                element.style.left = `${newX}px`;
+                element.style.top = `${newY}px`;
+            });
+
+            element.addEventListener('pointerup', (e) => {
+                if (!isDragging) return;
+                isDragging = false;
+                element.releasePointerCapture(e.pointerId);
+
+                const parentRect = element.parentElement.getBoundingClientRect();
+                const elemRect = element.getBoundingClientRect();
+                const finalX = elemRect.left - parentRect.left;
+                const finalY = elemRect.top - parentRect.top;
+
+                onDragEnd(finalX, finalY);
+            });
+        }
+
+        // --- CAJÓN DE PEGATINAS Y MULTIMEDIA ---
+        function toggleStickerDrawer() {
+            const drawer = document.getElementById('sticker-drawer');
+            drawer.style.display = drawer.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function initStickerTab(category) {
+            document.querySelectorAll('.drawer-tab').forEach(t => t.classList.remove('active'));
+            event && event.target.classList.add('active');
+
+            const container = document.getElementById('drawer-stickers-container');
+            container.innerHTML = '';
+
+            stickerCategories[category].forEach(sticker => {
+                const opt = document.createElement('div');
+                opt.className = 'sticker-option';
+                opt.textContent = sticker;
+                opt.onclick = () => addElementToActiveView({ type: 'sticker', content: sticker });
+                container.appendChild(opt);
+            });
+        }
+
+        function switchStickerTab(category) {
+            initStickerTab(category);
+        }
+
+        function addElementToActiveView(elementData) {
+            if (!currentBookId) {
+                alert('Abre un diario primero para colocar pegatinas.');
+                return;
+            }
+            const book = getCurrentBook();
+            // Posición inicial centrada por defecto
+            elementData.x = 100 + Math.random() * 50;
+            elementData.y = 100 + Math.random() * 50;
+
+            if (currentSpreadIndex === 0) {
+                // Preguntar si portada o página 1
+                book.coverElements.push(elementData);
+            } else {
+                let leftPageIndex = (currentSpreadIndex - 1) * 2 + 1;
+                if (book.pages[leftPageIndex]) {
+                    book.pages[leftPageIndex].elements.push(elementData);
+                } else {
+                    book.pages[0].elements.push(elementData);
+                }
+            }
+            saveDB();
+            renderCurrentSpread();
+        }
+
+        function deleteElement(targetType, pageIndex, elemIndex) {
+            const book = getCurrentBook();
+            if (targetType === 'cover') {
+                book.coverElements.splice(elemIndex, 1);
+            } else {
+                book.pages[pageIndex].elements.splice(elemIndex, 1);
+            }
+            saveDB();
+            renderCurrentSpread();
+        }
+
+        function triggerImageUpload() {
+            if (!currentBookId) {
+                alert('Abre un diario primero.');
+                return;
+            }
+            document.getElementById('image-upload-input').click();
+        }
+
+        function insertImageToCurrentPage(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                addElementToActiveView({ type: 'image', content: e.target.result });
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // --- REPRODUCTOR DE MÚSICA FLOTANTE (Winamp Estilo) ---
+        function togglePlayer() {
+            const player = document.getElementById('retro-player');
+            player.style.display = player.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function initPlayerDraggable() {
+            const player = document.getElementById('retro-player');
+            const handle = document.getElementById('player-drag-handle');
+            let isDragging = false, startX, startY, initialX, initialY;
+
+            handle.addEventListener('pointerdown', (e) => {
+                isDragging = true;
+                handle.setPointerCapture(e.pointerId);
+                const rect = player.getBoundingClientRect();
+                initialX = rect.left;
+                initialY = rect.top;
+                startX = e.clientX;
+                startY = e.clientY;
+            });
+
+            handle.addEventListener('pointermove', (e) => {
+                if (!isDragging) return;
+                player.style.left = `${initialX + (e.clientX - startX)}px`;
+                player.style.top = `${initialY + (e.clientY - startY)}px`;
+                player.style.right = 'auto';
+            });
+
+            handle.addEventListener('pointerup', (e) => {
+                isDragging = false;
+                handle.releasePointerCapture(e.pointerId);
+            });
+        }
+
+        function loadAudioFile(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            const audio = document.getElementById('audio-element');
+            audio.src = URL.createObjectURL(file);
+            document.getElementById('track-name').textContent = file.name;
+            audio.play();
+            document.getElementById('play-pause-btn').textContent = '⏸ Pause';
+        }
+
+        function togglePlayAudio() {
+            const audio = document.getElementById('audio-element');
+            const btn = document.getElementById('play-pause-btn');
+            if (audio.paused) {
+                audio.play();
+                btn.textContent = '⏸ Pause';
+            } else {
+                audio.pause();
+                btn.textContent = '▶ Play';
+            }
+        }
+
+        // --- GESTIÓN DE DIARIOS (MODALES) ---
+        let editingBookId = null;
+
+        function openCreateBookModal() {
+            editingBookId = null;
+            document.getElementById('modal-book-title').textContent = 'Nuevo Diario';
+            document.getElementById('input-book-name').value = '';
+            document.getElementById('input-book-private').checked = false;
+            document.getElementById('input-book-password').value = '';
+            document.getElementById('input-book-password').classList.add('hidden');
+            document.getElementById('book-modal').style.display = 'flex';
+        }
+
+        function openEditBookModal(bookId) {
+            editingBookId = bookId;
+            const book = db.books.find(b => b.id === bookId);
+            document.getElementById('modal-book-title').textContent = 'Editar Diario';
+            document.getElementById('input-book-name').value = book.title;
+            document.getElementById('input-book-private').checked = book.isPrivate;
+            document.getElementById('input-book-password').value = book.password || '';
+            document.getElementById('input-book-password').classList.toggle('hidden', !book.isPrivate);
+            document.getElementById('book-modal').style.display = 'flex';
+        }
+
+        document.getElementById('input-book-private').addEventListener('change', function() {
+            document.getElementById('input-book-password').classList.toggle('hidden', !this.checked);
+        });
+
+        function saveBookConfig() {
+            const title = document.getElementById('input-book-name').value.trim() || 'Mi Diario sin Título';
+            const isPrivate = document.getElementById('input-book-private').checked;
+            const password = document.getElementById('input-book-password').value;
+
+            if (editingBookId) {
+                const book = db.books.find(b => b.id === editingBookId);
+                book.title = title;
+                book.isPrivate = isPrivate;
+                book.password = password;
+            } else {
+                const newBook = {
+                    id: 'book_' + Date.now(),
+                    title: title,
+                    isPrivate: isPrivate,
+                    password: password,
+                    coverElements: [{ type: 'sticker', content: '💖', x: 60, y: 100 }],
+                    pages: [{ title: 'Página 1', text: 'Empieza a escribir aquí tus secretos...', elements: [] }]
+                };
+                db.books.push(newBook);
+            }
+
+            saveDB();
+            closeBookModal();
+            renderBookshelf();
+        }
+
+        function closeBookModal() {
+            document.getElementById('book-modal').style.display = 'none';
+        }
+
+        function deleteBook(bookId) {
+            if (confirm('¿Seguro que deseas eliminar este diario para siempre? 🗑️')) {
+                db.books = db.books.filter(b => b.id !== bookId);
+                saveDB();
+                renderBookshelf();
+            }
+        }
+
+        // --- AJUSTES Y TIPOGRAFÍAS ---
+        function openSettingsModal() {
+            document.getElementById('select-font-title').value = db.settings.titleFont;
+            document.getElementById('select-font-body').value = db.settings.bodyFont;
+            document.getElementById('settings-modal').style.display = 'flex';
+        }
+
+        function updateGlobalFonts() {
+            db.settings.titleFont = document.getElementById('select-font-title').value;
+            db.settings.bodyFont = document.getElementById('select-font-body').value;
+            saveDB();
+            applyGlobalFonts();
+            if (currentBookId) renderCurrentSpread();
+        }
+
+        function closeSettingsModal() {
+            document.getElementById('settings-modal').style.display = 'none';
+        }
+
+        function escapeHTML(str) {
+            return str.replace(/[&<>'"]/g, 
+                tag => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[tag] || tag)
+            );
+        }
+    </script>
+</body>
+</html>

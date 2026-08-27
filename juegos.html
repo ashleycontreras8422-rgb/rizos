@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arcade Consola Virtual - Single Button</title>
+  <style>
+    :root {
+      --bg-color: #0b0f19;
+      --panel-bg: #111827;
+      --neon-cyan: #00f0ff;
+      --neon-pink: #ff007f;
+      --neon-yellow: #fde047;
+      --text-main: #f3f4f6;
+      --font-arcade: 'Courier New', Courier, monospace;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      user-select: none;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      font-family: var(--font-arcade);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    #arcade-console {
+      width: 100%;
+      max-width: 800px;
+      height: 600px;
+      background: var(--panel-bg);
+      border: 4px solid var(--neon-cyan);
+      box-shadow: 0 0 20px var(--neon-cyan), inset 0 0 15px rgba(0, 240, 255, 0.2);
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Menú de Selección (3 juegos adaptados a 3 botones) */
+    #game-menu {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 40px;
+      height: 100%;
+      align-content: center;
+      background: radial-gradient(circle, #1f2937 0%, #111827 100%);
+    }
+
+    .menu-btn {
+      background: transparent;
+      border: 2px solid var(--neon-pink);
+      color: var(--neon-pink);
+      padding: 20px;
+      font-size: 1.2rem;
+      font-family: var(--font-arcade);
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: all 0.1s ease;
+      box-shadow: 0 0 10px rgba(255, 0, 127, 0.3);
+    }
+
+    .menu-btn:hover {
+      background: var(--neon-pink);
+      color: #fff;
+      box-shadow: 0 0 20px var(--neon-pink);
+      transform: scale(1.02);
+    }
+
+    /* Contenedor Activo de Juego */
+    #game-container {
+      display: none;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+    }
+
+    #hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      background: rgba(0, 0, 0, 0.6);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .back-btn {
+      background: transparent;
+      border: 1px solid var(--text-main);
+      color: var(--text-main);
+      padding: 5px 10px;
+      cursor: pointer;
+      font-family: var(--font-arcade);
+    }
+
+    .back-btn:hover {
+      background: var(--text-main);
+      color: var(--bg-color);
+    }
+
+    canvas {
+      background: #050508;
+      display: block;
+      width: 100%;
+      height: calc(100% - 60px);
+    }
+
+    /* Pantallas superuestas (Game Over) */
+    .overlay-screen {
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 60px);
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      text-align: center;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="arcade-console">
+    <!-- Menú de Selección Principal -->
+    <div id="game-menu">
+      <button class="menu-btn" data-game="dino">1. Corredor Infinito </button>
+      <button class="menu-btn" data-game="flappy">2. Flappy Impulso </button>
+      <button class="menu-btn" data-game="stack">3. Apilador de Precisión </button>
+    </div>
+
+    <!-- Contenedor Activo de Juego -->
+    <div id="game-container">
+      <div id="hud">
+        <button class="back-btn" id="btn-back">⬅ MENÚ</button>
+        <div id="score-board">SCORE: <span id="current-score">0</span></div>
+        <div id="hiscore-board">HI-SCORE: <span id="current-hiscore">0</span></div>
+      </div>
+      <canvas id="gameCanvas" width="800" height="540"></canvas>
+      
+      <!-- Pantalla de Game Over con Reinicio Instantáneo -->
+      <div id="game-over-screen" class="overlay-screen hidden">
+        <h2 style="color: var(--neon-pink); font-size: 2.5rem; margin-bottom: 10px;">GAME OVER</h2>
+        <p style="font-size: 1.1rem;">Pulsa ESPACIO o Clic para reiniciar al instante</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // --- 1. MÓDULO DE PERSISTENCIA (LOCALSTORAGE) ---
+    class ScoreStorage {
+      static getHiScore(gameId) {
+        const score = localStorage.getItem(`arcade_hiscore_${gameId}`);
+        return score ? parseInt(score, 10) : 0;
+      }
+
+      static setHiScore(gameId, score) {
+        const current = this.getHiScore(gameId);
+        if (score > current) {
+          localStorage.setItem(`arcade_hiscore_${gameId}`, score);
+          return true;
+        }
+        return false;
+      }
+    }
+
+    // --- 2. JUEGO 1: EL CORREDOR INFINITO (Aceleración y densidad equilibrada) ---
+    class DinoGame {
+      constructor(canvas, ctx, consoleRef) {
+        this.canvas = canvas;
+        this.ctx = ctx;
+        this.console = consoleRef;
+        this.score = 0;
+        this.dino = { x: 50, y: 400, width: 30, height: 40, vy: 0, gravity: 0.8, jumpForce: -13, grounded: true };
+        this.obstacles = [];
+        this.spawnTimer = 0;
+        this.gameSpeed = 6;
+        this.nextSpawnInterval = 90; // Fotogramas necesarios para el siguiente obstáculo
+      }
+
+      start() { 
+        this.score = 0; 
+        this.obstacles = [];
+        this.gameSpeed = 6;
+        this.spawnTimer = 0;
+        this.nextSpawnInterval = 90;
+      }
+
+      onInput() {
+        if (this.dino.grounded) {
+          this.dino.vy = this.dino.jumpForce;
+          this.dino.grounded = false;
+        }
+      }
+
+      update(dt) {
+        this.dino.vy += this.dino.gravity;
+        this.dino.y += this.dino.vy;
+
+        if (this.dino.y >= 400) {
+          this.dino.y = 400;
+          this.dino.vy = 0;
+          this.dino.grounded = true;
+        }
+
+        // Control de generación dinámica basada en velocidad y puntuación
+        this.spawnTimer++;
+        if (this.spawnTimer >= this.nextSpawnInterval) {
+          this.spawnTimer = 0;
+          
+          // A mayor velocidad, reducimos el intervalo de spawn, pero ponemos un límite seguro (mínimo 50 frames)
+          // para garantizar que siempre hay espacio físico para saltar.
+          const reduction = Math.floor(this.score / 50) * 5;
+          this.nextSpawnInterval = Math.max(50, 95 - reduction);
+
+          // Variación aleatoria para que no salgan rítmicamente exactos
+          this.nextSpawnInterval += Math.floor(Math.random() * 25);
+
+          const type = Math.random() > 0.65 ? 'fly' : 'ground';
+          const yPos = type === 'fly' ? (Math.random() > 0.5 ? 330 : 365) : 405; // Alturas variables para los voladores
+          
+          this.obstacles.push({ 
+            x: this.canvas.width, 
+            y: yPos, 
+            w: 25, 
+            h: type === 'fly' ? 25 : 35, 
+            type 
+          });
+        }
+
+        for (let i = this.obstacles.length - 1; i >= 0; i--) {
+          let obs = this.obstacles[i];
+          obs.x -= this.gameSpeed;
+
+          if (
+            this.dino.x < obs.x + obs.w &&
+            this.dino.x + this.dino.width > obs.x &&
+            this.dino.y < obs.y + obs.h &&
+            this.dino.y + this.dino.height > obs.y
+          ) {
+            this.console.triggerGameOver();
+          }
+
+          if (obs.x + obs.w < 0) {
+            this.obstacles.splice(i, 1);
+            this.score += 10;
+            // Incremento progresivo de velocidad cada 100 puntos
+            this.gameSpeed = 6 + Math.floor(this.score / 100) * 1.2;
+            this.console.updateScore(this.score);
+          }
+        }
+      }
+
+      draw() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // Suelo
+        this.ctx.strokeStyle = '#00f0ff';
+        this.ctx.lineWidth = 2;
+        this.ctx.beginPath();
+        this.ctx.moveTo(0, 440);
+        this.ctx.lineTo(this.canvas.width, 440);
+        this.ctx.stroke();
+
+        // Dino
+        this.ctx.fillStyle = '#00f0ff';
+        this.ctx.fillRect(this.dino.x, this.dino.y, this.dino.width, this.dino.height);
+
+        // Obstáculos
+        this.ctx.fillStyle = '#ff007f';
+        this.obstacles.forEach(obs => {
+          this.ctx.fillRect(obs.x, obs.y, obs.w, obs.h);
+        });
+      }
+    }
+
+    // --- 3. JUEGO 2: FLAPPY IMPULSO ---
+    class FlappyGame {
+      constructor(canvas, ctx, consoleRef) {
+        this.canvas = canvas;
+        this.ctx = ctx;
+        this.console = consoleRef;
+        this.score = 0;
+        this.bird = { x: 150, y: 250, radius: 15, vy: 0, gravity: 0.5, lift: -8 };
+        this.pipes = [];
+        this.spawnTimer = 0;
+      }
+
+      start() { this.score = 0; }
+
+      onInput() { this.bird.vy = this.bird.lift; }
+
+      update(dt) {
+        this.bird.vy += this.bird.gravity;
+        this.bird.y += this.bird.vy;
+
+        if (this.bird.y > this.canvas.height || this.bird.y < 0) {
+          this.console.triggerGameOver();
+        }
+
+        this.spawnTimer++;
+        if (this.spawnTimer > 110) {
+          this.spawnTimer = 0;
+          const gapHeight = 130;
+          const topHeight = Math.floor(Math.random() * 250) + 50;
+          this.pipes.push({ x: this.canvas.width, top: topHeight, bottom: topHeight + gapHeight, passed: false });
+        }
+
+        for (let i = this.pipes.length - 1; i >= 0; i--) {
+          let p = this.pipes[i];
+          p.x -= 3.5;
+
+          if (
+            this.bird.x + this.bird.radius > p.x && 
+            this.bird.x - this.bird.radius < p.x + 60 &&
+            (this.bird.y - this.bird.radius < p.top || this.bird.y + this.bird.radius > p.bottom)
+          ) {
+            this.console.triggerGameOver();
+          }
+
+          if (!p.passed && p.x + 60 < this.bird.x) {
+            p.passed = true;
+            this.score += 10;
+            this.console.updateScore(this.score);
+          }
+
+          if (p.x + 60 < 0) this.pipes.splice(i, 1);
+        }
+      }
+
+      draw() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        
+        // Pájaro
+        this.ctx.fillStyle = '#fde047';
+        this.ctx.beginPath();
+        this.ctx.arc(this.bird.x, this.bird.y, this.bird.radius, 0, Math.PI * 2);
+        this.ctx.fill();
+
+        // Tuberías
+        this.ctx.fillStyle = '#22c55e';
+        this.pipes.forEach(p => {
+          this.ctx.fillRect(p.x, 0, 60, p.top);
+          this.ctx.fillRect(p.x, p.bottom, 60, this.canvas.height - p.bottom);
+        });
+      }
+    }
+
+    // --- 4. JUEGO 3: APILADOR DE PRECISIÓN ---
+    class StackGame {
+      constructor(canvas, ctx, consoleRef) {
+        this.canvas = canvas;
+        this.ctx = ctx;
+        this.console = consoleRef;
+        this.score = 0;
+        this.stack = [];
+        this.currentBlock = null;
+        this.blockWidth = 180;
+        this.blockHeight = 30;
+        this.speed = 4;
+      }
+
+      start() {
+        this.score = 0;
+        this.stack = [{ x: 310, y: 450, w: this.blockWidth }];
+        this.spawnNewBlock();
+      }
+
+      spawnNewBlock() {
+        const last = this.stack[this.stack.length - 1];
+        this.currentBlock = { x: 0, y: last.y - this.blockHeight, w: last.w, dir: 1 };
+      }
+
+      onInput() {
+        if (!this.currentBlock) return;
+        const last = this.stack[this.stack.length - 1];
+        const diff = this.currentBlock.x - last.x;
+
+        if (Math.abs(diff) >= last.w) {
+          this.console.triggerGameOver();
+          return;
+        }
+
+        let newWidth = last.w - Math.abs(diff);
+        let newX = diff > 0 ? last.x + diff : last.x;
+
+        this.stack.push({ x: newX, y: this.currentBlock.y, w: newWidth });
+        this.score += 10;
+        this.console.updateScore(this.score);
+
+        if (this.stack.length > 10) {
+          this.stack.forEach(b => b.y += this.blockHeight);
+          this.stack.shift();
+        }
+
+        this.speed += 0.3;
+        this.spawnNewBlock();
+      }
+
+      update(dt) {
+        if (!this.currentBlock) return;
+        this.currentBlock.x += this.speed * this.currentBlock.dir;
+        if (this.currentBlock.x <= 0 || this.currentBlock.x + this.currentBlock.w >= this.canvas.width) {
+          this.currentBlock.dir *= -1;
+        }
+      }
+
+      draw() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.stack.forEach((b, idx) => {
+          this.ctx.fillStyle = `hsl(${idx * 30}, 80%, 55%)`;
+          this.ctx.fillRect(b.x, b.y, b.w, this.blockHeight);
+        });
+        if (this.currentBlock) {
+          this.ctx.fillStyle = '#fff';
+          this.ctx.fillRect(this.currentBlock.x, this.currentBlock.y, this.currentBlock.w, this.blockHeight);
+        }
+      }
+    }
+
+    // --- 5. CONTROLADOR CENTRAL DE LA CONSOLA ---
+    class ArcadeConsole {
+      constructor() {
+        this.canvas = document.getElementById('gameCanvas');
+        this.ctx = this.canvas.getContext('2d');
+        this.menuEl = document.getElementById('game-menu');
+        this.containerEl = document.getElementById('game-container');
+        this.gameOverEl = document.getElementById('game-over-screen');
+        
+        this.currentScoreEl = document.getElementById('current-score');
+        this.currentHiScoreEl = document.getElementById('current-hiscore');
+        
+        this.currentGame = null;
+        this.currentGameId = null;
+        this.animationFrameId = null;
+        this.isGameOver = false;
+
+        this.initListeners();
+      }
+
+      initListeners() {
+        document.querySelectorAll('.menu-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            this.loadGame(e.target.getAttribute('data-game'));
+          });
+        });
+
+        document.getElementById('btn-back').addEventListener('click', () => {
+          this.returnToMenu();
+        });
+
+        window.addEventListener('keydown', (e) => {
+          if (e.code === 'Space') {
+            e.preventDefault();
+            this.handleInput();
+          }
+        });
+
+        this.canvas.addEventListener('click', () => {
+          this.handleInput();
+        });
+      }
+
+      loadGame(gameId) {
+        this.currentGameId = gameId;
+        this.menuEl.classList.add('hidden');
+        this.containerEl.style.display = 'flex';
+        this.isGameOver = false;
+        this.gameOverEl.classList.add('hidden');
+
+        const hiScore = ScoreStorage.getHiScore(gameId);
+        this.currentHiScoreEl.textContent = hiScore;
+        this.currentScoreEl.textContent = '0';
+
+        switch(gameId) {
+          case 'dino': this.currentGame = new DinoGame(this.canvas, this.ctx, this); break;
+          case 'flappy': this.currentGame = new FlappyGame(this.canvas, this.ctx, this); break;
+          case 'stack': this.currentGame = new StackGame(this.canvas, this.ctx, this); break;
+        }
+
+        if (this.currentGame?.start) this.currentGame.start();
+        this.startLoop();
+      }
+
+      handleInput() {
+        if (this.isGameOver) {
+          this.loadGame(this.currentGameId);
+          return;
+        }
+        if (this.currentGame && typeof this.currentGame.onInput === 'function') {
+          this.currentGame.onInput();
+        }
+      }
+
+      startLoop() {
+        let lastTime = performance.now();
+        const loop = (time) => {
+          const deltaTime = (time - lastTime) / 1000;
+          lastTime = time;
+
+          if (this.currentGame && !this.isGameOver) {
+            this.currentGame.update(deltaTime);
+            this.currentGame.draw();
+          }
+          this.animationFrameId = requestAnimationFrame(loop);
+        };
+
+        if (this.animationFrameId) cancelAnimationFrame(this.animationFrameId);
+        this.animationFrameId = requestAnimationFrame(loop);
+      }
+
+      updateScore(score) {
+        this.currentScoreEl.textContent = score;
+        if (ScoreStorage.setHiScore(this.currentGameId, score)) {
+          this.currentHiScoreEl.textContent = score;
+        }
+      }
+
+      triggerGameOver() {
+        this.isGameOver = true;
+        this.gameOverEl.classList.remove('hidden');
+      }
+
+      returnToMenu() {
+        if (this.animationFrameId) cancelAnimationFrame(this.animationFrameId);
+        this.currentGame = null;
+        this.containerEl.style.display = 'none';
+        this.menuEl.classList.remove('hidden');
+        this.gameOverEl.classList.add('hidden');
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      window.arcade = new ArcadeConsole();
+    });
+  </script>
+</body>
+</html>

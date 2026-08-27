@@ -1,0 +1,3397 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <style>html, body, body * { cursor: url("images/Right Rainbow Gem Arrow Transp.cur"), auto !important; }</style>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agenda · Hallooᯓ★</title>
+
+    <link rel="icon" type="image/png" href="icon.png">
+
+
+<style>
+
+/* =====================================================
+   COLORES
+===================================================== */
+
+:root {
+
+    --rosa: #f49ac2;
+    --rosa-fuerte: #d96898;
+    --rosa-claro: #ffd6e8;
+    --rosa-suave: #fff0f6;
+
+    --amarillo: #f3d477;
+    --amarillo-claro: #fff2b5;
+    --amarillo-suave: #fffbea;
+
+    --texto: #765966;
+    --texto-claro: #9b7584;
+
+    --borde-rosa: #e4abc2;
+    --borde-amarillo: #dbc16b;
+
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 12px;
+
+    color: var(--texto);
+
+    background-color: #fff9df;
+
+    background-image:
+        radial-gradient(
+            #e5dcbf 1px,
+            transparent 1px
+        );
+
+    background-size: 8px 8px;
+
+}
+
+
+/* =====================================================
+   PÁGINA
+===================================================== */
+
+.pagina {
+
+    width: 1000px;
+
+    max-width: 95%;
+
+    margin: 25px auto;
+
+    background: white;
+
+    border: 1px solid var(--borde-rosa);
+
+    box-shadow:
+        6px 6px 0 var(--amarillo),
+        0 0 18px rgba(220,150,180,0.25);
+
+}
+
+
+/* =====================================================
+   CABECERA
+===================================================== */
+
+.cabecera {
+
+    padding: 8px 12px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffb9d8,
+            #ee82b4
+        );
+
+    border-bottom:
+        2px solid #ffeaf3;
+
+    text-shadow:
+        1px 1px #b85c83;
+
+}
+
+
+.logo {
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+}
+
+
+.logo span {
+
+    color: var(--amarillo-claro);
+
+}
+
+
+.estado {
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   MENÚ
+===================================================== */
+
+.menu {
+
+    padding: 5px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #fff4bd,
+            #f5d77d
+        );
+
+    border-bottom:
+        1px solid var(--borde-amarillo);
+
+}
+
+
+.menu a {
+
+    display: inline-block;
+
+    padding: 2px 13px;
+
+    color: #825f70;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    border-right:
+        1px solid #dfc46e;
+
+}
+
+
+.menu a:last-child {
+
+    border-right: none;
+
+}
+
+
+.menu a:hover {
+
+    color: var(--rosa-fuerte);
+
+    text-decoration: underline;
+
+}
+
+
+/* =====================================================
+   CONTENIDO
+===================================================== */
+
+.contenido {
+
+    padding: 22px;
+
+}
+
+
+.titulo {
+
+    margin: 0;
+
+    text-align: center;
+
+    color: var(--rosa-fuerte);
+
+    font-size: 30px;
+
+    text-shadow:
+        2px 2px #fff0ad;
+
+}
+
+
+.subtitulo {
+
+    margin-top: 5px;
+
+    text-align: center;
+
+    color: var(--texto-claro);
+
+    font-style: italic;
+
+}
+
+
+.decoracion {
+
+    margin: 13px 0;
+
+    text-align: center;
+
+    color: #dba05e;
+
+    font-size: 16px;
+
+    letter-spacing: 5px;
+
+}
+
+
+/* =====================================================
+   DOS COLUMNAS
+===================================================== */
+
+.columnas {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+
+}
+
+
+.columna {
+
+    min-width: 0;
+
+}
+
+
+/* =====================================================
+   VENTANAS
+===================================================== */
+
+.ventana {
+
+    margin-bottom: 18px;
+
+    background: white;
+
+    border:
+        1px solid var(--borde-rosa);
+
+    box-shadow:
+        3px 3px 0 #ead77d;
+
+}
+
+
+.barra {
+
+    padding: 6px 8px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: white;
+
+    font-weight: bold;
+
+    background:
+        linear-gradient(
+            to right,
+            #ee82b4,
+            #f5d87e
+        );
+
+    border-bottom:
+        1px solid #dfa0b9;
+
+    text-shadow:
+        1px 1px #ad6683;
+
+}
+
+
+.botones {
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.interior {
+
+    padding: 12px;
+
+}
+
+
+/* =====================================================
+   FECHA
+===================================================== */
+
+.fecha-hoy {
+
+    text-align: center;
+
+    padding: 12px;
+
+    background:
+        var(--amarillo-suave);
+
+    border:
+        1px dashed var(--borde-amarillo);
+
+    color: #876b3d;
+
+}
+
+
+.fecha-grande {
+
+    margin: 5px;
+
+    color: var(--rosa-fuerte);
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   FORMULARIOS
+===================================================== */
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 7px;
+
+    border:
+        1px solid #dfa8bf;
+
+    outline: none;
+
+    background: #fffdf3;
+
+    color: var(--texto);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+}
+
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: #ed82b2;
+
+    background: #fff8fb;
+
+}
+
+
+textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+
+}
+
+
+label {
+
+    display: block;
+
+    margin:
+        7px 0 4px;
+
+    color: #925d73;
+
+    font-weight: bold;
+
+}
+
+
+.form-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 8px;
+
+}
+
+
+/* =====================================================
+   BOTONES
+===================================================== */
+
+.boton {
+
+    padding:
+        6px 12px;
+
+    border:
+        1px solid #d3b45c;
+
+    color: #765966;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #fff3bd,
+            #f3d477
+        );
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        inset 0 1px white,
+        1px 1px 2px #ccc;
+
+}
+
+
+.boton:hover {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffd6e8,
+            #ef8fba
+        );
+
+}
+
+
+.boton-rosa {
+
+    border-color:
+        #d58aaa;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #ffe2ee,
+            #f49ac2
+        );
+
+}
+
+
+.botones-form {
+
+    margin-top: 10px;
+
+    display: flex;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+}
+
+
+/* =====================================================
+   TAREAS
+===================================================== */
+
+.tarea {
+
+    margin-bottom: 8px;
+
+    padding: 9px;
+
+    border:
+        1px solid #edb6cc;
+
+    background:
+        #fff9fc;
+
+}
+
+
+.tarea.completada {
+
+    opacity: 0.6;
+
+    background:
+        #fffbe8;
+
+}
+
+
+.tarea.completada .nombre-tarea {
+
+    text-decoration: line-through;
+
+}
+
+
+.tarea-superior {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 8px;
+
+}
+
+
+.nombre-tarea {
+
+    color: var(--rosa-fuerte);
+
+    font-weight: bold;
+
+}
+
+
+.tarea-info {
+
+    margin-top: 5px;
+
+    color: #987784;
+
+    font-size: 10px;
+
+}
+
+
+.tarea-acciones {
+
+    margin-top: 7px;
+
+    display: flex;
+
+    gap: 5px;
+
+}
+
+
+.mini-boton {
+
+    padding:
+        3px 7px;
+
+    border:
+        1px solid #d8b66b;
+
+    background:
+        var(--amarillo-claro);
+
+    color: var(--texto);
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+}
+
+
+.mini-boton:hover {
+
+    background:
+        var(--rosa-claro);
+
+}
+
+
+.prioridad-alta {
+
+    border-left:
+        5px solid #e67da8;
+
+}
+
+
+.prioridad-media {
+
+    border-left:
+        5px solid #f0c95f;
+
+}
+
+
+.prioridad-baja {
+
+    border-left:
+        5px solid #a9c98c;
+
+}
+
+
+/* =====================================================
+   PROGRESO
+===================================================== */
+
+.progreso-fondo {
+
+    height: 18px;
+
+    margin-top: 8px;
+
+    border:
+        1px solid #dfb4c6;
+
+    background:
+        #fff5f9;
+
+}
+
+
+.progreso {
+
+    width: 0%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to right,
+            #f49ac2,
+            #f5d87e
+        );
+
+    transition:
+        width 0.3s;
+
+}
+
+
+.progreso-texto {
+
+    margin-top: 5px;
+
+    text-align: center;
+
+    color: #a47787;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================================
+   NOTAS
+===================================================== */
+
+.nota-rapida {
+
+    padding: 9px;
+
+    margin-bottom: 7px;
+
+    background:
+        var(--amarillo-claro);
+
+    border:
+        1px dashed #d7b85b;
+
+}
+
+
+.nota-rapida button {
+
+    float: right;
+
+}
+
+
+/* =====================================================
+   HORARIO
+===================================================== */
+
+.horario-wrapper {
+
+    overflow-x: auto;
+
+}
+
+
+.horario {
+
+    width: 100%;
+
+    min-width: 650px;
+
+    border-collapse: collapse;
+
+}
+
+
+.horario th {
+
+    padding: 6px;
+
+    color: white;
+
+    background:
+        #ee82b4;
+
+    border:
+        1px solid #df9bb7;
+
+}
+
+
+.horario td {
+
+    height: 42px;
+
+    padding: 4px;
+
+    text-align: center;
+
+    border:
+        1px solid #e7c2d1;
+
+    background:
+        #fffdf5;
+
+}
+
+
+.horario td:focus {
+
+    outline:
+        2px solid #f2a4c4;
+
+    background:
+        #fff4bd;
+
+}
+
+
+.hora {
+
+    width: 70px;
+
+    color: #9a6c7d;
+
+    font-weight: bold;
+
+    background:
+        #fff0f6 !important;
+
+}
+
+
+/* =====================================================
+   NOTAS ESCOLARES
+===================================================== */
+
+.periodo {
+
+    margin-bottom: 12px;
+
+    padding: 10px;
+
+    background:
+        #fffaf0;
+
+    border:
+        1px solid #edc0d3;
+
+}
+
+
+.periodo-titulo {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+
+    color: var(--rosa-fuerte);
+
+    font-weight: bold;
+
+}
+
+
+.nota-fila {
+
+    display: grid;
+
+    grid-template-columns:
+        1.5fr 0.7fr 30px;
+
+    gap: 5px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.nota-fila input {
+
+    padding: 5px;
+
+}
+
+
+.media-periodo {
+
+    margin-top: 7px;
+
+    padding: 6px;
+
+    text-align: right;
+
+    color: #86683c;
+
+    background:
+        var(--amarillo-claro);
+
+    font-weight: bold;
+
+}
+
+
+.media-general {
+
+    margin-top: 12px;
+
+    padding: 12px;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            to right,
+            #ee82b4,
+            #f3d477
+        );
+
+    border:
+        1px solid #dda5bb;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    text-shadow:
+        1px 1px #a66a82;
+
+}
+
+
+.calculadora-media {
+
+    margin-top: 18px;
+
+    padding: 12px;
+
+    background: #fffaf0;
+
+    border: 1px solid #edc0d3;
+
+}
+
+
+.calculadora-media h2 {
+
+    margin: 0 0 8px;
+
+    color: var(--rosa-fuerte);
+
+    font-size: 17px;
+
+}
+
+
+.calculadora-controles {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+
+    align-items: center;
+
+}
+
+
+.calculadora-controles select,
+.calculadora-controles button {
+
+    padding: 6px;
+
+    border: 1px solid #d9b85d;
+
+    color: var(--texto);
+
+    background: white;
+
+}
+
+
+.calculadora-controles button {
+
+    color: #87556a;
+
+    background: var(--amarillo-claro);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+}
+
+
+.resultado-calculadora {
+
+    margin-top: 9px;
+
+    color: var(--rosa-fuerte);
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   OBJETIVOS
+===================================================== */
+
+.objetivo {
+
+    margin-bottom: 6px;
+
+    padding: 7px;
+
+    background:
+        #fff8df;
+
+    border:
+        1px solid #ead6a0;
+
+}
+
+
+.objetivo input {
+
+    width: auto;
+
+    margin-right: 5px;
+
+}
+
+
+/* =====================================================
+   CALENDARIO MINI
+===================================================== */
+
+.mini-calendario {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    text-align: center;
+
+}
+
+
+.mini-calendario th {
+
+    padding: 5px;
+
+    color: white;
+
+    background:
+        #ee82b4;
+
+}
+
+
+.mini-calendario td {
+
+    padding: 6px;
+
+    border:
+        1px solid #ecc5d3;
+
+}
+
+
+.mini-calendario .hoy {
+
+    background:
+        var(--amarillo-claro);
+
+    color: var(--rosa-fuerte);
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    padding: 12px;
+
+    text-align: center;
+
+    color: #a9808f;
+
+    background:
+        var(--rosa-suave);
+
+    border-top:
+        1px solid #edb4ca;
+
+    font-size: 10px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 750px) {
+
+    .columnas {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .cabecera {
+
+        display: block;
+
+        text-align: center;
+
+    }
+
+    .estado {
+
+        margin-top: 5px;
+
+    }
+
+    .menu a {
+
+        padding:
+            4px 6px;
+
+    }
+
+    .contenido {
+
+        padding: 12px;
+
+    }
+
+    .form-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="access.js"></script>
+<script src="loading.js"></script>
+<script>
+function comprobarAccesoAgenda() {
+    if (sessionStorage.getItem("agendaAutorizada") !== "true") {
+        window.location.replace("agenda-login.html");
+    }
+}
+
+comprobarAccesoAgenda();
+
+window.addEventListener("pagehide", function() {
+    sessionStorage.removeItem("agendaAutorizada");
+});
+
+window.addEventListener("pageshow", function() {
+    comprobarAccesoAgenda();
+});
+</script>
+
+<div class="pagina">
+
+
+<!-- =================================================
+     CABECERA
+================================================== -->
+
+<header class="cabecera">
+
+    <div class="logo">
+
+        RIZOS
+        <span>ᯓ★</span>
+
+    </div>
+
+    <div class="estado">
+
+        ✧ zona estudiantil ✧
+
+    </div>
+
+</header>
+
+
+
+<!-- =================================================
+     MENÚ
+================================================== -->
+
+<nav class="menu">
+
+    <a href="index.html">🏠 Home</a>
+
+        <a href="aboutme.htlm.html">♡ About Me</a>
+
+        <a href="blog.html">✎ Blog</a>
+
+        <a href="hobbies.html">☆ Hobbies</a>
+
+        <a href="music.html">♫ Music</a>
+
+        <a href="agenda-login.html">⭐ Agenda</a>
+
+        <a href="galery.html">📸 Galery</a>
+
+        <a href="dreams.html">✧ Dreams</a>
+
+        <a href="life.html">❀ Life</a>
+
+        <a href="writiti.html"> ✎ Writiti</a>
+    
+
+</nav>
+
+
+
+<main class="contenido">
+
+
+<h1 class="titulo">
+
+    Mi agenda escolar ᯓ★
+
+</h1>
+
+
+<div class="subtitulo">
+
+    manteniendo mi vida estudiantil juntos ♡
+
+</div>
+
+
+<div class="decoracion">
+
+    ☆ ✧ ☆ ✧ ☆
+
+</div>
+
+
+
+<!-- =================================================
+     FECHA
+================================================== -->
+
+<div class="ventana">
+
+    <div class="barra">
+
+        📅 HOY
+
+        <span class="botones">
+            − □ ×
+        </span>
+
+    </div>
+
+
+    <div class="interior">
+
+        <div class="fecha-hoy">
+
+            <div>
+                Hoy es...
+            </div>
+
+            <div
+                class="fecha-grande"
+                id="fechaActual"
+            >
+                --
+            </div>
+
+            <div>
+                ✿ haz que hoy cuente ✿
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     COLUMNAS
+================================================== -->
+
+<div class="columnas">
+
+
+<!-- =================================================
+     COLUMNA IZQUIERDA
+================================================== -->
+
+<div class="columna">
+
+
+<!-- ================================
+     AÑADIR TAREA
+================================ -->
+
+<div class="ventana">
+
+    <div class="barra">
+
+        📝 AÑADIR UNA TAREA
+
+        <span class="botones">
+            − □ ×
+        </span>
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <label>
+            Tarea / deberes:
+        </label>
+
+        <input
+            type="text"
+            id="nombreTarea"
+            placeholder="e.g. Finish maths exercises..."
+        >
+
+
+        <div class="form-grid">
+
+
+            <div>
+
+                <label>
+                    Asignatura / materia:
+                </label>
+
+                <input
+                    type="text"
+                    id="asignatura"
+                    placeholder="Maths"
+                >
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Fecha de entrega:
+                </label>
+
+                <input
+                    type="date"
+                    id="fechaTarea"
+                >
+
+            </div>
+
+
+        </div>
+
+
+        <div class="form-grid">
+
+
+            <div>
+
+                <label>
+                    Categoría:
+                </label>
+
+                <select id="categoria">
+
+                    <option>
+                        Deberes
+                    </option>
+
+                    <option>
+                        Exam
+                    </option>
+
+                    <option>
+                        Projecto
+                    </option>
+
+                    <option>
+                        Presentación
+                    </option>
+
+                    <option>
+                        Leer
+                    </option>
+
+                    <option>
+                        Otro
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div>
+
+                <label>
+                    Prioridad:
+                </label>
+
+                <select id="prioridad">
+
+                    <option value="alta">
+                        ★ Alta
+                    </option>
+
+                    <option value="media">
+                        ☆ Media
+                    </option>
+
+                    <option value="baja">
+                        ♡ Baja
+                    </option>
+
+                </select>
+
+            </div>
+
+
+        </div>
+
+
+        <label>
+            Notas adicionales:
+        </label>
+
+        <textarea
+            id="detalleTarea"
+            placeholder="¿Qué necesito recordar?"
+        ></textarea>
+
+
+        <div class="botones-form">
+
+            <button
+                class="boton"
+                onclick="agregarTarea()"
+            >
+
+                + AÑADIR TAREA
+
+            </button>
+
+
+            <button
+                class="boton"
+                onclick="limpiarFormulario()"
+            >
+
+                CLEAR
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================
+     PROGRESO
+================================ -->
+
+<div class="ventana">
+
+    <div class="barra">
+
+        ⭐ MI PROGRESO
+
+    </div>
+
+
+    <div class="interior">
+
+        <div>
+
+            Tareas completadas:
+
+        </div>
+
+
+        <div class="progreso-fondo">
+
+            <div
+                class="progreso"
+                id="barraProgreso"
+            ></div>
+
+        </div>
+
+
+        <div
+            class="progreso-texto"
+            id="textoProgreso"
+        >
+
+            0 / 0 completed
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================
+     OBJETIVOS
+================================ -->
+
+<div class="ventana">
+
+    <div class="barra">
+
+        🎯 OBJETIVOS ESCOLARES
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div
+            id="listaObjetivos"
+        >
+
+
+            <div class="objetivo">
+
+                <input
+                    type="checkbox"
+                >
+
+                Ser más organizado ♡
+
+            </div>
+
+
+            <div class="objetivo">
+
+                <input
+                    type="checkbox"
+                >
+
+                Estudiar un poco todos los días
+
+            </div>
+
+
+        </div>
+
+
+        <input
+            type="text"
+            id="nuevoObjetivo"
+            placeholder="Add a school goal..."
+        >
+
+
+        <div class="botones-form">
+
+            <button
+                class="boton"
+                onclick="agregarObjetivo()"
+            >
+
+                + AÑADIR OBJETIVO
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+</div>
+
+
+
+<!-- =================================================
+     COLUMNA DERECHA
+================================================== -->
+
+<div class="columna">
+
+
+<!-- ================================
+     TAREAS
+================================ -->
+
+<div class="ventana">
+
+    <div class="barra">
+
+        📌 MIS TAREAS
+
+        <span class="botones">
+            ★
+        </span>
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <div id="listaTareas">
+
+            <p>
+                No hay tareas aún ♡
+            </p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ================================
+     NOTAS RÁPIDAS
+================================ -->
+
+<div class="ventana">
+
+    <div class="barra">
+
+        💡 NOTAS RÁPIDAS
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <textarea
+            id="notaRapida"
+            placeholder="Write anything you need to remember..."
+        ></textarea>
+
+
+        <div class="botones-form">
+
+            <button
+                class="boton"
+                onclick="guardarNota()"
+            >
+
+                GUARDAR NOTA
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="notaGuardada"
+            style="margin-top:10px;"
+        ></div>
+
+
+    </div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =================================================
+     HORARIO
+================================================== -->
+
+<div class="ventana">
+
+    <div class="barra">
+
+        🕐 MI HORARIO SEMANAL
+
+        <span class="botones">
+            edit me ♡
+        </span>
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <p>
+
+            Puedes hacer clic en cualquier casilla
+            y escribir directamente tu horario.
+
+        </p>
+
+
+        <div class="horario-wrapper">
+
+
+        <table class="horario">
+
+
+            <tr>
+
+                <th>
+                    Hora
+                </th>
+
+                <th>
+                    Lunes
+                </th>
+
+                <th>
+                    Martes
+                </th>
+
+                <th>
+                    Miercoles
+                </th>
+
+                <th>
+                    Jueves
+                </th>
+
+                <th>
+                    Viernes
+                </th>
+
+            </tr>
+
+
+            <tr>
+
+                <td class="hora" contenteditable="true">
+                    08:00
+                </td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+            </tr>
+
+
+            <tr>
+
+                <td class="hora" contenteditable="true">
+                    09:00
+                </td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+            </tr>
+
+
+            <tr>
+
+                <td class="hora" contenteditable="true">
+                    10:00
+                </td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+            </tr>
+
+
+            <tr>
+
+                <td class="hora" contenteditable="true">
+                    11:00
+                </td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+            </tr>
+
+
+            <tr>
+
+                <td class="hora" contenteditable="true">
+                    12:00
+                </td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+            </tr>
+
+
+            <tr>
+
+                <td class="hora" contenteditable="true">
+                    13:00
+                </td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+            </tr>
+
+
+            <tr>
+
+                <td class="hora" contenteditable="true">
+                    14:00
+                </td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+            </tr>
+
+
+            <tr>
+
+                <td class="hora" contenteditable="true">
+                    15:00
+                </td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+                <td contenteditable="true"></td>
+
+            </tr>
+
+
+        </table>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     NOTAS ACADÉMICAS
+================================================== -->
+
+<div class="ventana">
+
+    <div class="barra">
+
+        📚 MIS NOTAS
+
+        <span class="botones">
+            ✧ report card ✧
+        </span>
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <p>
+
+            Añade tus asignaturas y notas.
+            La agenda calculará automáticamente
+            las medias.
+
+        </p>
+
+
+        <div id="periodos">
+
+
+            <!-- PRIMER PERIODO -->
+
+            <div
+                class="periodo"
+                data-periodo="1"
+            >
+
+                <div class="periodo-titulo">
+
+                    <span>
+                        🌸 PRIMER PERIODO
+                    </span>
+
+                </div>
+
+
+                <div class="notas-lista">
+
+
+                    <div class="nota-fila">
+
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                        >
+
+                        <input
+                            type="number"
+                            min="0"
+                            max="10"
+                            step="0.01"
+                            placeholder="Grade"
+                            oninput="calcularMedias()"
+                        >
+
+                        <button
+                            class="mini-boton"
+                            onclick="borrarNota(this)"
+                        >
+
+                            ×
+
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    class="mini-boton"
+                    onclick="agregarNota(this)"
+                >
+
+                    + subject
+
+                </button>
+
+
+                <div class="media-periodo">
+
+                    Average:
+                    <span class="media">
+                        --
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- SEGUNDO PERIODO -->
+
+            <div
+                class="periodo"
+                data-periodo="2"
+            >
+
+                <div class="periodo-titulo">
+
+                    <span>
+                        🌼 SEGUNDO PERIODO
+                    </span>
+
+                </div>
+
+
+                <div class="notas-lista">
+
+
+                    <div class="nota-fila">
+
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                        >
+
+                        <input
+                            type="number"
+                            min="0"
+                            max="10"
+                            step="0.01"
+                            placeholder="Grade"
+                            oninput="calcularMedias()"
+                        >
+
+                        <button
+                            class="mini-boton"
+                            onclick="borrarNota(this)"
+                        >
+
+                            ×
+
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    class="mini-boton"
+                    onclick="agregarNota(this)"
+                >
+
+                    + subject
+
+                </button>
+
+
+                <div class="media-periodo">
+
+                    Average:
+                    <span class="media">
+                        --
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TERCER PERIODO -->
+
+            <div
+                class="periodo"
+                data-periodo="3"
+            >
+
+                <div class="periodo-titulo">
+
+                    <span>
+                        🌷 TERCER PERIODO
+                    </span>
+
+                </div>
+
+
+                <div class="notas-lista">
+
+
+                    <div class="nota-fila">
+
+                        <input
+                            type="text"
+                            placeholder="Subject"
+                        >
+
+                        <input
+                            type="number"
+                            min="0"
+                            max="10"
+                            step="0.01"
+                            placeholder="Grade"
+                            oninput="calcularMedias()"
+                        >
+
+                        <button
+                            class="mini-boton"
+                            onclick="borrarNota(this)"
+                        >
+
+                            ×
+
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+
+                <button
+                    class="mini-boton"
+                    onclick="agregarNota(this)"
+                >
+
+                    + subject
+
+                </button>
+
+
+                <div class="media-periodo">
+
+                    Average:
+                    <span class="media">
+                        --
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="botones-form">
+
+
+            <button
+                class="boton boton-rosa"
+                onclick="agregarPeriodo()"
+            >
+
+                + AÑADIR OTRO PERIODO
+
+            </button>
+
+
+        </div>
+
+
+        <div
+            class="media-general"
+            id="mediaGeneral"
+        >
+
+            ★ PROMEDIO GENERAL: --
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     COSAS IMPORTANTES
+================================================== -->
+
+<div class="columnas">
+
+
+<div class="columna">
+
+
+<div class="ventana">
+
+    <div class="barra">
+
+        📌 NO OLVIDES!
+
+    </div>
+
+
+    <div class="interior">
+
+
+        <textarea
+            id="importante"
+            placeholder="Things you absolutely cannot forget..."
+        ></textarea>
+
+
+        <button
+            class="boton"
+            onclick="guardarImportante()"
+            style="margin-top:8px;"
+        >
+
+            GUARDAR ♡
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+
+<div class="columna">
+
+
+<div class="ventana">
+
+    <div class="barra">
+
+        🌟 PEQUEÑO RECORDATORIO
+
+    </div>
+
+
+    <div class="interior"
+         style="text-align:center; line-height:1.8;">
+
+        <strong>
+            No tienes que hacerlo todo
+            a la vez. ♡
+        </strong>
+
+        <br><br>
+
+        Un deber a la vez.
+
+        <br>
+
+        Un examen a la vez.
+
+        <br>
+
+        Un día a la vez.
+
+        <br><br>
+
+        ✧ tu puedes con esto ✧
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+</main>
+
+
+<!-- =================================================
+     CALCULADORA FINAL
+================================================== -->
+
+<div class="ventana">
+    <div class="barra">🧮 CALCULADORA DE NOTAS</div>
+    <div class="interior calculadora-media">
+        <h2>Calcula tu promedio</h2>
+        <div class="calculadora-controles">
+            <label for="selectorMedia">Elige que calcular:</label>
+            <select id="selectorMedia">
+                <option value="general">Entire evaluation</option>
+                <option value="1">First period</option>
+                <option value="2">Second period</option>
+                <option value="3">Third period</option>
+            </select>
+            <button id="calcularSeleccion" type="button">Calculate</button>
+        </div>
+        <div class="resultado-calculadora" id="resultadoCalculadora">Añade notas y elige un período.</div>
+    </div>
+</div>
+
+
+<!-- =================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    RIZOSᯓ★ · mi zona estudiantil · 2026-2028
+
+    <br>
+
+    pink + yellow + too many assignments ♡
+
+    <br><br>
+
+    <a
+        href="index.html"
+        style="color:#d96898;"
+    >
+
+        ← Back to Home
+
+    </a>
+
+</footer>
+
+
+</div>
+
+
+
+<script>
+
+/* =====================================================
+   FECHA ACTUAL
+===================================================== */
+
+const fechaActual =
+    document.getElementById("fechaActual");
+
+const ahora = new Date();
+
+
+const opciones = {
+
+    weekday: "long",
+
+    day: "numeric",
+
+    month: "long",
+
+    year: "numeric"
+
+};
+
+
+fechaActual.textContent =
+    ahora.toLocaleDateString(
+        "es-ES",
+        opciones
+    );
+
+
+/* =====================================================
+   HORARIO EDITABLE
+===================================================== */
+
+const celdasHorario =
+    document.querySelectorAll(".horario [contenteditable='true']");
+
+const horarioGuardado =
+    JSON.parse(localStorage.getItem("miHorario")) || [];
+
+celdasHorario.forEach(function(celda, indice) {
+
+    if (horarioGuardado[indice]) {
+        celda.textContent = horarioGuardado[indice];
+    }
+
+    celda.addEventListener("input", function() {
+        if (!window.siteAccess.requireOwner()) return;
+        const horario = Array.from(celdasHorario).map(item => item.textContent.trim());
+        localStorage.setItem("miHorario", JSON.stringify(horario));
+    });
+
+});
+
+
+function actualizarOpcionesPeriodos() {
+    const selector = document.getElementById("selectorMedia");
+    const periodos = document.querySelectorAll(".periodo");
+
+    selector.innerHTML = '<option value="general">Entire evaluation</option>';
+    periodos.forEach(function(periodo, indice) {
+        const opcion = document.createElement("option");
+        opcion.value = periodo.dataset.periodo;
+        opcion.textContent = "Period " + (indice + 1);
+        selector.appendChild(opcion);
+    });
+}
+
+
+function calcularSeleccion() {
+    const seleccion = document.getElementById("selectorMedia").value;
+    const periodos = document.querySelectorAll(".periodo");
+    let notasSeleccionadas = [];
+
+    periodos.forEach(function(periodo) {
+        if (seleccion === "general" || periodo.dataset.periodo === seleccion) {
+            periodo.querySelectorAll('.nota-fila input[type="number"]').forEach(function(input) {
+                const nota = parseFloat(input.value);
+                if (!isNaN(nota) && nota >= 0 && nota <= 10) notasSeleccionadas.push(nota);
+            });
+        }
+    });
+
+    const resultado = document.getElementById("resultadoCalculadora");
+    resultado.textContent = notasSeleccionadas.length
+        ? "Average: " + (notasSeleccionadas.reduce((total, nota) => total + nota, 0) / notasSeleccionadas.length).toFixed(2)
+        : "Add grades to calculate the average.";
+}
+
+
+document.getElementById("calcularSeleccion").addEventListener("click", calcularSeleccion);
+actualizarOpcionesPeriodos();
+
+
+
+/* =====================================================
+   TAREAS
+===================================================== */
+
+let tareas =
+    JSON.parse(
+        localStorage.getItem("misTareas")
+    ) || [];
+
+
+function guardarTareas() {
+
+    if (!window.siteAccess.requireOwner()) return;
+
+    localStorage.setItem(
+        "misTareas",
+        JSON.stringify(tareas)
+    );
+
+}
+
+
+function agregarTarea() {
+
+    if (!window.siteAccess.requireOwner()) return;
+
+
+    const nombre =
+        document.getElementById(
+            "nombreTarea"
+        ).value.trim();
+
+
+    const asignatura =
+        document.getElementById(
+            "asignatura"
+        ).value.trim();
+
+
+    const fecha =
+        document.getElementById(
+            "fechaTarea"
+        ).value;
+
+
+    const categoria =
+        document.getElementById(
+            "categoria"
+        ).value;
+
+
+    const prioridad =
+        document.getElementById(
+            "prioridad"
+        ).value;
+
+
+    const detalle =
+        document.getElementById(
+            "detalleTarea"
+        ).value.trim();
+
+
+
+    if (!nombre) {
+
+        alert(
+            "Escribe primero qué tarea tienes que hacer ♡"
+        );
+
+        return;
+
+    }
+
+
+
+    const tarea = {
+
+        id: Date.now(),
+
+        nombre,
+
+        asignatura,
+
+        fecha,
+
+        categoria,
+
+        prioridad,
+
+        detalle,
+
+        completada: false
+
+    };
+
+
+    tareas.push(tarea);
+
+
+    guardarTareas();
+
+    mostrarTareas();
+
+    limpiarFormulario();
+
+}
+
+
+function limpiarFormulario() {
+
+    document.getElementById(
+        "nombreTarea"
+    ).value = "";
+
+
+    document.getElementById(
+        "asignatura"
+    ).value = "";
+
+
+    document.getElementById(
+        "fechaTarea"
+    ).value = "";
+
+
+    document.getElementById(
+        "detalleTarea"
+    ).value = "";
+
+}
+
+
+
+function mostrarTareas() {
+
+
+    const lista =
+        document.getElementById(
+            "listaTareas"
+        );
+
+
+    lista.innerHTML = "";
+
+
+    if (tareas.length === 0) {
+
+        lista.innerHTML =
+            "<p>No tasks yet ♡</p>";
+
+        actualizarProgreso();
+
+        return;
+
+    }
+
+
+
+    tareas.sort(
+        (a,b) =>
+            Number(a.completada)
+            -
+            Number(b.completada)
+    );
+
+
+
+    tareas.forEach(
+        function(tarea) {
+
+
+            const div =
+                document.createElement(
+                    "div"
+                );
+
+
+            div.className =
+                "tarea prioridad-" +
+                tarea.prioridad;
+
+
+            if (tarea.completada) {
+
+                div.classList.add(
+                    "completada"
+                );
+
+            }
+
+
+
+            let fechaTexto =
+                tarea.fecha
+                ?
+                "📅 " + tarea.fecha
+                :
+                "📅 No date";
+
+
+
+            div.innerHTML = `
+
+                <div class="tarea-superior">
+
+                    <span class="nombre-tarea">
+
+                        ${tarea.nombre}
+
+                    </span>
+
+                    <span>
+
+                        ${tarea.completada ? "✓" : "○"}
+
+                    </span>
+
+                </div>
+
+
+                <div class="tarea-info">
+
+                    📚 ${tarea.asignatura || "General"}
+
+                    &nbsp; · &nbsp;
+
+                    ${tarea.categoria}
+
+                    &nbsp; · &nbsp;
+
+                    ${fechaTexto}
+
+                </div>
+
+
+                ${
+                    tarea.detalle
+                    ?
+                    `<div
+                        class="tarea-info"
+                        style="margin-top:7px;"
+                    >
+                        💭 ${tarea.detalle}
+                    </div>`
+                    :
+                    ""
+                }
+
+
+                <div class="tarea-acciones">
+
+                    <button
+                        class="mini-boton"
+                        onclick="completarTarea(${tarea.id})"
+                    >
+
+                        ${tarea.completada
+                            ? "↶ Undo"
+                            : "✓ Done"}
+
+                    </button>
+
+
+                    <button
+                        class="mini-boton"
+                        onclick="eliminarTarea(${tarea.id})"
+                    >
+
+                        🗑 Delete
+
+                    </button>
+
+                </div>
+
+            `;
+
+
+            lista.appendChild(div);
+
+        }
+    );
+
+
+    actualizarProgreso();
+
+}
+
+
+
+function completarTarea(id) {
+
+    if (!window.siteAccess.requireOwner()) return;
+
+
+    const tarea =
+        tareas.find(
+            t => t.id === id
+        );
+
+
+    if (tarea) {
+
+        tarea.completada =
+            !tarea.completada;
+
+    }
+
+
+    guardarTareas();
+
+    mostrarTareas();
+
+}
+
+
+
+function eliminarTarea(id) {
+
+    if (!window.siteAccess.requireOwner()) return;
+
+
+    tareas =
+        tareas.filter(
+            t => t.id !== id
+        );
+
+
+    guardarTareas();
+
+    mostrarTareas();
+
+}
+
+
+
+function actualizarProgreso() {
+
+
+    const total =
+        tareas.length;
+
+
+    const hechas =
+        tareas.filter(
+            t => t.completada
+        ).length;
+
+
+    const porcentaje =
+        total === 0
+        ?
+        0
+        :
+        Math.round(
+            (hechas / total) * 100
+        );
+
+
+    document.getElementById(
+        "barraProgreso"
+    ).style.width =
+        porcentaje + "%";
+
+
+    document.getElementById(
+        "textoProgreso"
+    ).textContent =
+        `${hechas} / ${total} completed · ${porcentaje}%`;
+
+}
+
+
+
+/* =====================================================
+   OBJETIVOS
+===================================================== */
+
+function agregarObjetivo() {
+
+    if (!window.siteAccess.requireOwner()) return;
+
+
+    const input =
+        document.getElementById(
+            "nuevoObjetivo"
+        );
+
+
+    const texto =
+        input.value.trim();
+
+
+    if (!texto) return;
+
+
+    const div =
+        document.createElement(
+            "div"
+        );
+
+
+    div.className =
+        "objetivo";
+
+
+    div.innerHTML = `
+
+        <input type="checkbox">
+
+        ${texto}
+
+    `;
+
+
+    document.getElementById(
+        "listaObjetivos"
+    ).appendChild(div);
+
+
+    input.value = "";
+
+}
+
+
+
+/* =====================================================
+   NOTA RÁPIDA
+===================================================== */
+
+function guardarNota() {
+
+    if (!window.siteAccess.requireOwner()) return;
+
+
+    const nota =
+        document.getElementById(
+            "notaRapida"
+        ).value;
+
+
+    localStorage.setItem(
+        "notaRapida",
+        nota
+    );
+
+
+    document.getElementById(
+        "notaGuardada"
+    ).textContent =
+        "♡ Saved!";
+
+}
+
+
+const notaAnterior =
+    localStorage.getItem(
+        "notaRapida"
+    );
+
+
+if (notaAnterior) {
+
+    document.getElementById(
+        "notaRapida"
+    ).value =
+        notaAnterior;
+
+}
+
+
+
+/* =====================================================
+   COSAS IMPORTANTES
+===================================================== */
+
+function guardarImportante() {
+
+    if (!window.siteAccess.requireOwner()) return;
+
+
+    const texto =
+        document.getElementById(
+            "importante"
+        ).value;
+
+
+    localStorage.setItem(
+        "importante",
+        texto
+    );
+
+
+    alert(
+        "Saved! ♡"
+    );
+
+}
+
+
+const importanteAnterior =
+    localStorage.getItem(
+        "importante"
+    );
+
+
+if (importanteAnterior) {
+
+    document.getElementById(
+        "importante"
+    ).value =
+        importanteAnterior;
+
+}
+
+
+
+/* =====================================================
+   NOTAS / PERIODOS
+===================================================== */
+
+function agregarNota(boton) {
+
+    if (!window.siteAccess.requireOwner()) return;
+
+
+    const lista =
+        boton
+        .parentElement
+        .querySelector(
+            ".notas-lista"
+        );
+
+
+    const fila =
+        document.createElement(
+            "div"
+        );
+
+
+    fila.className =
+        "nota-fila";
+
+
+    fila.innerHTML = `
+
+        <input
+            type="text"
+            placeholder="Subject"
+        >
+
+
+        <input
+            type="number"
+            min="0"
+            max="10"
+            step="0.01"
+            placeholder="Grade"
+            oninput="calcularMedias()"
+        >
+
+
+        <button
+            class="mini-boton"
+            onclick="borrarNota(this)"
+        >
+
+            ×
+
+        </button>
+
+    `;
+
+
+    lista.appendChild(fila);
+
+}
+
+
+
+function borrarNota(boton) {
+
+
+    const fila =
+        boton.parentElement;
+
+
+    fila.remove();
+
+
+    calcularMedias();
+
+}
+
+
+
+/* =====================================================
+   AÑADIR PERIODOS
+===================================================== */
+
+let numeroPeriodo = 3;
+
+
+function agregarPeriodo() {
+
+    if (!window.siteAccess.requireOwner()) return;
+
+
+    numeroPeriodo++;
+
+
+    const nombres = [
+
+        "FOURTH",
+
+        "FIFTH",
+
+        "SIXTH",
+
+        "SEVENTH",
+
+        "EIGHTH"
+
+    ];
+
+
+    const nombre =
+        nombres[
+            numeroPeriodo - 4
+        ]
+        ||
+        numeroPeriodo + "TH";
+
+
+    const periodo =
+        document.createElement(
+            "div"
+        );
+
+
+    periodo.className =
+        "periodo";
+
+
+    periodo.dataset.periodo =
+        numeroPeriodo;
+
+
+    periodo.innerHTML = `
+
+        <div class="periodo-titulo">
+
+            <span>
+
+                🌸 ${nombre} PERIOD
+
+            </span>
+
+            <button
+                class="mini-boton"
+                onclick="eliminarPeriodo(this)"
+            >
+
+                × remove
+
+            </button>
+
+        </div>
+
+
+        <div class="notas-lista">
+
+            <div class="nota-fila">
+
+                <input
+                    type="text"
+                    placeholder="Subject"
+                >
+
+
+                <input
+                    type="number"
+                    min="0"
+                    max="10"
+                    step="0.01"
+                    placeholder="Grade"
+                    oninput="calcularMedias()"
+                >
+
+
+                <button
+                    class="mini-boton"
+                    onclick="borrarNota(this)"
+                >
+
+                    ×
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="mini-boton"
+            onclick="agregarNota(this)"
+        >
+
+            + subject
+
+        </button>
+
+
+        <div class="media-periodo">
+
+            Average:
+            <span class="media">
+                --
+            </span>
+
+        </div>
+
+    `;
+
+
+    document
+        .getElementById("periodos")
+        .appendChild(periodo);
+
+    actualizarOpcionesPeriodos();
+
+}
+
+
+
+function eliminarPeriodo(boton) {
+
+    if (!window.siteAccess.requireOwner()) return;
+
+    boton
+        .closest(".periodo")
+        .remove();
+
+    calcularMedias();
+
+}
+
+
+
+/* =====================================================
+   CALCULAR MEDIAS
+===================================================== */
+
+function calcularMedias() {
+
+
+    const periodos =
+        document.querySelectorAll(
+            ".periodo"
+        );
+
+
+    let todasLasNotas = [];
+
+
+
+    periodos.forEach(
+        function(periodo) {
+
+
+            const inputs =
+                periodo.querySelectorAll(
+                    '.nota-fila input[type="number"]'
+                );
+
+
+            let notas = [];
+
+
+            inputs.forEach(
+                function(input) {
+
+
+                    if (
+                        input.value !== ""
+                    ) {
+
+
+                        const valor =
+                            parseFloat(
+                                input.value
+                            );
+
+
+                        if (
+                            !isNaN(valor)
+                            &&
+                            valor >= 0
+                            &&
+                            valor <= 10
+                        ) {
+
+                            notas.push(valor);
+
+                            todasLasNotas.push(
+                                valor
+                            );
+
+                        }
+
+                    }
+
+                }
+            );
+
+
+
+            const media =
+                periodo.querySelector(
+                    ".media"
+                );
+
+
+            if (notas.length === 0) {
+
+                media.textContent =
+                    "--";
+
+            } else {
+
+
+                const suma =
+                    notas.reduce(
+                        (a,b) => a + b,
+                        0
+                    );
+
+
+                const resultado =
+                    suma / notas.length;
+
+
+                media.textContent =
+                    resultado.toFixed(2);
+
+            }
+
+        }
+    );
+
+
+
+    const mediaGeneral =
+        document.getElementById(
+            "mediaGeneral"
+        );
+
+
+    if (
+        todasLasNotas.length === 0
+    ) {
+
+        mediaGeneral.textContent =
+            "★ OVERALL AVERAGE: --";
+
+        return;
+
+    }
+
+
+
+    const sumaTotal =
+        todasLasNotas.reduce(
+            (a,b) => a + b,
+            0
+        );
+
+
+    const mediaTotal =
+        sumaTotal /
+        todasLasNotas.length;
+
+
+    mediaGeneral.textContent =
+        "★ OVERALL AVERAGE: " +
+        mediaTotal.toFixed(2);
+
+}
+
+
+
+/* =====================================================
+   INICIAR
+===================================================== */
+
+mostrarTareas();
+
+calcularMedias();
+
+</script>
+
+
+</body>
+
+</html>
